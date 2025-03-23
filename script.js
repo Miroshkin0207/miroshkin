@@ -9,3 +9,5 @@ function najatie() {
     nadpis.innerHTML=""
     }
 }
+const a = document.getElementById("istoria")
+console.log(position(a))
