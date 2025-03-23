@@ -15,7 +15,7 @@ font-size: 20px
 }
 #kalkul{
 position: absolute;
-left: 100px;
+left: 300px;
 font-size: 20px;
 color: rgb(36, 87, 189);
 }
@@ -25,5 +25,5 @@ font-size: 20px
 }
 #istoria{
 position: absolute; 
-left: 100px
+left: 300px
 }
