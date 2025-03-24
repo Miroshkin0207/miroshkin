@@ -25,5 +25,7 @@ font-size: 20px
 }
 #istoria{
 position: absolute; 
-left: 300px
+left: 300px;
+position: relative;
+bottom: 50px
 }
