@@ -7,6 +7,8 @@ function najatie() {
     }else if (nadpis.innerHTML==="Молодец!") {
     knopka.innerHTML="Нажми"
     nadpis.innerHTML=""
-    console.log("АГА")
+    const el = document.getElementById("kalkul")
+    el.getBoundingClientRect()
+    console.log(rect.top + window.scrollY)
     }
 }
