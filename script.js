@@ -8,7 +8,7 @@ function najatie() {
     knopka.innerHTML="Нажми"
     nadpis.innerHTML=""
     const el = document.getElementById("kalkul")
-    const rect = el.getBoundingClientRect()
+    el.getBoundingClientRect()
     console.log(rect.top + window.scrollY)
     }
 }
