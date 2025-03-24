@@ -7,5 +7,6 @@ function najatie() {
     }else if (nadpis.innerHTML==="Молодец!") {
     knopka.innerHTML="Нажми"
     nadpis.innerHTML=""
+    console.log("АГА")
     }
 }
