@@ -22,5 +22,6 @@ top: 125px
 #knopka{
 background-color: black;
 color: rgb(7, 46, 108);
-outline-color: white
+outline-color: white;
+font-size: 20px
 }
