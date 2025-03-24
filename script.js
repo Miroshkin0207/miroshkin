@@ -13,5 +13,5 @@ function history() {
     window.location.href="https://miroshkin0207.github.io/history/"
 }
 function kalkulator() {
-    window.location.location="https://miroshkin0207/github.io/kalkualtor/"
+    window.location.location="https://miroshkin0207/github.io/kalkulator/"
 }
