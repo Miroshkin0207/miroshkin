@@ -7,8 +7,11 @@ function najatie() {
     }else if (nadpis.innerHTML==="Молодец!") {
     knopka.innerHTML="Нажми"
     nadpis.innerHTML=""
-    const el = document.getElementById("kalkul")
-    const rect = el.getBoundingClientRect()
-    console.log(rect.top + window.scrollY)
     }
+}
+function history() {
+    window.location.href="https://miroshkin0207.github.io/history/"
+}
+function kalkulator() {
+    window.location.location="https://miroshkin0207/github.io/kalkualtor/"
 }

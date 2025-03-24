@@ -19,9 +19,8 @@ position: absolute;
 left: 300px;
 top: 125px
 }
-#knopka{
+button{
 background-color: black;
 color: rgb(7, 46, 108);
-outline-color: white;
 font-size: 20px
 }
