@@ -19,3 +19,8 @@ position: absolute;
 left: 300px;
 top: 125px
 }
+#knopka{
+background-color: black;
+color: rgb(5, 25, 57);
+outline-color: rgb(5, 25, 57)
+}
