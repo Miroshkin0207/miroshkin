@@ -1,23 +1,28 @@
-body{
+body {
 background-color:rgb(26, 26, 29)
 }
-div{
+div {
 color: white;
 font-size: 20px
 }
-.ssilki{
+.ssilki {
 color: rgb(36, 87, 189);
 font-size: 20px
 }
-#kalkul{
+#kalkul {
 position: absolute;
 left: 300px;
 top: 100px
 }
-#istoria{
+#istoria {
 position: absolute; 
 left: 300px;
 top: 135px
+}
+#kliker {
+position: absolute;
+left: 300px;
+top: 170px
 }
 button{
 background-color: black;
