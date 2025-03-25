@@ -16,5 +16,5 @@ function kalkulator() {
 window.location.href="https://miroshkin0207.github.io/kalkulator/"
 }
 function kliker() {
-window.location.href="https://miroshkin0207.github.io/kliker"
+window.location.href="https://miroshkin0207.github.io/kliker/"
 }
