@@ -24,8 +24,11 @@ position: absolute;
 left: 300px;
 top: 170px
 }
-button{
+button {
 background-color: black;
 color: rgb(19, 66, 142);
 font-size: 20px
+}
+#knopka {
+size: 50px
 }
