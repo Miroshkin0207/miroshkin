@@ -1,34 +1,85 @@
 body {
 background-color: rgb(26, 26, 29)
 }
-div {
-color: white;
-font-size: 20px;
+
+@media (min-width: 900px) and (max-width: 3000px) {
+    .knopki {
+        font-size: 20px;
+        position: absolute;
+        left: 500px
+    }
+
+    .ssilki {
+        color: rgb(36, 87, 189);
+        font-size: 20px
+    }
+
+    #kalkul {
+        position: absolute;
+        top: 100px
+    }
+
+    #istoria {
+        position: absolute;
+        top: 135px
+    }
+
+    #kliker {
+        position: absolute;
+        top: 170px
+    }
+
+    button {
+        background-color: black;
+        color: rgb(19, 66, 142);
+        font-size: 20px
+    }
+
+    #knopka {
+        font-size: 30px
+    }
 }
-.ssilki {
-color: rgb(36, 87, 189);
-font-size: 20px
-}
-#kalkul {
-position: absolute;
-left: 500px;
-top: 100px
-}
-#istoria {
-position: absolute; 
-left: 500px;
-top: 135px
-}
-#kliker {
-position: absolute;
-left: 500px;
-top: 170px
-}
-button {
-background-color: black;
-color: rgb(19, 66, 142);
-font-size: 20px
-}
-#knopka {
-font-size: 30px
+@media (max-width: 899px) {
+    #dobro {
+        font-size: 30px
+    }
+
+    #najmi {
+        font-size: 30px
+    }
+
+    .knopki {
+        font-size: 40px;
+        position: absolute;
+        left: 800px
+    }
+
+    .ssilki {
+        color: rgb(36, 87, 189);
+        font-size: 20px
+    }
+
+    #kalkul {
+        position: absolute;
+        top: 100px
+    }
+
+    #istoria {
+        position: absolute;
+        top: 135px
+    }
+
+    #kliker {
+        position: absolute;
+        top: 170px
+    }
+
+    button {
+        background-color: black;
+        color: rgb(19, 66, 142)
+    }
+
+    #knopka {
+        font-size: 50px
+    }
 }
