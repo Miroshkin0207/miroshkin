@@ -2,10 +2,10 @@ body {
 background-color: rgb(26, 26, 29)
 }
 
-.nadpisi {
+@media (min-width: 900px) and (max-width: 3000px) {
+    .nadpisi {
     color: White
 }
-@media (min-width: 900px) and (max-width: 3000px) {
     .knopki {
         font-size: 20px;
         position: absolute;
@@ -43,6 +43,9 @@ background-color: rgb(26, 26, 29)
     }
 }
 @media (max-width: 899px) {
+    .nadpisi {
+    color: White
+}
     #dobro {
         font-size: 30px
     }
