@@ -5,6 +5,9 @@
 }
 
 @media (min-width: 900px) and (max-width: 3000px) {
+    body {
+        background-color: White
+    }
     
     .knopki {
         font-size: 20px;
