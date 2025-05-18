@@ -5,9 +5,7 @@
 }
 
 @media (min-width: 900px) and (max-width: 3000px) {
-    body {
-background-color: rgb(26, 26, 29)
-}
+    
     .knopki {
         font-size: 20px;
         position: absolute;
