@@ -4,7 +4,7 @@
     color: White
 }
 
-@media (min-width: 900px) and (max-width: 3000px) {
+@media (min-width: 1200px) and (max-width: 3000px) {
     body {
         background-color: Gray
     }
