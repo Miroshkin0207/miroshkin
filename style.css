@@ -46,6 +46,9 @@ background-color: rgb(26, 26, 29)
 }
 
 @media (min-width: 1px) and (max-width: 899px) {
+    body {
+background-color: White
+}
     #dobro {
         font-size: 30px
     }
