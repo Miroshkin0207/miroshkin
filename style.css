@@ -7,6 +7,9 @@ body {
 }
 
 @media (min-width: 1200px) and (max-width: 52000px) {
+    #najmi {
+        font-size: 20px
+    }
     
     .knopki {
         font-size: 20px;
