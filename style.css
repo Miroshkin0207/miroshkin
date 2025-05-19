@@ -25,7 +25,9 @@ body {
 
     .ssilki {
         color: rgb(36, 87, 189);
-        font-size: 20px
+        font-size: 20px;
+        position: absolute;
+        top: 720px
     }
 
     #kalkul {
