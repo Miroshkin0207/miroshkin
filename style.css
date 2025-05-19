@@ -68,6 +68,11 @@ body {
     #interes {
         font-size: 45px
     }
+    
+        .ssilki {
+        color: rgb(36, 87, 189);
+        font-size: 45px
+    }
 
     .knopki {
         font-size: 40px;
@@ -75,24 +80,19 @@ body {
         left: 600px
     }
 
-    .ssilki {
-        color: rgb(36, 87, 189);
-        font-size: 45px
-    }
-
     #kalkul {
         position: absolute;
-        top: 100px
+        top: 200px
     }
 
     #istoria {
         position: absolute;
-        top: 135px
+        top: 275px
     }
 
     #kliker {
         position: absolute;
-        top: 170px
+        top: 300px
     }
 
     button {
