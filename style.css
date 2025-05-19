@@ -12,7 +12,9 @@ body {
     }
 
     #interes {
-        font-size: 25px
+        font-size: 25px;
+        position: absolute;
+        top: 700px
     }
     
     .knopki {
