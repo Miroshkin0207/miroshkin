@@ -24,13 +24,13 @@ body {
         position: absolute;
         top: 720px
     }
-    #kalkul {
-        position: absolute;
-        top: 120px
-    }
     #istoria {
         position: absolute;
+        top: 120px
+    #kalkul {
+        position: absolute;
         top: 155px
+    }
     }
     #kliker {
         position: absolute;
