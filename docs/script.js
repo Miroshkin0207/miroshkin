@@ -10,7 +10,7 @@ function najatie() {
     }
 }
 function history() {
-window.location.href="https://miroshkin0207.github.io/HistoryOfChanges/"
+window.location.href="https://miroshkin0207.github.io/history/"
 }
 function kalkulator() {
 window.location.href="https://miroshkin0207.github.io/kalkulator/"
