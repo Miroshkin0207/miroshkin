@@ -4,7 +4,7 @@ body {
 .nadpisi {
     color: White
 }
-@media (min-width: 1200px) and (max-width: 52000px) {
+@media (min-width: 1200px){
     #najmi {
         font-size: 30px
     }
