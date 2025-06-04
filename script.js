@@ -4,13 +4,13 @@ function najatie() {
     if (nadpis.innerHTML==="") {
     knopka.innerHTML="Вернуть"
     nadpis.innerHTML="Молодец!"
-    }else if (nadpis.innerHTML==="Молодец!") {
+    }else {
     knopka.innerHTML="Нажми"
     nadpis.innerHTML=""
     }
 }
 function history() {
-window.location.href="https://miroshkin0207.github.io/history/"
+window.location.href="https://miroshkin0207.github.io/HistoryOfChanges/"
 }
 function kalkulator() {
 window.location.href="https://miroshkin0207.github.io/kalkulator/"
