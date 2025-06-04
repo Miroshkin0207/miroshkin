@@ -1,0 +1,11 @@
+body {
+background-color: rgb(26, 26, 29)
+}
+div {
+color: white
+}
+button {
+background-color: black;
+color: rgb(19, 66, 142);
+font-size: 20px
+}
