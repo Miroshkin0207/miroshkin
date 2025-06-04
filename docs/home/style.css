@@ -1,0 +1,110 @@
+body {
+    background-color: rgb(26, 26, 29)
+}
+
+.nadpisi {
+    color: White
+}
+
+@media (min-width: 1200px) and (max-width: 52000px) {
+    #najmi {
+        font-size: 30px
+    }
+
+    #interes {
+        font-size: 25px;
+        position: absolute;
+        top: 700px
+    }
+    
+    .knopki {
+        font-size: 20px;
+        position: absolute;
+        left: 500px
+    }
+
+    .ssilki {
+        color: rgb(36, 87, 189);
+        font-size: 20px;
+        position: absolute;
+        top: 720px
+    }
+
+    #kalkul {
+        position: absolute;
+        top: 120px
+    }
+
+    #istoria {
+        position: absolute;
+        top: 155px
+    }
+
+    #kliker {
+        position: absolute;
+        top: 190px
+    }
+
+    button {
+        background-color: black;
+        color: rgb(19, 66, 142);
+        font-size: 20px
+    }
+
+    #knopka {
+        font-size: 30px
+    }
+}
+
+@media (min-width: 1px) and (max-width: 1199px) {
+    #dobro {
+        font-size: 60px
+    }
+
+    #najmi {
+        font-size: 50px
+    }
+
+    #nadpis{
+        font-size: 50px
+    }
+
+    #interes {
+        font-size: 45px
+    }
+    
+        .ssilki {
+        color: rgb(36, 87, 189);
+        font-size: 45px
+    }
+
+    .knopki {
+        font-size: 40px;
+        position: absolute;
+        left: 600px
+    }
+
+    #kalkul {
+        position: absolute;
+        top: 200px
+    }
+
+    #istoria {
+        position: absolute;
+        top: 275px
+    }
+
+    #kliker {
+        position: absolute;
+        top: 300px
+    }
+
+    button {
+        background-color: black;
+        color: rgb(19, 66, 142)
+    }
+
+    #knopka {
+        font-size: 65px
+    }
+          }
