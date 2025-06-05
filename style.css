@@ -21,8 +21,6 @@ body {
     .ssilki {
         color: rgb(36, 87, 189);
         font-size: 20px;
-        position: absolute;
-        top: 720px
     }
     #istoria {
         position: absolute;
@@ -63,7 +61,6 @@ body {
     .ssilki {
         color: rgb(36, 87, 189);
         font-size: 45px;
-        position: absolute
     }
     .knopki {
         font-size: 40px;
