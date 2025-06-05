@@ -57,10 +57,13 @@ body {
     }
     .knopki {
         font-size: 40px;
-        display: flex;
-        border: solid 10px "White";
         position: absolute;
         left: 450px
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     #istoria {
         position: absolute;
