@@ -53,11 +53,6 @@ body {
     #nadpis{
         font-size: 50px
     }
-    #interes {
-        font-size: 45px;
-        position: absolute;
-        top: 600px
-    }
     .ssilki {
         color: rgb(36, 87, 189);
         font-size: 45px;
@@ -89,16 +84,21 @@ body {
     #knopka {
         font-size: 65px
     }
+    #interes {
+        font-size: 45px;
+        position: absolute;
+        top: 600px
+    }
     #MyTg {
-        top: 655px
+        top: 670px
     }
     #TgCh {
-        top: 705px
+        top: 720px
     }
     #vk {
-        top: 755px
+        top: 770px
     }
     #tiktok {
-        top: 805px
+        top: 820px
     }
           }
