@@ -67,6 +67,8 @@ body {
     }
     .knopki {
         font-size: 40px;
+        display: flex;
+        border: solid 3px;
         position: absolute;
         left: 500px
     }
