@@ -60,9 +60,10 @@ body {
         position: absolute;
         top: 600px
     }
-        .ssilki {
+    .ssilki {
         color: rgb(36, 87, 189);
-        font-size: 45px
+        font-size: 45px;
+        position: absolute
     }
     .knopki {
         font-size: 40px;
