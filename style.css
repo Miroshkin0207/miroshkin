@@ -68,9 +68,9 @@ body {
     .knopki {
         font-size: 40px;
         display: flex;
-        border: solid 3px;
+        border: solid 10px "White";
         position: absolute;
-        left: 500px
+        left: 450px
     }
     #istoria {
         position: absolute;
@@ -78,7 +78,7 @@ body {
     }
     #kalkul {
         position: absolute;
-        top: 475px
+        top: 490px
     }
     #kliker {
         position: absolute;
