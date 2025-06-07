@@ -92,15 +92,19 @@ body {
         top: 600px
     }
     #MyTg {
+        position: absolute;
         top: 670px
     }
     #TgCh {
+        position: absolute;
         top: 720px
     }
     #vk {
+        position: absolute;
         top: 770px
     }
     #tiktok {
+        position: absolute;
         top: 820px
     }
           }
