@@ -55,14 +55,12 @@ body {
         color: rgb(36, 87, 189);
         font-size: 45px;
     }
-    .knopki {
-        font-size: 40px;
-        position: absolute;
-        left: 450px
-    }
     .container {
         display: flex;
         flex-direction: column;
+        font-size: 40px;
+        position: absolute;
+        left: 450px
     }
     #kalkul {
         margin: 7px
