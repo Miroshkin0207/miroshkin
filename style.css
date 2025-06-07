@@ -4,6 +4,10 @@ body {
 .nadpisi {
     color: White
 }
+button {
+    background-color: black;
+    color: rgb(19, 66, 142);
+}
 @media (min-width: 1200px){
     #najmi {
         font-size: 30px
@@ -32,11 +36,6 @@ body {
         position: absolute;
         top: 190px
     }
-    button {
-        background-color: black;
-        color: rgb(19, 66, 142);
-        font-size: 20px
-    }
     #knopka {
         font-size: 30px
     }
@@ -46,14 +45,10 @@ body {
         font-size: 60px
     }
     #najmi {
-        font-size: 50px
+        font-size: 35px
     }
     #nadpis{
-        font-size: 50px
-    }
-    .ssilki {
-        color: rgb(36, 87, 189);
-        font-size: 45px;
+        font-size: 35px
     }
     .container {
         display: flex;
@@ -67,11 +62,6 @@ body {
         margin-top: 7px;
         margin-bottom: 7px
     }
-    button {
-        background-color: black;
-        color: rgb(19, 66, 142)
-    }
-
     #knopka {
         font-size: 65px
     }
@@ -79,6 +69,10 @@ body {
         font-size: 45px;
         position: absolute;
         top: 600px
+    }
+    .ssilki {
+        color: rgb(36, 87, 189);
+        font-size: 35px
     }
     #MyTg {
         position: absolute;
