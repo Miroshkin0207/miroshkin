@@ -64,8 +64,9 @@ body {
         display: flex;
         border: solid 5px rgb(0, 0, 0);
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center
+    }
+    #kalkul {
+        margin: 7px
     }
     button {
         background-color: black;
