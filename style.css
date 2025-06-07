@@ -67,18 +67,6 @@ body {
         justify-content: space-between;
         align-items: center
     }
-    #istoria {
-        position: absolute;
-        top: 400px;
-    }
-    #kalkul {
-        position: absolute;
-        top: 490px
-    }
-    #kliker {
-        position: absolute;
-        top: 500px
-    }
     button {
         background-color: black;
         color: rgb(19, 66, 142)
