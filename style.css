@@ -58,12 +58,14 @@ body {
     .container {
         display: flex;
         flex-direction: column;
-        font-size: 40px;
         position: absolute;
         left: 450px
+    .knopki {
+        font-size: 40px;
     }
     #kalkul {
-        margin: 7px
+        margin-top: 7px;
+        margin-bottom: 7px
     }
     button {
         background-color: black;
