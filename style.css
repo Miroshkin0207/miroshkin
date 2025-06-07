@@ -62,7 +62,6 @@ body {
     }
     .container {
         display: flex;
-        border: solid 5px rgb(0, 0, 0);
         flex-direction: column;
     }
     #kalkul {
