@@ -54,7 +54,7 @@ button {
         display: flex;
         flex-direction: column;
         position: absolute;
-        left: 420px
+        left: 400px
     }
     .knopki {
         font-size: 45px;
@@ -70,7 +70,7 @@ button {
     #interes {
         font-size: 45px;
         position: absolute;
-        top: 600px
+        top: 640px
     }
     .ssilki {
         color: rgb(36, 87, 189);
@@ -78,18 +78,18 @@ button {
     }
     #MyTg {
         position: absolute;
-        top: 700px
+        top: 740px
     }
     #TgCh {
         position: absolute;
-        top: 740px
+        top: 780px
     }
     #vk {
         position: absolute;
-        top: 780px
+        top: 820px
     }
     #tiktok {
         position: absolute;
-        top: 820px
+        top: 860px
     }
           }
