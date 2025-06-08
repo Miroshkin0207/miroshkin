@@ -54,7 +54,7 @@ button {
         display: flex;
         flex-direction: column;
         position: absolute;
-        left: 450px
+        left: 420px
     }
     .knopki {
         font-size: 45px;
