@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(26, 26, 29);
+    color: white
+}
+
+h1 {
+    text-align: center
+}
+
+button {
+    background-color: black;
+    color: rgb(19, 66, 142)
+}
+
+nav {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    position: absolute;
+    left: 550px;
+    top: 150px;
+    width: 550px;
+}
+
+nav button {
+    font-size: 40px
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 25px;
+    bottom: 125px;
+    gap: 5px
+}
+
+a {
+    color: rgb(3, 79, 200);
+    font-size: 30px;
+    padding: 0
+}
+
+@media (min-width: 1200px) {
+    p {
+        font-size: 30px
+    }
+
+    #text {
+        font-size: 35px
+    }
+
+    #mainButton {
+        font-size: 35px
+    }
+}
