@@ -78,7 +78,7 @@ a {
     nav {
         left: 50%;
         transform: translateX(-50%);
-        top: 150px;
+        top: 400px;
         width: 700px;
         height: 450px
     } 
@@ -89,7 +89,7 @@ a {
 
     footer {
         left: 50px;
-        bottom: 250px;
+        bottom: 150px;
         gap: 20px
     }
 
