@@ -76,7 +76,7 @@ a {
     }
 
     nav {
-        right: 250px;
+        transform: translateX(-50%);
         top: 550px;
         width: 700px;
         height: 450px
@@ -84,10 +84,6 @@ a {
 
     nav button {
         font-size: 55px
-    }
-
-    .navigation {
-        text-align: center
     }
 
     footer {
