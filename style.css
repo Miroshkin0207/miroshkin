@@ -15,29 +15,17 @@ button {
 nav {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
-    position: absolute;
-    left: 550px;
-    top: 150px;
-    width: 550px;
-}
-
-nav button {
-    font-size: 40px
+    position: absolute
 }
 
 footer {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 25px;
-    bottom: 125px;
-    gap: 5px
+    position: absolute
 }
 
 a {
-    color: rgb(3, 79, 200);
-    font-size: 30px;
-    padding: 0
+    color: rgb(3, 79, 200)
 }
 
 @media (min-width: 1200px) {
@@ -51,5 +39,60 @@ a {
 
     #mainButton {
         font-size: 35px
+    }
+
+    nav {
+        left: 550px;
+        top: 150px;
+        width: 550px
+    }
+
+    nav button {
+        font-size: 40px
+    }
+
+    footer {
+        left: 25px;
+        bottom: 125px;
+        gap: 5px
+    }
+
+    a {
+        font-size: 30px
+    }
+}
+
+@media (max-width: 1199px) {
+    h1 {
+        font-size: 55px
+    }
+
+    p {
+        font-size: 45px
+    }
+
+    #mainButton {
+        font-size: 50px
+    }
+
+    nav {
+        right: 250px;
+        top: 550px;
+        width: 700px;
+        height: 450px
+    }
+
+    nav button {
+        font-size: 55px
+    }
+
+    footer {
+        left: 50px;
+        bottom: 250px;
+        gap: 25px
+    }
+
+    a {
+        font-size: 45px
     }
 }
