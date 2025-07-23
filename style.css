@@ -42,7 +42,7 @@ a {
     }
 
     nav {
-        left: 550px;
+        left: 700px;
         top: 150px;
         width: 550px
     }
@@ -64,7 +64,7 @@ a {
 
 @media (max-width: 1199px) {
     h1 {
-        font-size: 55px
+        font-size: 50px
     }
 
     p {
@@ -72,14 +72,15 @@ a {
     }
 
     #mainButton {
-        font-size: 50px
+        font-size: 65px
     }
 
     nav {
         right: 250px;
         top: 550px;
         width: 700px;
-        height: 450px
+        height: 450px;
+        text-align: center
     }
 
     nav button {
@@ -89,7 +90,7 @@ a {
     footer {
         left: 50px;
         bottom: 250px;
-        gap: 25px
+        gap: 20px
     }
 
     a {
