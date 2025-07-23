@@ -81,10 +81,14 @@ a {
         width: 700px;
         height: 450px;
         text-align: center
-    }
+    } 
 
     nav button {
         font-size: 55px
+    }
+
+    .navigation {
+        text-align: center
     }
 
     footer {
