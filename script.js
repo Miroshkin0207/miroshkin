@@ -12,3 +12,7 @@ function mainClick() {
 function history() {
     window.location.href = "https://miroshkin0207.github.io/historyOfChanges"
 }
+
+function calculator() {
+    window.location.href = "https://miroshkin0207.github.io/calculator"
+}
