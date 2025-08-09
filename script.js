@@ -16,3 +16,7 @@ function history() {
 function calculator() {
     window.location.href = "https://miroshkin0207.github.io/calculator"
 }
+
+function clicker() {
+    window.location.href = "https://miroshkin0207.github.io/clicker"
+}
