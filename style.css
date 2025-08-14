@@ -81,8 +81,7 @@ a {
         width: 200px;
         height: 165px;
         left: 50%;
-        transform: translateX(-50%);
-        top: 225px      
+        top: 240px      
     }
 
     nav button {
