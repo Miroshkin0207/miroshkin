@@ -1,6 +1,8 @@
 body {
     background-color: rgb(26, 26, 29);
-    color: white
+    color: white;
+    font-family: Tahoma;
+    padding-top: env(safe-area-insert-top)
 }
 
 h1 {
@@ -9,7 +11,7 @@ h1 {
 
 button {
     background-color: black;
-    color: rgb(19, 66, 142)
+    color: rgb(19, 65, 142)
 }
 
 nav {
@@ -28,7 +30,7 @@ a {
     color: rgb(3, 79, 200)
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     p {
         font-size: 30px
     }
@@ -62,38 +64,38 @@ a {
     }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 999px) {
     h1 {
-        font-size: 50px
+        font-size: 15px
     }
 
     p {
-        font-size: 45px
+        font-size: 10px
     }
 
     #mainButton {
-        font-size: 65px
+        font-size: 10px
     }
 
     nav {
         left: 50%;
         transform: translateX(-50%);
-        top: 550px;
-        width: 700px;
-        height: 450px
-    } 
+        top: 200px;
+        width: 250px;
+        height: 165px
+    }
 
     nav button {
-        font-size: 55px
+        font-size: 25px
     }
 
     footer {
         left: 50px;
-        bottom: 150px;
-        gap: 20px
+        bottom: 20px;
+        gap: 5px
     }
 
     a {
-        font-size: 45px
+        font-size: 15px
     }
 }
