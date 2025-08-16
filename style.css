@@ -55,7 +55,7 @@ a {
 
     footer {
         left: 25px;
-        bottom: 125px;
+        bottom: 75px;
         gap: 5px
     }
 
@@ -80,8 +80,7 @@ a {
     nav {
         width: 200px;
         height: 165px;
-        left: 50%;
-        transform: translateX(-50%);
+        left: calc(50% - 100px);
         top: 240px      
     }
 
@@ -91,7 +90,7 @@ a {
 
     footer {
         left: 5px;
-        bottom: 20px;
+        bottom: 10px;
         gap: 7px
     }
 
