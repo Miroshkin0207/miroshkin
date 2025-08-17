@@ -77,15 +77,16 @@ a {
         font-size: 25px
     }
 
+    nav button {
+            font-size: 25px
+        }
+
     nav {
         width: 200px;
         height: 165px;
-        left: calc(50% - 100px);
+        left: 50%;
+        transform: translateX(-50%);
         top: 240px      
-    }
-
-    nav button {
-        font-size: 25px
     }
 
     footer {
@@ -95,6 +96,6 @@ a {
     }
 
     a {
-        font-size: 25px
+        font-size: 20px
     }
 }
