@@ -84,7 +84,8 @@ a {
     nav {
         width: 200px;
         height: 165px;
-        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
         top: 255px      
     }
 
