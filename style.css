@@ -84,8 +84,7 @@ a {
     nav {
         width: 200px;
         height: 165px;
-        left: 50%;
-        transform: translateX(-50%);
+        text-align: center;
         top: 255px      
     }
 
