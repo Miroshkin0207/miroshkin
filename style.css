@@ -78,11 +78,11 @@ a {
     }
 
     nav {
-        width: 200px;
-        height: 165px;
         top: 255px;
         left: 50%;
-        transform: translateX(-50%)
+        transform: translateX(-50%);
+        width: 200px;
+        height: 165px;
     }
 
     nav button {
