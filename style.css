@@ -82,7 +82,7 @@ a {
         height: 165px;
         top: 255px;
         left: 50%;
-        transform: translateX(-100%)
+        transform: translateX(-50%)
     }
 
     nav button {
