@@ -16,7 +16,7 @@ button {
 
 nav {
     display: inline-grid;
-    grid-template: 1 fr 1fr / 1fr 1fr;
+    grid-template: fr 1fr / 1fr 1fr;
     position: absolute
 }
 
