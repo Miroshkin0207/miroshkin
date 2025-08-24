@@ -16,7 +16,6 @@ button {
 
 nav {
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
     position: absolute
 }
 
@@ -46,7 +45,8 @@ a {
     nav {
         left: 700px;
         top: 150px;
-        width: 550px
+        width: 550px;
+        grid-template: 1fr 1fr / 1fr 1fr
     }
 
     nav button {
@@ -84,7 +84,9 @@ a {
     nav {
         top: 255px;
         left: 50%;
-        transform: translateX(-50%)      
+        transform: translateX(-50%);
+        width: 200px;
+        grid-template: 1fr 1fr / 1fr 1fr
     }
 
     footer {
