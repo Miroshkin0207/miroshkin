@@ -10,19 +10,19 @@ function mainClick() {
 }
 
 function history() {
-    window.location.href = "/miroshkin0207/История изменений"
+    window.location.href = "/miroshkin/history-of-changes"
 }
 
 function calculator() {
-    window.location.href = "/miroshkin0207/Калькулятор"
+    window.location.href = "/miroshkin/calculator"
 }
 
 function clicker() {
-    window.location.href = "/miroshkin0207/Кликер"
+    window.location.href = "/miroshkin/clicker"
 }
 
 function textHandler() {
-    window.location.href = "/miroshkin0207/Обработчик текста"
+    window.location.href = "/miroshkin/text-handler"
 }
 
 function mainClick() {
