@@ -10,13 +10,17 @@ function mainClick() {
 }
 
 function history() {
-    window.location.href = "https://miroshkin0207.github.io/historyOfChanges"
+    window.location.href = "/miroshkin0207/История изменений"
 }
 
 function calculator() {
-    window.location.href = "https://miroshkin0207.github.io/calculator"
+    window.location.href = "/miroshkin0207/Калькулятор"
 }
 
 function clicker() {
-    window.location.href = "https://miroshkin0207.github.io/clicker"
+    window.location.href = "/miroshkin0207/Кликер"
+}
+
+function textHandler() {
+    window.location.href = "/miroshkin0207/Обработчик текста"
 }

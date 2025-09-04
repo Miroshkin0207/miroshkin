@@ -1,3 +1,3 @@
 function back() {
-    window.location.href = "https://miroshkinsite.netlify.app"
+    window.location.href = "/miroshkin0207/Главная"
 }
