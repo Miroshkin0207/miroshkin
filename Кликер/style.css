@@ -1,0 +1,193 @@
+﻿body {
+    background-color: rgb(26, 26, 29);
+    color: white;
+    font-family: Tahoma
+}
+
+#back {
+    background-color: black;
+    color: rgb(19, 65, 142);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1
+}
+
+h1 {
+    user-select: none;
+    position: relative;
+    text-align: center
+}
+
+#mainButton {
+    background-color: greenyellow;
+    color: black;
+    user-select: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.score {
+    height: 100px
+}
+
+h4 {
+    user-select: none;
+    font-size: 55px;
+    display: inline-block;
+    margin: 0
+}
+
+#total {
+    position: relative;
+    left: 5px;
+}
+
+.rect {
+    background-color: rgb(53, 57, 64);
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column
+}
+
+.mainLine {
+    background-color: rgb(19, 66, 142);
+    font-size: 30px;
+    display: flex;
+    border-bottom: solid 5px black
+}
+
+.border {
+    background-color: black;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 60%
+}
+
+.line {
+    display: flex;
+    border-bottom: solid 5px black;
+    border-left: solid 5px black
+}
+
+.names {
+    width: 60%
+}
+
+.mainName {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.scores {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.help {
+    background-color: rgb(95, 88, 88);
+    color: rgb(3, 79, 200);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1
+}
+
+@media (min-width: 1000px) {
+    #back {
+        font-size: 40px
+    }
+
+    h1 {
+        font-size: 40px
+    }
+
+    #mainButton {
+        font-size: 70px;
+        width: 450px;
+        height: 450px
+    }
+
+    .score {
+        position: absolute;
+        bottom: 25px
+    }
+
+    h3 {
+        font-size: 35px;
+        position: absolute;
+        right: 225px;
+        top: 15px;
+        transform: translateX(+50%);
+        margin: 0
+    }
+
+    .rect {
+        width: 450px;
+        top: 75px
+    }
+
+    .line {
+        font-size: 30px
+    }
+
+    .help {
+        height: 75px;
+        font-size: 30px
+    }
+}
+
+@media (max-width: 999px) {
+    #back {
+        font-size: 30px
+    }
+
+    h1 {
+        font-size: 30px;
+        top: 24px
+    }
+
+    #mainButton {
+        font-size: 45px;
+        width: 250px;
+        height: 250px;
+        top: 7px
+    }
+
+    .score {
+        position: absolute;
+        top: 350px
+    }
+
+    h3 {
+        font-size: 35px;
+        position: relative;
+        top: 75px;
+        text-align: center;
+        z-index: 5
+    }
+
+    .rect {
+        width: 100%;
+        top: 500px
+    }
+
+    .line {
+        font-size: 20px
+    }
+
+    .help {
+        height: 50px;
+        font-size: 25px
+    }
+}
