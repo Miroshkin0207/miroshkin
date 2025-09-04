@@ -37,17 +37,17 @@ function mainClick() {
 }
 
 function history() {
-    window.location.href = "/miroshkin0207/История изменений/"
+    window.location.href = "/miroshkin/Калькулятор/"
 }
 
 function calculator() {
-    window.location.href = "/miroshkin0207/Калькулятор/"
+    window.location.href = "/miroshkin/Калькулятор/"
 }
 
 function clicker() {
-    window.location.href = "/miroshkin0207/Кликер/"
+    window.location.href = "/miroshkin/Кликер/"
 }
 
 function textHandler() {
-    window.location.href = "/miroshkin0207/Обработчик текста/"
+    window.location.href = "/miroshkin/Обработчик текста/"
 }
