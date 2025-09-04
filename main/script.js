@@ -37,7 +37,7 @@ function mainClick() {
 }
 
 function history() {
-    window.location.href = "/miroshkin/Калькулятор/"
+    window.location.href = "/miroshkin/История изменений/"
 }
 
 function calculator() {
