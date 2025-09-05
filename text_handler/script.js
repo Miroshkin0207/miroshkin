@@ -11,9 +11,12 @@ function textInput() {
     let countWords = 0
     let countSpaces = 0
     for (let i = 0; i < text.length; i++) {
-        let char = text[i]
-        countChars++
-        if (char == " ") {
+        countChars++      
+    }
+
+    text = text.trim()
+    for (let i = 0; i < text.length; i++) {
+        if (text[i] == " ") {
             countSpaces++
         }
         countWords = countSpaces + 1
@@ -25,6 +28,6 @@ function textInput() {
         words.innerHTML = `Количество слов: ${countWords}`
     }
     else {
-        words.innerHTML = `Количество слов: ${countWords - 1}`
+            words.innerHTML = `Количество слов: ${countWords - 1}`               
     }
 }
