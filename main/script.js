@@ -10,7 +10,7 @@ function mainClick() {
 }
 
 function history() {
-    window.location.href = "/miroshkin/history-of-changes/"
+    window.location.href = "/miroshkin/history_of_changes/"
 }
 
 function calculator() {
@@ -22,16 +22,5 @@ function clicker() {
 }
 
 function textHandler() {
-    window.location.href = "/miroshkin/text-handler/"
-}
-
-function mainClick() {
-    if (document.querySelector("#text").innerHTML === "") {
-        document.querySelector("#text").innerHTML = "Молодец!"
-        document.querySelector("#mainButton").innerHTML = "Вернуть"
-    }
-    else {
-        document.querySelector("#text").innerHTML = ""
-        document.querySelector("#mainButton").innerHTML = "Нажми"
-    }
+    window.location.href = "/miroshkin/text_handler/"
 }
