@@ -1,13 +1,16 @@
 {
   "routes": [
     {
-      "src": "^/(?!main/)([^/]+)(/.*)?$",
+      "src": "/",
+      "dest": "/main/index.html"
+    },
+    {
+      "src": "/(.*)/",
       "dest": "/$1/index.html"
     },
     {
-      "src": "^/main(/.*)?$",
-      "dest": "/main/index.html"
+      "src": "/(.*)",
+      "dest": "/$1/index.html"
     }
-  ],
-  "trailingSlash": false
+  ]
 }
