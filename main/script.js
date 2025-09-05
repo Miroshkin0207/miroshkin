@@ -10,17 +10,17 @@ function mainClick() {
 }
 
 function history() {
-    window.location.href = "/miroshkin/history_of_changes/"
+    window.location.href = "/history_of_changes/"
 }
 
 function calculator() {
-    window.location.href = "/miroshkin/calculator/"
+    window.location.href = "/calculator/"
 }
 
 function clicker() {
-    window.location.href = "/miroshkin/clicker/"
+    window.location.href = "/clicker/"
 }
 
 function textHandler() {
-    window.location.href = "/miroshkin/text_handler/"
+    window.location.href = "/text_handler/"
 }
