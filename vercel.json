@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "src": "/(.*)/",
+      "dest": "/$1/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1/index.html"
+    },
+    {
+      "src": "/",
+      "dest": "/main/index.html"
+    }
+  ]
+}
