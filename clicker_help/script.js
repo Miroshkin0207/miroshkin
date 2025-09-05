@@ -1,3 +1,3 @@
 ﻿function back() {
-    window.location.href = "/miroshkin/clicker/"
+    window.location.href = "/clicker/"
 }
