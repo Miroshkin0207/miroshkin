@@ -1,5 +1,5 @@
 ﻿function back() {
-    window.location.href = "/miroshkin0207/Главная"
+    window.location.href = "/miroshkin/main"
 }
 
 let output = document.querySelector(".output")
