@@ -75,7 +75,8 @@ textarea {
         height: 350px;
         margin-left: auto;
         margin-right: auto;
-        margin: 10px
+        margin: 10px;
+        top: 15px
     }
 
     .stats {
