@@ -35,19 +35,3 @@ function mainClick() {
         document.querySelector("#mainButton").innerHTML = "Нажми"
     }
 }
-
-function history() {
-    window.location.href = "/miroshkin/История изменений/"
-}
-
-function calculator() {
-    window.location.href = "/miroshkin/Калькулятор/"
-}
-
-function clicker() {
-    window.location.href = "/miroshkin/Кликер/"
-}
-
-function textHandler() {
-    window.location.href = "/miroshkin/Обработчик текста/"
-}
