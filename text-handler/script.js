@@ -1,5 +1,5 @@
 ﻿function back() {
-    window.location.href = "/Главная/"
+    window.location.href = "/main/"
 }
 
 function textInput() {

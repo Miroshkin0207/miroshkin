@@ -10,17 +10,17 @@ function mainClick() {
 }
 
 function history() {
-    window.location.href = "/История-изменений/"
+    window.location.href = "/history-of-changes/"
 }
 
 function calculator() {
-    window.location.href = "/Калькулятор/"
+    window.location.href = "/calculator/"
 }
 
 function clicker() {
-    window.location.href = "/Кликер/"
+    window.location.href = "/clicker/"
 }
 
 function textHandler() {
-    window.location.href = "/Обработчик текста/"
+    window.location.href = "/text-handler/"
 }
