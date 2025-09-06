@@ -1,5 +1,5 @@
 ﻿function back() {
-    window.location.href = "/main/"
+    window.location.href = "/Главная/"
 }
 
 let output = document.querySelector(".output")

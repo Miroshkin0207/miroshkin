@@ -1,5 +1,5 @@
 ﻿function back() {
-    window.location.href = "/main"
+    window.location.href = "/Главная/"
 }
 
 function textInput() {
@@ -15,7 +15,7 @@ function textInput() {
     }
 
     text = text.trim()
-    for (let i = 0; i < text.length; i++) {
+    for (let i = 0; i < text.length; i++) {       
         if (text[i] == " ") {
             countSpaces++
         }
