@@ -1,0 +1,86 @@
+﻿body {
+    background-color: rgb(26, 26, 29);
+    color: white;
+    font-family: Tahoma
+}
+
+button {
+    background-color: black;
+    color: rgb(19, 65, 142);
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+}
+
+.text {
+    text-align: center
+}
+
+textarea {
+    font-size: 25px;
+    border: solid 3px blue;
+    position: relative;
+    background-color: white
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.stats h2 {
+    margin: 0
+}
+
+@media (min-width: 1000px) {
+    button {
+        font-size: 40px
+    }
+
+    h1 {
+        font-size: 40px;
+        bottom: 10px
+    }
+
+    textarea {
+        width: 750px;
+        height: 400px
+    }
+
+    .stats {
+        font-size: 30px;
+        bottom: 15px
+    }
+}
+
+@media (max-width: 999px) {
+    button {
+        font-size: 30px
+    }
+
+    h1 {
+        font-size: 30px;
+        top: 24px
+    }
+
+    textarea {
+        width: 300px;
+        height: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 10px;
+        top: 15px
+    }
+
+    .stats {
+        font-size: 24px;
+        top: 25px
+    }
+}

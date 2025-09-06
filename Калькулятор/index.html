@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="back" onclick="back()">Главная</button>
+    <h1>Калькулятор</h1>
+    <div class="output"></div>
+    
+    <div class="rect1">
+        <button onclick="clearInput(this)">C</button>
+        <button onclick="inputChar(this)">^</button>
+        <button onclick="inputChar(this)">(</button>
+
+        <button onclick="inputChar(this)">7</button>
+        <button onclick="inputChar(this)">8</button>
+        <button onclick="inputChar(this)">9</button>
+
+        <button onclick="inputChar(this)">4</button>
+        <button onclick="inputChar(this)">5</button>
+        <button onclick="inputChar(this)">6</button>
+
+        <button onclick="inputChar(this)">1</button>
+        <button onclick="inputChar(this)">2</button>
+        <button onclick="inputChar(this)">3</button>
+
+        <button onclick="inputChar(this)">√</button>
+        <button onclick="inputChar(this)">0</button>
+        <button onclick="inputChar(this)">.</button>
+    </div>
+
+    <div class="rect2">
+        <button onclick="inputChar(this)">)</button>
+        <button onclick="delLastChar(this)"><=</button>
+
+        <button onclick="inputChar(this)" class="signs">+</button>
+        <button onclick="inputChar(this)" class="signs">-</button>
+
+        <button onclick="inputChar(this)" class="signs">×</button>
+        <button onclick="inputChar(this)" class="signs">÷</button>
+
+        <button onclick="printResult()" id="equal">=</button>
+    </div>
+
+        <button onclick="copy()" id="copy">Скопировать</button>
+    <script src="script.js"></script>
+</body>
+</html>

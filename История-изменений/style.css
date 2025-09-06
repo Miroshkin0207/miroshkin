@@ -1,0 +1,63 @@
+﻿body {
+    background-color: rgb(26, 26, 29);
+    color: white;
+    font-family: Tahoma
+}
+
+button {
+    background-color: black;
+    color: rgb(19, 65, 142);
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+h1 {
+    text-align: center
+}
+
+@media (min-width: 1000px) {
+    button {
+        font-size: 40px
+    }
+
+    h1 {
+        font-size: 40px
+    }
+
+    h2 {
+        font-size: 35px
+    }
+
+    h4 {
+        font-size: 30px
+    }
+
+    p {
+        font-size: 25px
+    }
+}
+
+@media (max-width: 999px) {
+    button {
+        font-size: 30px
+    }
+
+    h1 {
+        font-size: 30px;
+        position: relative;
+        top: 15px
+    }
+
+    h2 {
+        font-size: 25px
+    }
+
+    h4 {
+        font-size: 20px
+    }
+
+    p {
+        font-size: 19px
+    }
+}
