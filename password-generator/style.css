@@ -1,0 +1,146 @@
+body {
+    background-color: rgb(26, 26, 29);
+    color: white;
+    font-family: Tahoma
+}
+
+button {
+    background-color: black;
+    color: rgb(19, 65, 142)
+}
+
+#back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5
+}
+
+h1 {
+    text-align: center
+}
+
+.passwordSettings {
+    text-align: center
+}
+
+input {
+    border: solid 3px blue
+}
+
+.buttonDisabled {
+    opacity: 0.55
+}
+
+h2 {
+    text-align: center
+}
+
+.password {
+    text-align: center;
+    word-break: break-all;  
+    position: relative
+}
+
+@media (min-width: 1000px) {
+    #back {
+        font-size: 40px
+    }
+
+    label {
+        font-size: 30px
+    }
+
+    .passwordSettings {
+        background-color: rgb(53, 57, 64);
+        width: 400px
+    }
+
+    input {
+        font-size: 30px;
+        position: relative;
+        top: 5px
+    }
+
+    #generator {
+        font-size: 40px;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 5
+    }
+
+    h2 {
+        font-size: 50px;
+        position: relative;
+        bottom: 95px
+    }
+
+    #copy {
+        font-size: 55px;
+        position: absolute;
+        right: 0;
+        bottom: 290px;
+        z-index: 5
+    }
+
+    .password {
+        font-size: 40px;
+        bottom: 95px
+    }
+}
+
+@media (max-width: 999px) {
+    #back {
+        font-size: 30px
+    }
+
+    h1 {
+        position: relative;
+        top: 24px
+    }
+    
+    label {
+        font-size: 20px
+    }
+
+    .passwordSettings {
+        background-color: rgb(53, 57, 64);
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    input {
+        font-size: 20px;
+        width: 95%;
+        position: relative;
+        top: 4px
+    }
+
+    #generator {
+        font-size: 30px;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 5
+    }
+
+    h2 {
+        font-size: 35px;
+        position: relative;
+        top: 200px
+    }
+
+    #copy {
+        font-size: 30px;
+        position: absolute;
+        right: 0;
+        top: 385px;
+        z-index: 5
+    }
+
+    .password {
+        font-size: 30px;
+        top: 425px
+    }
+}

@@ -1,0 +1,103 @@
+body {
+    background-color: rgb(26, 26, 29);
+    color: white;
+    font-family: Tahoma;
+    padding-top: env(safe-area-insert-top)
+}
+
+h1 {
+    text-align: center
+}
+
+button {
+    background-color: black;
+    color: rgb(19, 65, 142)
+}
+
+nav {
+    display: inline-grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    position: absolute
+}
+
+#generator {
+    grid-column: span 2
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute
+}
+
+a {
+    color: rgb(3, 79, 200)
+}
+
+@media (min-width: 1000px) {
+    p {
+        font-size: 30px
+    }
+
+    #text {
+        font-size: 35px
+    }
+
+    #mainButton {
+        font-size: 35px
+    }
+
+    nav {
+        left: 700px;
+        top: 150px;
+        width: 550px
+    }
+
+    nav button {
+        font-size: 40px
+    }
+
+    footer {
+        left: 25px;
+        bottom: 75px;
+        gap: 5px
+    }
+
+    a {
+        font-size: 30px
+    }
+}
+
+@media (max-width: 999px) {
+    h1 {
+        font-size: 25px
+    }
+
+    p {
+        font-size: 20px
+    }
+
+    #mainButton {
+        font-size: 25px
+    }
+
+    nav button {
+        font-size: 20px
+    }
+
+    nav {
+        top: 230px;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    footer {
+        left: 5px;
+        bottom: 10px;
+        gap: 7px
+    }
+
+    a {
+        font-size: 20px
+    }
+}
