@@ -8,12 +8,17 @@ h1 {
     text-align: center
 }
 
+#interesting {
+    margin-bottom: 0
+}
+
 button {
     background-color: black;
     color: rgb(19, 65, 142)
 }
 
 nav {
+    position: absolute;
     display: inline-grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr
 }
@@ -23,6 +28,7 @@ nav {
 }
 
 footer {
+    position: absolute;
     display: flex;
     flex-direction: column
 }
@@ -55,7 +61,8 @@ a {
     }
 
     footer {
-        gap: 5px
+        gap: 5px;
+        bottom: 30px
     }
 
     a {
@@ -82,11 +89,13 @@ a {
 
     nav {
         left: 50%;
+        top: 250px;
         transform: translateX(-50%)
     }
 
     footer {
-        gap: 7px
+        gap: 7px;
+        bottom: 10pxs
     }
 
     a {

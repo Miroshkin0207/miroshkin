@@ -108,7 +108,7 @@ h2 {
         width: 80%;
         position: absolute;
         left: 50%;
-        top: 45px;
+        top: 70px;
         transform: translateX(-50%)
     }
 
@@ -136,12 +136,12 @@ h2 {
         font-size: 30px;
         position: absolute;
         right: 0;
-        top: 385px;
+        top: 395px;
         z-index: 5
     }
 
     .password {
         font-size: 30px;
-        top: 275px
+        top: 285px
     }
 }
