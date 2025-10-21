@@ -59,7 +59,7 @@ function printResult() {
 }
 
 function delLastChar() {
-    output.innerHTML.slice(0, -1)
+    output.innerHTML = output.innerHTML.slice(0, -1)
 }
 
 function clearInput() {
