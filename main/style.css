@@ -23,10 +23,6 @@ nav {
     grid-template: 1fr 1fr 1fr / 1fr 1fr
 }
 
-#generator {
-    grid-column: span 2
-}
-
 footer {
     position: absolute;
     display: flex;

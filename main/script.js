@@ -28,3 +28,7 @@ function textHandler() {
 function passwordGenerator() {
     window.location.href = "/password-generator/"
 }
+
+function random() {
+    window.location.href = "/randomizer/"
+}

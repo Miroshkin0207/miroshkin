@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Рандомайзер</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="back" onclick="back()">Главная</button>
+    <h1>Рандомайзер</h1>
+    <p>Здесь Вы можете добавить возможные исходы какого-то события, и получить один случайный.</p>
+
+    <div class="settings">
+        <h2>Событие</h2>
+        <div class="event">
+            <label for="eventName">Имя события:</label>
+            <br>
+            <div class="eventContainer">
+                <input id="eventName" placeholder="Введите событие" oninput="showCheck()">
+                 <button id="check" onclick="showEventName()">
+                    <img src="images/check.png" width="30" height="30">
+                </button>
+            </div>
+        </div>
+
+        <h2>Исходы</h2>
+        <div class="exoduses">
+            <button id="newExodus" onclick="newExodus()">+Новый исход</button>
+           
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
