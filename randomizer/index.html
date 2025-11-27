@@ -10,25 +10,49 @@
     <h1>Рандомайзер</h1>
     <p>Здесь Вы можете добавить возможные исходы какого-то события, и получить один случайный.</p>
 
-    <div class="settings">
-        <h2>Событие</h2>
+    <div class="buttons">
+        <button id="newExodus" onclick="newExodus()">+Новый исход</button>
+        <button id="start">Запустить</button>   
+    </div>
+
+    <div class="anim">
+            <input id="animation" type="checkbox" checked>
+            <label for="animation">Анимация</label>
+    </div>     
+    
+    <div class="menu">
         <div class="event">
-            <label for="eventName">Имя события:</label>
+            <label for="eventNameInput">Имя события:</label>
             <br>
-            <div class="eventContainer">
-                <input id="eventName" placeholder="Введите событие" oninput="showCheck()">
-                 <button id="check" onclick="showEventName()">
-                    <img src="images/check.png" width="30" height="30">
-                </button>
-            </div>
+            <input id="eventNameInput" placeholder="Введите событие" oninput="showCheck()">
+            <button class="check" onclick="showEventName()">
+                <img src="images/check.png">
+            </button>
         </div>
 
-        <h2>Исходы</h2>
-        <div class="exoduses">
-            <button id="newExodus" onclick="newExodus()">+Новый исход</button>
-           
+        <div id="titleExoduses">
+            <h2>Исходы:</h2>
+        </div>
+        <h2 id="noExoduses">Пока что исходов нет :)</h2>
+            <div class="exoduses">
+                <div class="menuNewExodus">
+                    <h3>Новый исход</h3>
+                    <label>Имя исхода:</label>
+                    <br>
+                    <button id="add">Добавить</button>
+                    <button id="exit">
+                        <img src="images/exit.png">
+                    </button>
+                </div>
+                <div class="listExoduses" ></div>
+        </div>
+
+        <div class="result">
+            <h4>Итог:</h4>
+            <button id="ok" onclick="afterResult()">Ок</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

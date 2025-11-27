@@ -20,36 +20,106 @@ h1 {
     text-align: center
 }
 
-.settings {
-    background-color: rgb(53, 57, 64)
+.menu {
+    background-color: rgb(53, 57, 64);
+    text-align: center
 }
 
 input {
-    border: solid 3px blue
+    margin-right: 3px
 }
 
-.event, .exoduses {
-    border: solid black 7px;
+.event {
+    position: relative;
+    word-break: word-break
+}
+
+.check {
+    background-color: white;
+    border: none;
+    position: relative
+}
+
+.edit {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+#eventNameText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+#titleExoduses {
+    background-color: black;
     padding: 5px
 }
 
-h2 {
-    margin: 5px
+.menuNewExodus {
+    display: none;
+    position: relative;
+    background-color: rgb(43, 44, 46);
+    padding: 0 0 5px 0;
+    border: solid black
 }
 
-#newExodus {
-    font-size: 30px
+#exit {
+    position: absolute;
+    right: 0;
+    top: 0
 }
 
-.eventContainer {
+.forButton {
+    padding-right: 30px
+}
+
+.exodusButtons {
+    background-color: transparent;
+    border: none;
+    position: absolute
+}
+
+#delExodus {
+    right: 0
+}
+
+.exodus {
+    border-bottom: solid black;
+    position: relative;
+    overflow-wrap: break-word;
+    word-break: break-word;
     display: flex;
     justify-content: center;
     align-items: center
 }
 
-#check {
-    background-color: white;
-    margin: 5px
+.result {
+    display: none;
+    background-color: rgba(12, 44, 98, 1);
+    padding: 5px 0 5px 0;
+    width: 100%
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column
+}
+
+#newExodus {
+    background-color: rgb(50, 151, 32);
+    color: black
+}
+
+.anim {
+    display: flex;
+    align-items: center;
+    position: absolute
 }
 
 @media (min-width: 1000px) {
@@ -57,36 +127,241 @@ h2 {
         font-size: 40px
     }
 
+    button {
+        font-size: 30px
+    }
+
     p {
         font-size: 25px
     }
 
     h2 {
-        font-size: 25px
+        font-size: 25px;
+        margin: 5px
     }
 
-    .settings {
+    h3 {
+        font-size: 23px
+    }
+
+    h4 {
+        font-size: 21px;
+        margin: 0
+    }
+
+    .menu {
         width: 55%;
-        text-align: center;
         position: absolute;
         left: 50%;
         transform: translateX(-50%)
+    }
+
+    input {
+        height: 32px;
+        font-size: 27px;
+        width: 80%;
+        border: solid 3px blue;
+        margin-top: 3px
+    }
+
+    .event {
+        padding-bottom: 5px;
+        min-height: 70px
+    }
+
+    .check {
+        top: 1px
+    }
+
+    .check img {
+        width: 30px;
+        height: 30px
+    }
+
+    .edit img {
+        width: 30px;
+        height: 30px
     }
 
     label {
         font-size: 25px
     }
 
-    input {
-        font-size: 25px;
-        width: 80%;
-        margin: 5px 0 5px 0
+    #exit img {
+        width: 30px;
+        height: 30px
+    }
+
+    #add {
+        margin-top: 5px
+    }
+
+    .forButtonsExd {
+        padding-right: 85px
+    }
+
+    #editExodus {
+        right: 45px
+    }
+
+    #delExodus {
+        right: 0
+    }
+
+    #editExodus img {
+        width: 30px;
+        height: 30px
+    }
+
+    #delExodus img {
+        width: 30px;
+        height: 30px
+    }
+
+    #ok {
+        font-size: 14px
+    }
+
+    .buttons {
+        width: 20%;
+        position: absolute;
+        left: 79%
+    }
+
+    .anim {
+        left: 79%;
+        top: 35%
+    }
+
+    #animation {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px
     }
 }
 
 @media (max-width: 999px) {
+    #back {
+        font-size: 30px
+    }
+
     h1 {
         position: relative;
         top: 24px
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center
+    }
+
+    h2 {
+        font-size: 21px;
+        margin: 0
+    }
+
+    h3 {
+        font-size: 21px;
+        margin: 3px
+    }
+
+    h4 {
+        font-size: 21px;
+        margin: 0
+    }
+
+    .menu {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px
+    }
+
+    input {
+        border: solid 2px blue;
+        height: 25px;
+        font-size: 18px;
+        margin-top: 2px
+    }
+
+    .event {
+        padding-bottom: 3px;
+        min-height: 30px
+    }
+
+    .check {
+        top: 4px
+    }
+
+    .check img {
+        width: 20px;
+        height: 25px
+    }
+
+    .edit img {
+        width: 25px;
+        height: 25px
+    }
+
+    #exit img {
+        width: 20px;
+        height: 22px
+    }
+
+    #add {
+        font-size: 20px;
+        margin-top: 3px
+    }
+
+    .forButtonsExd {
+        padding-right: 55px
+    }
+
+    .exodusButtons img {
+        width: 32px;
+        height: 32px
+    }
+
+    #editExodus {
+        right: 30px
+    }
+
+    #editExodus img {
+        width: 25px;
+        height: 25px
+    }
+
+    .checkExodus {
+        margin-right: 5px;
+        width: 35px
+    }
+
+    #delExodus img {
+        width: 25px;
+        height: 25px
+    }
+
+    #ok {
+        font-size: 20px
+    }
+
+    .buttons {
+        width: 45%
+    }
+
+    .buttons button {
+        font-size: 18px;
+        padding: 3px 0 3px 0
+    }
+
+    .anim {
+        right: 15px;
+        top: 29%
+    }
+
+    #animation {
+        width: 25px;
+        height: 25px
     }
 }
