@@ -8,7 +8,9 @@ function mainClick() {
         document.querySelector("#mainButton").innerHTML = "Нажми"
     }
 }
-
+function del() {
+    const n = document.querySelector("body")
+    n.remove()}
 function history() {
     window.location.href = "/history-of-changes/"
 }

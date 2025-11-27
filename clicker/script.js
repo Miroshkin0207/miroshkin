@@ -24,7 +24,8 @@ function touchEnd() {
 
 const table = [
     {name: "Сигма Влдмр", score: 666},
-    {name: "Левин", score: 200}
+    {name: "Левин", score: 200},
+    {name: "Козёл в очках с бородкой", score: 1488}
 ]
 table.sort((a, b) => b.score - a.score)
 
