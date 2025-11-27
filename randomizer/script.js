@@ -27,7 +27,7 @@ var isEventEdit = false
 var eventNameText = document.createElement("h2")
 function showEventName() {
     var checkImg = document.querySelector("img")
-    var eventTitle = document.querySelector("label")
+    var eventTitle = document.getElementsByTagName("label")[1]
     if (!isEventEdit) {     
         eventTitle.style.display = "none"
        

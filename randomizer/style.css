@@ -50,12 +50,15 @@ input {
 }
 
 #eventNameText {
-    
+    position: relative;
+    bottom: 7px;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 #titleExoduses {
     background-color: black;
-    padding: 5px
+    padding: 5px;
 }
 
 .menuNewExodus {
@@ -89,8 +92,7 @@ input {
 .exodus {
     border-bottom: solid black;
     position: relative;
-    overflow-wrap: break-word;
-    word-break: break-word;
+    
     display: flex;
     justify-content: center;
     align-items: center
@@ -354,7 +356,7 @@ input {
 
     .anim {
         right: 15px;
-        top: 29%
+        top: 175px
     }
 
     #animation {
