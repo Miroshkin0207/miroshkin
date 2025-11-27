@@ -92,7 +92,6 @@ input {
 .exodus {
     border-bottom: solid black;
     position: relative;
-    
     display: flex;
     justify-content: center;
     align-items: center
@@ -314,7 +313,7 @@ input {
     }
 
     .forButtonsExd {
-        padding-right: 55px
+        padding-right: 60px
     }
 
     .exodusButtons img {
