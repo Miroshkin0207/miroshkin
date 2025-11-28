@@ -22,22 +22,33 @@ h1 {
 
 .menu {
     background-color: rgb(53, 57, 64);
-    text-align: center
+    text-align: center;
+    position: relative
 }
 
 input {
-    margin-right: 3px
+    margin: 2px 3px 4px 0
 }
 
 .event {
-    position: relative;
-    word-break: word-break
+    word-break: word-break;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+
+.eventName {
+    display: flex;
+    flex-direction: column;
+    width: 70%
 }
 
 .check {
     background-color: white;
     border: none;
-    position: relative
+    position: absolute;
+    left: 86%
 }
 
 .edit {
@@ -46,14 +57,7 @@ input {
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%)
-}
-
-#eventNameText {
-    position: relative;
-    transform: translateY(-2%);
-    overflow-wrap: break-word;
-    word-break: break-word;
+    transform: translateY(-45%)
 }
 
 #titleExoduses {
@@ -64,9 +68,9 @@ input {
 .menuNewExodus {
     display: none;
     position: relative;
+    width: 100%;    
     background-color: rgb(43, 44, 46);
-    padding: 0 0 5px 0;
-    border: solid black
+    border-bottom: solid black
 }
 
 #exit {
@@ -157,18 +161,14 @@ input {
     input {
         height: 32px;
         font-size: 27px;
-        width: 80%;
         border: solid 3px blue;
         margin-top: 3px
     }
 
-    .event {
-        padding-bottom: 5px;
-        min-height: 70px
-    }
-
     .check {
-        top: 1px
+        width: 40px;
+        height: 40px;
+        bottom: 4px
     }
 
     .check img {
@@ -255,7 +255,7 @@ input {
 
     h2 {
         font-size: 21px;
-        margin: 0
+        margin: 2px
     }
 
     h3 {
@@ -278,23 +278,23 @@ input {
 
     input {
         border: solid 2px blue;
-        height: 25px;
-        font-size: 18px;
-        margin-top: 2px
+        height: 27px;
+        font-size: 19px
     }
 
     .event {
-        padding-bottom: 3px;
-        min-height: 30px
+        padding-bottom: 0px
     }
 
     .check {
-        top: 4px
+        width: 34px;
+        height: 32px;
+        bottom: 5px
     }
 
     .check img {
-        width: 20px;
-        height: 25px
+        width: 24px;
+        height: 24px
     }
 
     .edit img {

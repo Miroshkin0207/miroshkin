@@ -22,9 +22,10 @@
     
     <div class="menu">
         <div class="event">
-            <label for="eventNameInput">Имя события:</label>
-            <br>
-            <input id="eventNameInput" placeholder="Введите событие" oninput="showCheck()">
+            <div class="eventName">
+                <label for="eventNameInput">Имя события:</label>
+                <input id="eventNameInput" placeholder="Введите событие" oninput="showCheck()">
+            </div>
             <button class="check" onclick="showEventName()">
                 <img src="images/check.png">
             </button>
@@ -37,8 +38,7 @@
             <div class="exoduses">
                 <div class="menuNewExodus">
                     <h3>Новый исход</h3>
-                    <label>Имя исхода:</label>
-                    <br>
+                    <label for="add">Имя исхода:</label>
                     <button id="add">Добавить</button>
                     <button id="exit">
                         <img src="images/exit.png">
