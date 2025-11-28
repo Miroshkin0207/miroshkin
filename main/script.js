@@ -31,6 +31,6 @@ function passwordGenerator() {
     window.location.href = "/password-generator/"
 }
 
-function random() {
+function randomizer() {
     window.location.href = "/randomizer/"
 }
