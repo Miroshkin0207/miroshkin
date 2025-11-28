@@ -51,7 +51,7 @@ input {
 
 #eventNameText {
     position: relative;
-    bottom: 7px;
+    transform: translateY(-2%);
     overflow-wrap: break-word;
     word-break: break-word;
 }
