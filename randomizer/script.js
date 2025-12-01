@@ -5,7 +5,7 @@ function back() {
 
 // Получение случайного числа
 function getRandom(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min
+    return min + Math.floor(Math.random() * (max - min + 1))
 }
 
 // Показ/скрытие галочки
@@ -66,10 +66,10 @@ var noExoduses = document.querySelector("#noExoduses")
 
 function newExodus() {
     noExoduses.style.display = "none"
-    menuNewExodus.style.display = "inline-block"
+    menuNewExodus.style.display = "flex"
    
     var add = document.getElementById("add")
-    if (menuNewExodus.childElementCount > 5) {
+    if (menuNewExodus.childElementCount > 4) {
         exodusNameInput = menuNewExodus.children[2]
     }
     else {
@@ -77,6 +77,7 @@ function newExodus() {
         exodusNameInput.placeholder = "Введите имя"
     }
     menuNewExodus.insertBefore(exodusNameInput, add)
+
     add.onclick = () => {
         addExodus(exodusNameInput)
         exodusNameInput.remove()
@@ -185,16 +186,6 @@ function deleteExodus(exodus) {
     }
 }
 
-// Выбор случайного исхода
-function nextExodus(n) {
-    return new Promise(resolve => {       
-        setTimeout(() => { 
-            listExoduses.children[n].style.border = "solid"
-            resolve()
-        }, 150)
-    })  
-}
-
 // Вызов функции получения нового исхода
 document.querySelector("#start").onclick = () => {
     if (listExoduses.childElementCount >= 2) {
@@ -203,6 +194,16 @@ document.querySelector("#start").onclick = () => {
     else {
         alert("Для запуска должно быть как минимум 2 исхода")
     }
+}
+
+// Выбор случайного исхода
+function nextExodus(n) {
+    return new Promise(resolve => {       
+        setTimeout(() => { 
+            listExoduses.children[n].style.border = "solid"
+            resolve()
+        }, 150)
+    })  
 }
 
 var titleExoduses = document.querySelector("#titleExoduses")
@@ -224,17 +225,28 @@ async function start() {
     }
 
     select = document.createElement("h2")
+
     // С анимацией
+    var n
     if (animation.checked) {
-        var count = 0
         if (exdCount <= 15) {
-            var n = getRandom(15, 25)
+            var winner
+            winner = getRandom(0, exdCount - 1)
+            n = getRandom(15, 20)
+            if (n % exdCount <= winner) {
+                n += winner - n % exdCount
+            }
+            else {
+                n -= n % exdCount - winner
+            }
         }
+
         else {
-            var n = getRandom(15, exdCount)
+            n = getRandom(exdCount + 1, exdCount * 2)
         }
         
-        for (let i = 0; count < n; i++) {
+        var count = 0
+        for (let i = 0; count <= n; i++) {
             await nextExodus(i)
             if (i != 0) {
                 listExoduses.children[i - 1].style.border = "none"
@@ -246,15 +258,15 @@ async function start() {
             }         
             if (i == exdCount - 1) {
                 i = -1
-            }                  
-            count++
+            }    
+            count++              
         }
     }
 
     // Без анимации
     else {
-        const n = getRandom(0, exdCount - 1)
-        selectElement = listExoduses.children[n]
+        winner = getRandom(0, exdCount - 1)
+        selectElement = listExoduses.children[winner]
         selectElement.style.border = "solid"
         select.innerHTML = selectElement.innerText
     }

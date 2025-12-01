@@ -7,7 +7,7 @@ body {
 button {
     background-color: black;
     color: rgb(19, 65, 142);  
-    z-index: 5
+    position: relative
 }
 
 #back {
@@ -27,7 +27,8 @@ h1 {
 }
 
 input {
-    margin: 2px 3px 4px 0
+    margin: 2px 4px 4px 0;
+    width: 75%
 }
 
 .event {
@@ -41,14 +42,15 @@ input {
 .eventName {
     display: flex;
     flex-direction: column;
-    width: 70%
+    align-items: center;
+    width: 100%
 }
 
 .check {
     background-color: white;
     border: none;
     position: absolute;
-    left: 86%
+    left: calc(89% + 2px)
 }
 
 .edit {
@@ -67,10 +69,13 @@ input {
 
 .menuNewExodus {
     display: none;
+    flex-direction: column;
+    align-items: center;
     position: relative;
-    width: 100%;    
+    width: 100%;
     background-color: rgb(43, 44, 46);
-    border-bottom: solid black
+    border-bottom: solid black;
+    padding-bottom: 3px
 }
 
 #exit {
@@ -162,7 +167,7 @@ input {
         height: 32px;
         font-size: 27px;
         border: solid 3px blue;
-        margin-top: 3px
+        margin-right: 7px
     }
 
     .check {
@@ -183,6 +188,11 @@ input {
 
     label {
         font-size: 25px
+    }
+
+    #exit {
+        width: 43px;
+        height: 40px
     }
 
     #exit img {
@@ -280,10 +290,6 @@ input {
         border: solid 2px blue;
         height: 27px;
         font-size: 19px
-    }
-
-    .event {
-        padding-bottom: 0px
     }
 
     .check {

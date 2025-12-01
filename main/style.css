@@ -8,25 +8,26 @@ h1 {
     text-align: center
 }
 
-#interesting {
-    margin-bottom: 0
-}
-
 button {
     background-color: black;
     color: rgb(19, 65, 142)
 }
 
 nav {
-    position: absolute;
-    display: inline-grid;
+    display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr
 }
 
+#interesting {
+    margin-bottom: 0;
+    position: relative
+}
+
 footer {
-    position: absolute;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    gap: 5px;
+    position: absolute
 }
 
 a {
@@ -35,11 +36,7 @@ a {
 
 @media (min-width: 1000px) {
     p {
-        font-size: 30px
-    }
-
-    #text {
-        font-size: 35px
+        font-size: 25px
     }
 
     #mainButton {
@@ -47,22 +44,28 @@ a {
     }
 
     nav {
-        left: 700px;
-        top: 150px;
-        width: 550px
+        position: absolute;
+        right: 1%;
+        width: 40%;
+        top: 50%;
+        transform: translateY(-50%)
     }
 
     nav button {
-        font-size: 40px
+        font-size: 35px
     }
 
     footer {
-        gap: 5px;
-        bottom: 30px
+        position: absolute;
+        bottom: 4%
+    }
+
+    #interesting {
+        font-size: 25px
     }
 
     a {
-        font-size: 30px
+        font-size: 25px
     }
 }
 
@@ -84,17 +87,20 @@ a {
     }
 
     nav {
-        left: 50%;
-        top: 240px;
-        transform: translateX(-50%)
+        width: 70%;
+        margin: 7% auto 0
     }
 
     footer {
-        gap: 7px;
-        bottom: 10px
+        bottom: 2%
+    }
+
+    #interesting {
+        font-size: 18px;
+        margin-top: 10px
     }
 
     a {
-        font-size: 20px
+        font-size: 17px
     }
 }
