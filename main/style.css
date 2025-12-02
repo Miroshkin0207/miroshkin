@@ -13,6 +13,10 @@ button {
     color: rgb(19, 65, 142)
 }
 
+#quote {
+    overflow-wrap: break-word
+}
+
 nav {
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr
@@ -26,8 +30,11 @@ nav {
 footer {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    position: absolute
+    gap: 5px
+}
+
+.relativeFooter {
+    position: relative
 }
 
 a {
@@ -41,6 +48,11 @@ a {
 
     #mainButton {
         font-size: 35px
+    }
+
+    .quoteContainer {
+        width: 57%;
+        margin-right: 5%
     }
 
     nav {
@@ -92,12 +104,12 @@ a {
     }
 
     footer {
+        position: absolute;
         bottom: 2%
     }
 
     #interesting {
-        font-size: 18px;
-        margin-top: 10px
+        font-size: 18px
     }
 
     a {
