@@ -5,7 +5,7 @@ var footer = document.querySelector("footer")
 const quotes = [
     "Ненависть порождает ненависть.",
     "Не ошибается только тот, кто ничего не делает.",
-    "Боль — это боль, как её ни назови. Разве она станет слабее от мысли, что она нереальна?",
+    "Глупо бояться того, что ещё предстоит увидеть и узнать.",
     "Жизнь человека определяется тем, что он считает истинным и правильным. Это и формирует нашу реальность. Вот только что такое истина? Всего лишь понятие, реальность может оказаться миражом. А быть может, люди живут в мире собственных иллюзий?",
     "Те, кто способны простить себя и принять свою натуру, поистине сильны.",
     "Знание не есть ум.",
@@ -20,10 +20,9 @@ function getRandom(min, max) {
 }
 
 let before = -1
-let n = -2
 function mainClick() {
     footer.classList.remove("relativeFooter")
-    n = getRandom(0, quotes.length - 1)
+    let n = getRandom(0, quotes.length - 1)
     if (n == before) {
         const half = Math.floor(quotes.length / 2)
         n = (n >= half) ? getRandom(0, half - 1) : getRandom(half, quotes.length - 1)
