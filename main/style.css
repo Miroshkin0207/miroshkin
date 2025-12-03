@@ -100,7 +100,7 @@ a {
 
     nav {
         width: 70%;
-        margin: 7% auto 0
+        margin: 15% auto 0
     }
 
     footer {
@@ -109,7 +109,8 @@ a {
     }
 
     #interesting {
-        font-size: 18px
+        font-size: 18px;
+        margin-top: 7%
     }
 
     a {

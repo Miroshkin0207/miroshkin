@@ -39,11 +39,11 @@ function showEventName() {
         checkImg.src = "images/edit.png"
         check.classList.remove("check")
         check.classList.add("edit")
-        if (eventNameText.innerHTML.length > 43) {
-            document.querySelector(".event").classList.add("forButton")
+        if (eventNameText.innerHTML.length > 23) {
+            document.querySelector("#eventNameText").classList.add("forButton")
         }
         else {
-            document.querySelector(".event").classList.remove("forButton")
+            document.querySelector("#eventNameText").classList.remove("forButton")
         }      
         isEventEdit = true
     }
@@ -118,7 +118,7 @@ function addExodus(exodusNameInput) {
         menuNewExodus.style.display = "none"
                 
         exodus.classList.add("exodus")
-        if (exodusNameText.innerHTML.length > 43) {
+        if (exodusNameText.innerHTML.length > 23) {
             exodus.classList.add("forButtonsExd")
         }
         
@@ -154,7 +154,7 @@ function editExodus(exodus, exodusNameInput, exodusNameText, isEditExd, editExd,
     if (isEditExd) {
         exodusNameInput.value = exodusNameText.innerHTML
         exodusNameText.replaceWith(exodusNameInput)
-        exodusNameInput.style = "position: relative; right: 25px"      
+        exodusNameInput.style = "position: relative; right: 30px"      
         editImg.src = "images/check.png"
         editExd.style.backgroundColor = "white"
         editExd.classList.toggle("checkExodus")
@@ -163,10 +163,10 @@ function editExodus(exodus, exodusNameInput, exodusNameText, isEditExd, editExd,
     else {
         exodusNameText.innerHTML = exodusNameInput.value
         exodusNameInput.replaceWith(exodusNameText)
-        if (exodusNameText.innerHTML.length > 43) {
+        if (exodusNameText.innerHTML.length > 23) {
             exodus.classList.add("forButtonsExd")
         }
-        if (exodusNameText.innerHTML.length < 43) {
+        if (exodusNameText.innerHTML.length < 23) {
             exodus.classList.remove("forButtonsExd")
         }
         
@@ -315,6 +315,6 @@ function fontSizeUp() {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve()
-        }, 10)
+        }, 15)
     })
 }

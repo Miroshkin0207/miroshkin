@@ -28,11 +28,11 @@ function mainClick() {
         n = (n >= half) ? getRandom(0, half - 1) : getRandom(half, quotes.length - 1)
     }
     before = n
-    quote.innerHTML = quotes[n]  
-    if (window.matchMedia("min-width: 1000px") && quote.offsetHeight > window.innerHeight) {
+    quote.innerHTML = quotes[n]
+    if (window.matchMedia("(min-width: 1000px)").matches && quote.offsetHeight > window.innerHeight) {
         footer.classList.add("relativeFooter")
     }
-    else if (window.matchMedia("max-width: 999px") && quote.offsetHeight > window.innerHeight * 0.07) {
+    else if (window.matchMedia("(max-width: 999px)").matches && quote.offsetHeight > window.innerHeight * 0.03) {
         footer.classList.add("relativeFooter")
     }
     document.querySelector("#mainButton").innerHTML = "Повторить"

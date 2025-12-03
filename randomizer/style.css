@@ -27,7 +27,6 @@ h1 {
 }
 
 input {
-    margin: 2px 4px 4px 0;
     width: 75%
 }
 
@@ -42,8 +41,12 @@ input {
 .eventName {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%
+    overflow-wrap: break-word;   
+    word-break: break-all;
+    width: 100%;
+    padding-bottom: 5px
 }
 
 .check {
@@ -84,10 +87,6 @@ input {
     top: 0
 }
 
-.forButton {
-    padding-right: 30px
-}
-
 .exodusButtons {
     background-color: transparent;
     border: none;
@@ -103,7 +102,10 @@ input {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    padding: 10px
 }
 
 .result {
@@ -188,6 +190,10 @@ input {
 
     label {
         font-size: 25px
+    }
+
+    .forButton {
+        padding-right: 30px
     }
 
     #exit {
@@ -286,6 +292,10 @@ input {
         margin-top: 5px
     }
 
+    label {
+        font-size: 20px
+    }
+
     input {
         border: solid 2px blue;
         height: 27px;
@@ -295,7 +305,7 @@ input {
     .check {
         width: 34px;
         height: 32px;
-        bottom: 5px
+        bottom: 6px
     }
 
     .check img {
@@ -306,6 +316,10 @@ input {
     .edit img {
         width: 25px;
         height: 25px
+    }
+
+    .forButton {
+        padding-right: 27px
     }
 
     #exit img {
@@ -328,7 +342,9 @@ input {
     }
 
     #editExodus {
-        right: 30px
+        right: 35px;
+        height: 30px;
+        width: 32px
     }
 
     #editExodus img {
