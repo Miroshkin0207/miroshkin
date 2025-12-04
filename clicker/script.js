@@ -2,24 +2,44 @@
     window.location.href = "/main/"
 }
 
-let button = document.querySelector("#mainButton")
-button.addEventListener("touchstart", touchStart)
-button.addEventListener("mousedown", touchStart)
-button.addEventListener("touchend", touchEnd)
-button.addEventListener("mouseup", touchEnd)
-button.addEventListener("click", scoreUp)
+var button = document.querySelector("#mainButton")
 
-function scoreUp() {
-    document.querySelector("#total").innerHTML++
+// Для ПК
+button.addEventListener("mousedown", mouseStart)
+button.addEventListener("mouseup", mouseEnd)
+
+// Для телефонов
+button.addEventListener("touchstart", (e) => touchStart(e))
+button.addEventListener("touchend", (e) => touchEnd(e))
+button.addEventListener("touchmove", () => touchMove())
+
+function touchStart(e) {
+    if (e.targetTouches.length <= 2) {
+        document.querySelector("#total").innerHTML = Number(document.querySelector("#total").innerHTML) + e.changedTouches.length
+        button.classList.add("buttonClicked")
+    }
+    else {
+        return
+    }
 }
 
-function touchStart() {
-    button.style.backgroundColor = "rgb(90, 116, 51)"
+function touchEnd(e) {
+    if (e.targetTouches.length == 0) {
+        button.classList.remove("buttonClicked")
+    }
 }
 
-function touchEnd() {
+function touchMove() {
     button.classList.remove("buttonClicked")
-    button.style.backgroundColor = "greenyellow"
+}
+
+function mouseStart() {
+    document.querySelector("#total").innerHTML++
+    button.classList.add("buttonClicked")
+}
+
+function mouseEnd() {
+    button.classList.remove("buttonClicked")
 }
 
 const table = [

@@ -31,6 +31,10 @@ h1 {
     margin-left: auto
 }
 
+.buttonClicked {
+    background-color: rgb(90, 116, 51) !important
+}
+
 .score {
     height: 100px
 }
