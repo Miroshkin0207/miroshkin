@@ -1,20 +1,23 @@
 ﻿body {
     background-color: rgb(26, 26, 29);
     color: white;
-    font-family: Tahoma
+    font-family: Tahoma;
+    user-select: none
 }
 
-#back {
+button {
     background-color: black;
     color: rgb(19, 65, 142);
-    position: absolute;
-    left: 0;
-    top: 0;
     z-index: 1
 }
 
+#back {
+    position: absolute;
+    left: 0;
+    top: 0 
+}
+
 h1 {
-    user-select: none;
     position: relative;
     text-align: center
 }
@@ -22,7 +25,6 @@ h1 {
 #mainButton {
     background-color: greenyellow;
     color: black;
-    user-select: none;
     position: relative;
     display: flex;
     justify-content: center;
@@ -35,25 +37,61 @@ h1 {
     background-color: rgb(90, 116, 51) !important
 }
 
-.score {
-    height: 100px
-}
-
-h4 {
-    user-select: none;
-    font-size: 55px;
+.score h4 {
     display: inline-block;
     margin: 0
 }
 
-#total {
-    position: relative;
-    left: 5px;
+.titleTable {
+    display: inline-block
 }
 
-.rect {
-    background-color: rgb(53, 57, 64);
+#help {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    width: 25px;
+    position: relative;
+    top: 7px;
+    right: 3px
+}
+
+#info {
+    border: none
+}
+
+.overlay {
+    display: none;
     position: absolute;
+    left: 0;
+    top: 0;
+    width: 10000px;
+    height: 10000px;
+    background-color: rgb(0, 0, 0, 0.7);
+    z-index: 2
+}
+
+.menuInfo {
+    display: none;
+    position: absolute;
+    background-color: rgb(41, 43, 44);
+    z-index: 5;
+    text-align: center
+}
+
+.menuInfo p {
+    text-align: start
+}
+
+#exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none
+}
+
+.table {
+    background-color: rgb(53, 57, 64);
     right: 0;
     display: flex;
     flex-direction: column
@@ -61,7 +99,7 @@ h4 {
 
 .mainLine {
     background-color: rgb(19, 66, 142);
-    font-size: 30px;
+    font-size: 25px;
     display: flex;
     border-bottom: solid 5px black
 }
@@ -76,12 +114,7 @@ h4 {
 
 .line {
     display: flex;
-    border-bottom: solid 5px black;
-    border-left: solid 5px black
-}
-
-.names {
-    width: 60%
+    border-bottom: solid 5px black
 }
 
 .mainName {
@@ -91,20 +124,15 @@ h4 {
     align-items: center
 }
 
+.names {
+    width: 60%
+}
+
 .scores {
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: center
-}
-
-.help {
-    background-color: rgb(95, 88, 88);
-    color: rgb(3, 79, 200);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1
 }
 
 @media (min-width: 1000px) {
@@ -113,40 +141,98 @@ h4 {
     }
 
     h1 {
-        font-size: 40px
+        font-size: 40px;
+        position: relative;
+        right: 5%
     }
 
     #mainButton {
         font-size: 70px;
-        width: 450px;
-        height: 450px
+        width: 425px;
+        height: 400px;
+        right: 5%
     }
 
     .score {
-        position: absolute;
-        bottom: 25px
+        position: relative;
+        top: 30px;
+        width: 64%;
+        word-break: break-all
+    }
+
+    .score h4 {
+        font-size: 30px
+    }
+
+    .score button {
+        display: none
     }
 
     h3 {
         font-size: 35px;
-        position: absolute;
-        right: 225px;
-        top: 15px;
-        transform: translateX(+50%);
+        display: inline-block;
         margin: 0
     }
 
-    .rect {
-        width: 450px;
-        top: 75px
+    #info {
+        width: 35px;
+        height: 35px
     }
 
-    .line {
+    .menuInfo {
+        width: 800px;
+        height: 350px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15%
+    }
+
+    .menuInfo button {
         font-size: 30px
     }
 
-    .help {
-        height: 75px;
+    h2 {
+        font-size: 25px
+    }
+
+    p {
+        font-size: 20px
+    }
+
+    #exit {
+        width: 48px;
+        height: 45px
+    }
+
+    #exit img {
+        width: 35px;
+        height: 35px
+    }
+
+    .titleTable {
+        position: absolute;
+        right: 0;
+        top: 2%;
+        width: 35%;
+        text-align: center
+    }
+
+    .table {
+        position: absolute;
+        width: 35%;
+        top: 75px
+    }
+
+    .names {
+        border-left: solid black;
+        font-size: 25px
+    }
+
+    .scores {
+        font-size: 25px
+    }
+
+    .line {
         font-size: 30px
     }
 }
@@ -169,29 +255,82 @@ h4 {
     }
 
     .score {
+        position: relative;
+        margin-top: 7%
+    }
+
+    .score h4 {
+        font-size: 25px
+    }
+
+    .score button {
         position: absolute;
-        top: 350px
+        right: 0
+    }
+
+    #lock {
+        background-color: white   
+    }
+
+    #lock img {
+        width: 30px;
+        height: 35px
     }
 
     h3 {
-        font-size: 35px;
-        position: relative;
-        top: 75px;
+        font-size: 25px;
         text-align: center;
-        z-index: 5
+        margin: 0;
+        display: inline-block
     }
 
-    .rect {
+    #info {
+        width: 30px;
+        height: 30px
+    }
+
+    .menuInfo {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15%;
+        padding: 7% 3% 3% 3%
+    }
+    
+    .menuInfo button {
+        font-size: 24px
+    }
+
+    #exit {
+        width: 43px;
+        height: 40px
+    }
+
+    #exit img {
+        width: 30px;
+        height: 30px
+    }
+
+    h2 {
+        font-size: 25px
+    }
+
+    p {
+        font-size: 20px
+    }
+
+    .titleTable {
+        text-align: center;
         width: 100%;
-        top: 500px
+        margin: 20% auto 2%
+    }
+
+    .table {
+        width: 100%;
+        position: relative
     }
 
     .line {
         font-size: 20px
-    }
-
-    .help {
-        height: 50px;
-        font-size: 25px
     }
 }

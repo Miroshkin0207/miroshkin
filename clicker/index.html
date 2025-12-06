@@ -8,22 +8,43 @@
 <body>
     <button id="back" onclick="back()">Главная</button>
     <h1>Кликер</h1>
+        
+    <div id="mainButton">Кликай!</div>
     <div class="score">
         <h4>Счёт:</h4>
         <h4 id="total">0</h4>
+        <button id="lock" onclick="lock()">
+            <img src="images/lockOpen.png">
+        </button>
     </div>
-    <div id="mainButton">Кликай!</div>
 
-    <h3>Таблица лидеров</h3>
-    <div class="rect">
+    <div class="titleTable">
+        <h3>Таблица лидеров</h3>
+        <button id="help" onclick="info()">
+            <img id="info" src="images/info.png">
+        </button>
+    </div>
+
+    <div class="table">
         <div class="mainLine">
             <div class="mainName">Имя</div>
             <div class="scores">Рекорд</div>
         </div>
         <div class="border"></div>
-        <div class="help">
-            <a href="/clicker-help/">Как сюда попасть?</a>
-        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="menuInfo">
+        <button id="exit" onclick="exit()">
+            <img src="images/exit.png">
+        </button>
+        <h2>Как попасть в таблицу лидеров?</h2>
+        <p>1) Сделайте скриншот, подтверждающий ваш рекорд;</p>
+        <p>2) Отправьте скриншот в Телеграм владельца сайта или в наш телеграм-канал (ссылки есть на главной странице);</p>
+        <p>3) Туда же напишите имя, под которым вас нужно записать.</p>
+        <strong><p>Рекорд можно перезаписать на то же имя, если он стал больше.</p></strong>
+        <button onclick="exit()">Понятно</button>
     </div>
     <script src="script.js"></script>
 </body>

@@ -5,18 +5,20 @@
 var button = document.querySelector("#mainButton")
 
 // Для ПК
-button.addEventListener("mousedown", mouseStart)
-button.addEventListener("mouseup", mouseEnd)
+button.addEventListener("mousedown", (e) => mouseStart(e), {passive: false})
+button.addEventListener("mouseup", () => mouseEnd(), {passive: false})
 
 // Для телефонов
 button.addEventListener("touchstart", (e) => touchStart(e))
 button.addEventListener("touchend", (e) => touchEnd(e))
 button.addEventListener("touchmove", () => touchMove())
 
-function touchStart(e) {
+let total = document.querySelector("#total")
+function touchStart(e) { 
+    e.preventDefault()
     if (e.targetTouches.length <= 2) {
-        document.querySelector("#total").innerHTML = Number(document.querySelector("#total").innerHTML) + e.changedTouches.length
         button.classList.add("buttonClicked")
+        total.innerHTML = Number(total.innerHTML) + e.changedTouches.length
     }
     else {
         return
@@ -30,10 +32,11 @@ function touchEnd(e) {
 }
 
 function touchMove() {
-    button.classList.remove("buttonClicked")
+   button.classList.remove("buttonClicked")
 }
 
-function mouseStart() {
+function mouseStart(e) {
+    e.preventDefault()
     document.querySelector("#total").innerHTML++
     button.classList.add("buttonClicked")
 }
@@ -50,8 +53,6 @@ const table = [
 ]
 table.sort((a, b) => b.score - a.score)
 
-const help = document.querySelector(".help")
-document.querySelector(".rect").removeChild(help)
 for (let i = 0; i < table.length; i++) {
     let line = document.createElement("div")
     line.classList.add("line")
@@ -66,7 +67,30 @@ for (let i = 0; i < table.length; i++) {
     score.innerHTML = table[i].score
     line.appendChild(score)
 
-    document.querySelector(".rect").appendChild(line)
+    document.querySelector(".table").appendChild(line)
 }
 
-document.querySelector(".rect").appendChild(help)
+var isOpen = true
+function lock() {
+    var lockImg = document.querySelector("img")
+    if (isOpen == true) {
+        lockImg.src = "images/lockClose.png"
+        document.body.style.overflow = "hidden"
+        isOpen = false
+    }
+    else {
+        lockImg.src = "images/lockOpen.png"
+        document.body.style.overflow = "visible"
+        isOpen = true
+    }
+}
+
+function info() {
+    document.querySelector(".menuInfo").style.display = "block"
+    document.querySelector(".overlay").style.display = "block"
+}
+
+function exit() {
+    document.querySelector(".menuInfo").style.display = "none"
+    document.querySelector(".overlay").style.display = "none"
+}
