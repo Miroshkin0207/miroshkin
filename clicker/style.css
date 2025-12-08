@@ -62,18 +62,16 @@ h1 {
 
 .overlay {
     display: none;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    width: 10000px;
-    height: 10000px;
     background-color: rgb(0, 0, 0, 0.7);
     z-index: 2
 }
 
 .menuInfo {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: rgb(41, 43, 44);
     z-index: 5;
     text-align: center
@@ -92,9 +90,10 @@ h1 {
 
 .table {
     background-color: rgb(53, 57, 64);
-    right: 0;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    position: absolute;
+    right: 0
 }
 
 .mainLine {
@@ -179,12 +178,18 @@ h1 {
         height: 35px
     }
 
+    .overlay {
+        width: 100%;
+        height: 100%
+    }
+
     .menuInfo {
         width: 800px;
         height: 350px;
         left: 50%;
         transform: translateX(-50%);
-        top: 15%
+        top: 15%;
+        padding: 0 3% 0 2%
     }
 
     .menuInfo button {
@@ -225,6 +230,7 @@ h1 {
 
     .names {
         border-left: solid black;
+        padding-left: 3px;
         font-size: 25px
     }
 
@@ -289,6 +295,11 @@ h1 {
         height: 30px
     }
 
+    .overlay {
+        width: 100%;
+        height: 125%;
+    }
+
     .menuInfo {
         width: 90%;
         left: 50%;
@@ -326,8 +337,7 @@ h1 {
     }
 
     .table {
-        width: 100%;
-        position: relative
+        width: 100%
     }
 
     .line {

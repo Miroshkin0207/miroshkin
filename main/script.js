@@ -23,9 +23,8 @@ let before = -1
 function mainClick() {
     footer.classList.remove("relativeFooter")
     let n = getRandom(0, quotes.length - 1)
-    if (n == before) {
-        const half = Math.floor(quotes.length / 2)
-        n = (n >= half) ? getRandom(0, half - 1) : getRandom(half, quotes.length - 1)
+    while (n == before) {
+        n = getRandom(0, quotes.length - 1)
     }
     before = n
     quote.innerHTML = quotes[n]
