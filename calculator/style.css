@@ -43,6 +43,21 @@ h1 {
     position: absolute
 }
 
+.rect2 button {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+img {
+    background-color: transparent;
+    width: 100%;
+    position: relative;
+    right: 5%;
+    height: 75%
+}
+
 #equal {
     grid-column: span 2
 }
@@ -50,6 +65,15 @@ h1 {
 #copy {
     position: absolute;
     right: 0
+}
+
+.messageCopy {
+    display: none;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    top: 5%
 }
 
 @media (min-width: 1000px) {
@@ -93,6 +117,11 @@ h1 {
         top: 50%;
         transform: translateY(-50%)
     }
+
+    .messageCopy {
+        font-size: 30px;
+        padding: 15px
+    }
 }
 
 @media (max-width: 999px) {
@@ -135,4 +164,9 @@ h1 {
         left: 60%;
         bottom: 0
     } 
+
+    .messageCopy {
+        font-size: 25px;
+        padding: 5px
+    }
 }

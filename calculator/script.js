@@ -1,13 +1,15 @@
-﻿function back() {
+﻿// Переход на главную страницу
+function back() {
     window.location.href = "/main/"
 }
 
+// Ввод текста
 let output = document.querySelector(".output")
-
 function inputChar(text) {
     output.innerHTML += text.innerHTML
 }
 
+// Расчёт
 let result = ""
 function printResult() {
     if (output.innerHTML.length > 0) {
@@ -58,15 +60,42 @@ function printResult() {
     }
 }
 
+
+// Удалить последний символ
 function delLastChar() {
     output.innerHTML = output.innerHTML.slice(0, -1)
 }
 
+// Очистить
 function clearInput() {
     output.innerHTML = ""
     result = ""
 }
 
-function copy() {
+var messageCopy = document.querySelector(".messageCopy")
+function waitFor() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve()
+        }, 1000)
+    })
+}
+function timer() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve()
+        }, 15)
+    })
+}
+// Скопировать
+async function copy() {    
     navigator.clipboard.writeText(output.innerHTML)
+    messageCopy.style.display = "block"
+    await waitFor()
+    for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) {
+        await timer()
+    }
+    
+    messageCopy.style.display = "none"
+    messageCopy.style.opacity = 1
 }

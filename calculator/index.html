@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html>
 <head>
     <title>Калькулятор</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="output"></div>
     
     <div class="rect1">
-        <button onclick="clearInput(this)">C</button>
+        <button onclick="clearInput()">C</button>
         <button onclick="inputChar(this)">^</button>
         <button onclick="inputChar(this)">(</button>
 
@@ -34,7 +34,9 @@
 
     <div class="rect2">
         <button onclick="inputChar(this)">)</button>
-        <button onclick="delLastChar(this)"><=</button>
+        <button onclick="delLastChar(this)">
+            <img src="delete.png">
+        </button>
 
         <button onclick="inputChar(this)" class="signs">+</button>
         <button onclick="inputChar(this)" class="signs">-</button>
@@ -46,6 +48,7 @@
     </div>
 
         <button onclick="copy()" id="copy">Скопировать</button>
+        <div class="messageCopy">Скопировано</div>
     <script src="script.js"></script>
 </body>
 </html>
