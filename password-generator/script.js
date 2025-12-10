@@ -27,12 +27,12 @@ function checkButtonDisabled() {
 }
 checkButtonDisabled()
 
+var password = ""
 function generate() {
     const minimum = Number(document.querySelector("#first").value)
     const maximum = Number(document.querySelector("#second").value)
 
     const chars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789!?"
-    password = ""
     
     let error = false
     if (!(minimum <= maximum)) {
@@ -69,7 +69,7 @@ function timer() {
 
 // Скопировать
 async function copy() {   
-    navigator.clipboard.writeText(output.innerHTML)
+    navigator.clipboard.writeText(password.innerHTML)
     messageCopy.style.display = "block"
     await waitFor()
     for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) {
