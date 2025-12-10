@@ -6,21 +6,30 @@ body {
 
 button {
     background-color: black;
-    color: rgb(19, 65, 142)
+    color: rgb(19, 65, 142);
+    position: relative
 }
 
 #back {
     position: absolute;
     left: 0;
-    top: 0;
-    z-index: 5
+    top: 0
 }
 
 h1 {
     text-align: center
 }
 
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px
+}
+
 .passwordSettings {
+    position: relative;
     text-align: center
 }
 
@@ -42,6 +51,16 @@ h2 {
     position: relative
 }
 
+.messageCopy {
+    display: none;
+    z-index: 5;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    top: 5%
+}
+
 @media (min-width: 1000px) {
     #back {
         font-size: 40px
@@ -53,7 +72,7 @@ h2 {
 
     .passwordSettings {
         background-color: rgb(53, 57, 64);
-        width: 400px
+        width: 50%
     }
 
     input {
@@ -64,28 +83,29 @@ h2 {
 
     #generator {
         font-size: 40px;
-        margin-bottom: 15px;
-        position: relative;
-        z-index: 5
+        margin-bottom: 15px
     }
 
     h2 {
-        font-size: 50px;
+        font-size: 40px;
         position: relative;
-        bottom: 95px
+        margin: 10px auto 0
     }
 
     #copy {
-        font-size: 55px;
+        font-size: 45px;
         position: absolute;
-        right: 0;
-        bottom: 290px;
-        z-index: 5
+        right: 5px;
+        bottom: 45%
+    }
+
+    .messageCopy {
+        font-size: 30px;
+        padding: 15px
     }
 
     .password {
-        font-size: 40px;
-        bottom: 95px
+        font-size: 40px
     }
 }
 
@@ -105,10 +125,7 @@ h2 {
 
     .passwordSettings {
         background-color: rgb(53, 57, 64);
-        width: 80%;
-        position: absolute;
         left: 50%;
-        top: 90px;
         transform: translateX(-50%)
     }
 
@@ -121,23 +138,24 @@ h2 {
 
     #generator {
         font-size: 30px;
-        margin-bottom: 10px;
-        position: relative;
-        z-index: 5
+        margin-bottom: 10px
     }
 
     h2 {
-        font-size: 35px;
+        font-size: 30px;
         position: relative;
-        top: 250px
+        margin: 10px auto 5px
     }
 
     #copy {
         font-size: 30px;
-        position: absolute;
-        right: 0;
-        top: 395px;
-        z-index: 5
+        left: 100%;
+        transform: translateX(-100%)
+    }
+
+    .messageCopy {
+        font-size: 25px;
+        padding: 5px
     }
 
     .password {

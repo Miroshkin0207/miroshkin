@@ -8,8 +8,6 @@ function random(min, max)
 }
 
 const button = document.querySelector("#generator")
-
-
 function checkButtonDisabled() {
     const minimum = Number(document.querySelector("#first").value)
     const maximum = Number(document.querySelector("#second").value)
@@ -53,6 +51,31 @@ function generate() {
     }
 }
 
-function copy() {
-    navigator.clipboard.writeText(password)
+var messageCopy = document.querySelector(".messageCopy")
+function waitFor() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve()
+        }, 1000)
+    })
+}
+function timer() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve()
+        }, 15)
+    })
+}
+
+// Скопировать
+async function copy() {   
+    navigator.clipboard.writeText(output.innerHTML)
+    messageCopy.style.display = "block"
+    await waitFor()
+    for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) {
+        await timer()
+    }
+    
+    messageCopy.style.display = "none"
+    messageCopy.style.opacity = 1
 }
