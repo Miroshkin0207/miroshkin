@@ -69,6 +69,7 @@ img {
 
 .messageCopy {
     display: none;
+    z-index: 5;
     background-color: black;
     left: 50%;
     transform: translateX(-50%);

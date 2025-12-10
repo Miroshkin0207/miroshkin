@@ -52,6 +52,16 @@ function printResult() {
             alert("Ошибка: некорректное выражение")
             flag = false
         }
+        finally {
+            if (result == "Infinity") {
+                alert("На ноль делить нельзя")
+                flag = false
+            }
+            else if (isNaN(result)) {
+                alert("Нельзя извлекать квадратный корень из отрицательного числа")
+                flag = false
+            }
+        }
 
         if (flag) {
             output.innerHTML = result
@@ -87,8 +97,9 @@ function timer() {
         }, 15)
     })
 }
+
 // Скопировать
-async function copy() {    
+async function copy() {   
     navigator.clipboard.writeText(output.innerHTML)
     messageCopy.style.display = "block"
     await waitFor()
