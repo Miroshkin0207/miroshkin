@@ -27,9 +27,9 @@ function checkButtonDisabled() {
 }
 checkButtonDisabled()
 
-
+var password = ""
 function generate() {
-    var password = ""
+    password = ""
     const minimum = Number(document.querySelector("#first").value)
     const maximum = Number(document.querySelector("#second").value)
 
