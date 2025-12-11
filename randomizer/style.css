@@ -43,8 +43,7 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-wrap: break-word;   
-    word-break: break-all;
+    overflow-wrap: anywhere;
     width: 100%;
     padding-bottom: 5px
 }
@@ -103,8 +102,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    word-break: break-all;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     padding: 10px
 }
 

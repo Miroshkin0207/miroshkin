@@ -58,7 +58,7 @@ function printResult() {
                 flag = false
             }
             else if (isNaN(result)) {
-                alert("Нельзя извлекать квадратный корень из отрицательного числа")
+                alert("Не число")
                 flag = false
             }
         }
