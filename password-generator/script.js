@@ -70,7 +70,7 @@ function timer() {
 
 // Скопировать
 async function copy() {   
-    navigator.clipboard.writeText(password.innerHTML)
+    navigator.clipboard.writeText(password)
     messageCopy.style.display = "block"
     await waitFor()
     for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) {
