@@ -108,5 +108,5 @@ function exit() {
 
 // Сохранение
 window.addEventListener("beforeunload", () => {
-    navigator.sendBeacon("/api/score", score.innerHTML)
+    navigator.sendBeacon("/api/score", total.innerHTML)
 })
