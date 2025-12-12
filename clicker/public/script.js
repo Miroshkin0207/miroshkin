@@ -6,7 +6,7 @@ function back() {
 // Загрузка рекорда
 let total = document.querySelector("#total")
 async function getScore() {
-    const response = await fetch("clicker/api/get-score")
+    const response = await fetch("/clicker/api/get-score")
     total.innerHTML = Number(await response.text())
 }
 getScore()
@@ -109,5 +109,5 @@ function exit() {
 
 // Сохранение
 window.addEventListener("beforeunload", () => {
-    navigator.sendBeacon("clicker/api/score", total.innerHTML)
+    navigator.sendBeacon("/clicker/api/score", total.innerHTML)
 })
