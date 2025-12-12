@@ -167,6 +167,12 @@ h1 {
         display: none
     }
 
+    #aboutScore {
+        font-size: 25px;
+        position: relative;
+        top: 15px
+    }
+
     h3 {
         font-size: 35px;
         display: inline-block;
@@ -281,6 +287,12 @@ h1 {
     #lock img {
         width: 30px;
         height: 35px
+    }
+
+    #aboutScore {
+        font-size: 20px;
+        position: relative;
+        top: 5px
     }
 
     h3 {
