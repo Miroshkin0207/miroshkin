@@ -5,11 +5,13 @@ function back() {
 
 // Загрузка рекорда
 let total = document.querySelector("#total")
+let response
 async function getScore() {
-    const response = await fetch("/api/get-score")
+    response = await fetch("/api/get-score")
     total.innerHTML = Number(await response.text())
 }
 getScore()
+console.log(response)
 
 var button = document.querySelector("#mainButton")
 // Для ПК
