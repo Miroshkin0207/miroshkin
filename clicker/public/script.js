@@ -9,6 +9,7 @@ async function getScore() {
     const response = await fetch("/api/get-score")
     total.innerHTML = Number(await response.text())
 }
+getScore()
 
 var button = document.querySelector("#mainButton")
 // Для ПК
