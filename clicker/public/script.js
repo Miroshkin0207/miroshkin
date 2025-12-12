@@ -1,9 +1,16 @@
-﻿function back() {
+﻿// переход на главную страницу
+function back() {
     window.location.href = "/main/"
 }
 
-var button = document.querySelector("#mainButton")
+// Загрузка рекорда
+let total = document.querySelector("#total")
+async function getScore() {
+    const response = await fetch("/api/get-score")
+    total.innerHTML = Number(await response.text())
+}
 
+var button = document.querySelector("#mainButton")
 // Для ПК
 button.addEventListener("mousedown", (e) => mouseStart(e), {passive: false})
 button.addEventListener("mouseup", () => mouseEnd(), {passive: false})
@@ -13,7 +20,7 @@ button.addEventListener("touchstart", (e) => touchStart(e))
 button.addEventListener("touchend", (e) => touchEnd(e))
 button.addEventListener("touchmove", () => touchMove())
 
-let total = document.querySelector("#total")
+// Обработка кликов
 function touchStart(e) { 
     e.preventDefault()
     if (e.targetTouches.length <= 2) {
@@ -71,6 +78,7 @@ for (let i = 0; i < table.length; i++) {
     document.querySelector(".table").appendChild(line)
 }
 
+// Замок
 var isOpen = true
 function lock() {
     var lockImg = document.querySelector("img")
@@ -86,12 +94,19 @@ function lock() {
     }
 }
 
+// Открыть меню
 function info() {
     document.querySelector(".menuInfo").style.display = "block"
     document.querySelector(".overlay").style.display = "block"
 }
 
+// Закрыть меню
 function exit() {
     document.querySelector(".menuInfo").style.display = "none"
     document.querySelector(".overlay").style.display = "none"
 }
+
+// Сохранение
+window.addEventListener("beforeunload", () => {
+    navigator.sendBeacon("/api/score", score.innerHTML)
+})

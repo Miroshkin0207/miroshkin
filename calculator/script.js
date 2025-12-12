@@ -44,28 +44,25 @@ function printResult() {
             countSpecChars--
         }
 
-        let flag = true
         try {
             result = eval(result)
         }
         catch {
             alert("Ошибка: некорректное выражение")
-            flag = false
+            return
         }
         finally {
             if (result == "Infinity") {
                 alert("На ноль делить нельзя")
-                flag = false
+                return
             }
             else if (isNaN(result)) {
                 alert("Не число")
-                flag = false
+                return
             }
         }
 
-        if (flag) {
-            output.innerHTML = result
-        }
+        output.innerHTML = result
         result = ""
     }
 }
