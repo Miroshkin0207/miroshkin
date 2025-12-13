@@ -4,13 +4,13 @@ export default function getScore(req, res) {
         return res.send("0")
     }
     const scoreIndex = cookieString.indexOf("score=")
-    let score1 = scoreIndex != -1 ? cookieString.substring(scoreIndex + 6) : 0
+    let scoreString = scoreIndex != -1 ? cookieString.substring(scoreIndex + 6) : 0
     let score = ""
-    for (let i = 0; i < score1.length; i++) {
-        if (score1[i] == ";") {
+    for (let i = 0; i < scoreString.length; i++) {
+        if (scoreString[i] == ";") {
             break
         }
-        score += score1[i]
+        score += scoreString[i]
     }
 
     return res.send(score)
