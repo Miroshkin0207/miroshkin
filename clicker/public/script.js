@@ -4,13 +4,11 @@ function back() {
 }
 
 // Загрузка рекорда
-let flag = false
 let total = document.querySelector("#total")
 async function getScore() {
     const response = await fetch("/api/get-score.js")
     const score = await response.text()
     total.innerHTML = score
-    flag = true
 }
 getScore()
 
@@ -111,12 +109,10 @@ function exit() {
 }
 
 // Сохранение
-if (flag) {
-    setInterval(() => {
-        fetch("/api/score.js", {
-            method: "POST",
-            body: total.innerHTML,
-            credentials: "include"
-        })
-    }, 5000)
-}
+setInterval(() => {
+    fetch("/api/score.js", {
+        method: "POST",
+        body: total.innerHTML,
+        credentials: "include"
+    })
+}, 7000)
