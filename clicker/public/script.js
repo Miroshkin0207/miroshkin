@@ -7,7 +7,8 @@ function back() {
 let total = document.querySelector("#total")
 async function getScore() {
     const response = await fetch("/clicker/api/get-score.js")
-    total.innerHTML = Number(await response.text())
+    total.innerHTML = await response.text()
+    console.log(response.text())
 }
 getScore()
 
