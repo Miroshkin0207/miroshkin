@@ -1,7 +1,7 @@
 export default function getScore(req, res) {
     const cookieString = req.headers.cookie || ""
     if (cookieString == "") {
-        return res.send("1")
+        return res.send("0")
     }
 
     const scoreIndex = cookieString.indexOf("score=")
@@ -15,5 +15,5 @@ export default function getScore(req, res) {
         score += scoreString[i]
     }
 
-    return res.send(score)
+    return res.send("2")
 }
