@@ -108,6 +108,22 @@ function exit() {
     document.querySelector(".overlay").style.display = "none"
 }
 
+// Сбросить рекорд
+function showMenuReset() {
+    document.querySelector(".overlay").style.display = "block"
+    document.querySelector(".menuReset").style.display = "block"
+}
+
+function exitReset() {
+    document.querySelector(".menuReset").style.display = "none"
+    document.querySelector(".overlay").style.display = "none"
+}
+
+function reset() {
+    total.innerHTML = 0
+    exitReset()
+}
+
 // Сохранение
 setInterval(() => {
     fetch("/api/score.js", {
@@ -115,4 +131,4 @@ setInterval(() => {
         body: total.innerHTML,
         credentials: "include"
     })
-}, 5000)
+}, 3000)

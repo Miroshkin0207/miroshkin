@@ -18,6 +18,7 @@
         </button>
     </div>
     <p id="aboutScore">Рекорд сбросится через неделю</p>
+    <button onclick="showMenuReset()">Сбросить</button>
 
     <div class="titleTable">
         <h3>Таблица лидеров</h3>
@@ -37,7 +38,7 @@
     <div class="overlay"></div>
 
     <div class="menuInfo">
-        <button id="exit" onclick="exit()">
+        <button class="exit" onclick="exit()">
             <img src="images/exit.png">
         </button>
         <h2>Как попасть в таблицу лидеров?</h2>
@@ -46,6 +47,16 @@
         <p>3) Туда же напишите имя, под которым вас нужно записать.</p>
         <strong><p>Рекорд можно перезаписать на то же имя, если он стал больше.</p></strong>
         <button onclick="exit()">Понятно</button>
+    </div>
+
+    <div class="menuReset">
+        <button class="exit" onclick="exitReset()">
+            <img src="images/exit.png">
+        </button>
+        <h2>Подтверждение</h2>
+        <p>Вы уверены, что хотите сбросить свой рекорд?</p>       
+        <button onclick="exitReset()">Нет</button>
+        <button onclick="reset()">Да</button>
     </div>
     <script src="script.js"></script>
 </body>

@@ -81,7 +81,7 @@ h1 {
     text-align: start
 }
 
-#exit {
+.exit {
     position: absolute;
     top: 0;
     right: 0;
@@ -134,7 +134,19 @@ h1 {
     align-items: center
 }
 
+.menuReset {
+    display: none;
+    background-color: rgb(41, 43, 44);
+    z-index: 5;
+    position: fixed;
+    text-align: center
+}
+
 @media (min-width: 1000px) {
+    button {
+        font-size: 25px
+    }
+
     #back {
         font-size: 40px
     }
@@ -169,7 +181,7 @@ h1 {
 
     #aboutScore {
         font-size: 25px;
-        position: relative;
+        position: relative;        
         top: 15px
     }
 
@@ -193,8 +205,8 @@ h1 {
         width: 800px;
         height: 350px;
         left: 50%;
-        transform: translateX(-50%);
-        top: 15%;
+        transform: translate(-50%, -50%);
+        top: 50%;
         padding: 0 3% 0 2%
     }
 
@@ -210,12 +222,12 @@ h1 {
         font-size: 20px
     }
 
-    #exit {
+    .exit {
         width: 48px;
         height: 45px
     }
 
-    #exit img {
+    .exit img {
         width: 35px;
         height: 35px
     }
@@ -247,9 +259,21 @@ h1 {
     .line {
         font-size: 30px
     }
+
+    .menuReset {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 45%;
+        height: 25%
+    }
 }
 
 @media (max-width: 999px) {
+    button {
+        font-size: 22px
+    }
+
     #back {
         font-size: 30px
     }
@@ -290,7 +314,6 @@ h1 {
     }
 
     #aboutScore {
-        font-size: 20px;
         position: relative;
         top: 5px
     }
@@ -324,12 +347,12 @@ h1 {
         font-size: 24px
     }
 
-    #exit {
+    .exit {
         width: 43px;
         height: 40px
     }
 
-    #exit img {
+    .exit img {
         width: 30px;
         height: 30px
     }
@@ -354,5 +377,13 @@ h1 {
 
     .line {
         font-size: 20px
+    }
+
+    .menuReset {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        height: 50%
     }
 }
