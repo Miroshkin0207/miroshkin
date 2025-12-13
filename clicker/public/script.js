@@ -9,7 +9,7 @@ let total = document.querySelector("#total")
 async function getScore() {
     const response = await fetch("/api/get-score.js")
     const score = await response.text()
-    total.innerHTML = Number(score)
+    total.innerHTML = score
     flag = true
 }
 getScore()
