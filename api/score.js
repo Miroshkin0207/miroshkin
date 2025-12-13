@@ -1,3 +1,8 @@
+export const config = {
+    api: {
+        bodyParser: false,
+    }
+}
 export default async function score(req, res) {
     let score
     try {
@@ -6,7 +11,7 @@ export default async function score(req, res) {
     }
     catch {
         score = "0"
-        console.log("Неудача! score =" + score)
+        console.log("Неудача! score = " + score)
     }
     const secondsPerWeek = 60 * 60 * 24 * 7
     res.setHeader("Set-Cookie", `score=${score}; Max-Age=${secondsPerWeek}`)
