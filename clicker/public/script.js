@@ -131,4 +131,5 @@ setInterval(() => {
         body: total.innerHTML,
         credentials: "include"
     })
+    localStorage.setItem("score", score)
 }, 3000)
