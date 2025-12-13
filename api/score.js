@@ -1,5 +1,5 @@
 export default async function score(req, res) {
-    let scores
+    let score
     try {
         score = await req.text()
     }
