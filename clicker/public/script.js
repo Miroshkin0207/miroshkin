@@ -126,10 +126,11 @@ function reset() {
 
 // Сохранение
 setInterval(() => {
-    fetch("/api/score.js", {
-        method: "POST",
-        body: total.innerHTML,
-        credentials: "include"
-    })
-    localStorage.setItem("score", score)
+    if (total.innerHTML != 0) {
+        fetch("/api/score.js", {
+            method: "POST",
+            body: total.innerHTML,
+            credentials: "include"
+        })
+    }
 }, 3000)
