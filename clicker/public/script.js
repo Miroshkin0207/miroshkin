@@ -113,7 +113,6 @@ setInterval(() => {
     fetch("/api/score.js", {
         method: "POST",
         body: total.innerHTML,
-        keepalive: true,
         credentials: "include"
     })
 }, 3000)
