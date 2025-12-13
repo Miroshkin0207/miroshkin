@@ -1,6 +1,6 @@
 export default async function score(req, res) {
     let score
-    const text = req.text()
+    const text = await req.text()
     console.log("text = " + text)
     try {
         score = await req.text()
