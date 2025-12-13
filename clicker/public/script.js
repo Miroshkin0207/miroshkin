@@ -111,5 +111,10 @@ function exit() {
 
 // Сохранение
 window.addEventListener("beforeunload", () => {
-    navigator.sendBeacon("/api/score.js", total.innerHTML)
+    fetch("/api/score.js", {
+        method: "POST",
+        body: total.innerHTML,
+        keepalive: true,
+        credentials: "include"
+    })
 })
