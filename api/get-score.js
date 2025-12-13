@@ -5,7 +5,7 @@ export default function getScore(req, res) {
     }
 
     const scoreIndex = cookieString.indexOf("score=")
-    let scoreString = scoreIndex != -1 ? cookieString.substring(scoreIndex + 6) : 0
+    let scoreString = scoreIndex != -1 ? cookieString.substring(scoreIndex) : 0
     let score = ""
 
     for (let i = 0; i < scoreString.length; i++) {
@@ -15,5 +15,5 @@ export default function getScore(req, res) {
         score += scoreString[i]
     }
 
-    return res.send("2")
+    return res.send(score)
 }
