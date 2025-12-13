@@ -1,10 +1,7 @@
-export const config = {
-    api: {
-        bodyParser: false,
-    }
-}
 export default async function score(req, res) {
     let score
+    const text = req.text()
+    console.log("text = " + text)
     try {
         score = await req.text()
         console.log("Успех! score = " + score)
