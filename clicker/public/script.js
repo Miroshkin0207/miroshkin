@@ -115,4 +115,4 @@ setInterval(() => {
         body: total.innerHTML,
         credentials: "include"
     })
-}, 7000)
+}, 5000)
