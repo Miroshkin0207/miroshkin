@@ -119,14 +119,16 @@ function exitReset() {
     document.querySelector(".overlay").style.display = "none"
 }
 
+let isReset = false
 function reset() {
     total.innerHTML = 0
+    isReset = true
     exitReset()
 }
 
 // Сохранение
 setInterval(() => {
-    if (total.innerHTML != 0) {
+    if (total.innerHTML != 0 && isReset) {
         fetch("/api/score.js", {
             method: "POST",
             body: total.innerHTML,
