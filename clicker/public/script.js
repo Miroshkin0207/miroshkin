@@ -108,17 +108,20 @@ function exit() {
     document.querySelector(".overlay").style.display = "none"
 }
 
-// Сбросить рекорд
+// Меню сброса рекорда
 function showMenuReset() {
     document.querySelector(".overlay").style.display = "block"
     document.querySelector(".menuReset").style.display = "block"
 }
 
+
+// Выйти из меню сброса рекорда
 function exitReset() {
     document.querySelector(".menuReset").style.display = "none"
     document.querySelector(".overlay").style.display = "none"
 }
 
+// Сбросить рекорд
 let isReset = false
 function reset() {
     total.innerHTML = 0
@@ -128,7 +131,7 @@ function reset() {
 
 // Сохранение
 setInterval(() => {
-    if (total.innerHTML != 0 && isReset) {
+    if (total.innerHTML != 0 || isReset) {
         fetch("/api/score.js", {
             method: "POST",
             body: total.innerHTML,

@@ -10,7 +10,6 @@ export default async function score(req, res) {
     req.on("data", chunk => scoreString += chunk.toString())
     req.on("end", () => {
         score = scoreString || "0"
-        console.log(score)
         res.setHeader("Set-Cookie", `score=${score}; Max-Age=${secondsPerWeek}`)
         res.end()
     })  
