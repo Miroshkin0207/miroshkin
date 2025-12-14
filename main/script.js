@@ -47,7 +47,7 @@ function calculator() {
 }
 
 function clicker() {
-    window.location.href = "/clicker/public/"
+    window.location.href = "/clicker/"
 }
 
 function textHandler() {

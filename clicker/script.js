@@ -5,10 +5,18 @@ function back() {
 
 // Загрузка рекорда
 let total = document.querySelector("#total")
-async function getScore() {
-    const response = await fetch("/api/get-score.js")
-    const score = await response.text()
-    total.innerHTML = score
+function getScore() {     
+    const time = localStorage.getItem("time")
+    if (time != null) {
+        if (Date.now() > time) {
+            localStorage.clear()            
+            localStorage.setItem("time", Date.now() + 60_480_000)
+        }
+    }
+    else {
+        localStorage.setItem("time", Date.now() + 60_480_000)
+    }
+    total.innerHTML = localStorage.getItem("score") || 0
 }
 getScore()
 
@@ -132,10 +140,6 @@ function reset() {
 // Сохранение
 setInterval(() => {
     if (total.innerHTML != 0 || isReset) {
-        fetch("/api/score.js", {
-            method: "POST",
-            body: total.innerHTML,
-            credentials: "include"
-        })
+        localStorage.setItem("score", total.innerHTML)
     }
 }, 3000)
