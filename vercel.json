@@ -12,4 +12,18 @@
       "destination": "/api/:path*.js"
     }
   ]
+},
+
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "all, index, follow"
+        }
+      ]
+    }
+  ]
 }
