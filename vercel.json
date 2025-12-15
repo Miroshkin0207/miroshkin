@@ -3,7 +3,7 @@
     {
       "source": "/",
       "destination": "/main/",
-      "permanent": false
+      "permanent": true
     }
   ],
   "rewrites": [
