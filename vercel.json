@@ -3,7 +3,14 @@
     {
       "source": "/",
       "destination": "/main/",
-      "permanent": true
+      "permanent": true,
+     "missing": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*YandexBot.*"
+        }
+      ]
     }
   ],
   "rewrites": [
