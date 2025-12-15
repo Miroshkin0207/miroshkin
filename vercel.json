@@ -3,35 +3,13 @@
     {
       "source": "/",
       "destination": "/main/",
-      "permanent": true,
-      "missing": [
-        {
-          "type": "header",
-          "key": "user-agent",
-          "value": ".*YandexBot.*"
-        }
-      ]
+      "permanent": true
     }
   ],
   "rewrites": [
     {
       "source": "/api/:path*",
       "destination": "/api/:path*.js"
-    },
-    {
-      "source": "/yandex_c782062fef93e46c.html",
-      "destination": "/main/yandex_c782062fef93e46c.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "all, index, follow"
-        }
-      ]
     }
   ]
 }
