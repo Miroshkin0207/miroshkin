@@ -11,10 +11,7 @@
       "source": "/api/:path*",
       "destination": "/api/:path*.js"
     }
-  ]
-},
-
-{
+  ],
   "headers": [
     {
       "source": "/(.*)",
