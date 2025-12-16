@@ -53,7 +53,7 @@ function printResult() {
         }
         finally {
             if (result == "Infinity") {
-                alert("Бесконечность")
+                alert("Бесконечность или очень большое число")
                 return
             }
             else if (isNaN(result)) {

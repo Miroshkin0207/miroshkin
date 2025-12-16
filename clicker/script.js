@@ -73,7 +73,7 @@ const table = [
     {name: "Козёл в очках с бородкой", score: 5000},
     {name: "Пряничный раб Козла в очках", score: 1760},
     {name: "TON-618", score: 2500},
-    {name: "Сейджуро Акаши", score: 6700}
+    {name: "Сейджуро Акаши", score: 6100}
 ]
 table.sort((a, b) => b.score - a.score)
 
