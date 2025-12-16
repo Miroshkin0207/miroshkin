@@ -5,11 +5,5 @@
       "destination": "/main/",
       "permanent": false
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "/api/:path*.js"
-    }
   ]
 }

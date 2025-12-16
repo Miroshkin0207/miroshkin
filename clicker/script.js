@@ -6,17 +6,22 @@ function back() {
 // Загрузка рекорда
 let total = document.querySelector("#total")
 function getScore() {     
-    const time = localStorage.getItem("time")
+    let time = localStorage.getItem("time")
     if (time != null) {
         if (Date.now() > time) {
-            localStorage.clear()            
-            localStorage.setItem("time", Date.now() + 60_480_000)
+            localStorage.clear()          
+            localStorage.setItem("time", Date.now() + 259200000)
+            time = localStorage.getItem("time")
         }
     }
     else {
-        localStorage.setItem("time", Date.now() + 60_480_000)
+        localStorage.setItem("time", Date.now() + 259200000)
+        time = localStorage.getItem("time")
     }
-    total.innerHTML = localStorage.getItem("score") || 0
+    total.innerHTML = localStorage.getItem("score") || 0   
+    const days = document.querySelector("#days")
+    days.innerHTML = Math.ceil((time - Date.now()) / 86400000)
+    document.querySelector("#daysWord").innerHTML = days.innerHTML == 1 ? "день" : "дня"
 }
 getScore()
 
@@ -134,7 +139,9 @@ let isReset = false
 function reset() {
     total.innerHTML = 0
     isReset = true
+    localStorage.clear()
     exitReset()
+    getScore()
 }
 
 // Сохранение

@@ -92,7 +92,6 @@ h1 {
     background-color: rgb(53, 57, 64);
     display: flex;
     flex-direction: column;
-    position: absolute;
     right: 0
 }
 
@@ -366,12 +365,16 @@ h1 {
     }
 
     .titleTable {
+        position: relative;
         text-align: center;
         width: 100%;
-        margin: 20% auto 2%
+        margin: 0 auto 2%
     }
 
     .table {
+        position: relative;
+        margin: 0;
+
         width: 100%
     }
 

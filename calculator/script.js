@@ -53,7 +53,7 @@ function printResult() {
         }
         finally {
             if (result == "Infinity") {
-                alert("На ноль делить нельзя")
+                alert("Бесконечность")
                 return
             }
             else if (isNaN(result)) {
@@ -84,7 +84,7 @@ function waitFor() {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve()
-        }, 1000)
+        }, 750)
     })
 }
 function timer() {
