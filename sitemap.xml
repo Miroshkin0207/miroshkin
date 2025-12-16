@@ -13,7 +13,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://miroshkin.vercel.app/clicker/</loc>
+    <loc>https://miroshkin.vercel.app/clicker/index.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
@@ -25,7 +25,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://miroshkin.vercel.app/randomizer/</loc>
+    <loc>https://miroshkin.vercel.app/randomizer/index.html</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
