@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://miroshkin.vercel.app/main/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://miroshkin.vercel.app/history-of-changes/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://miroshkin.vercel.app/calculator/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://miroshkin.vercel.app/clicker/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://miroshkin.vercel.app/text-handler/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://miroshkin.vercel.app/password-generator/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://miroshkin.vercel.app/randomizer/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
