@@ -21,9 +21,7 @@ function getScore() {
     total.innerHTML = localStorage.getItem("score") || 0   
     const days = document.querySelector("#days")
     days.innerHTML = Math.ceil((time - Date.now()) / 86400000)
-    if (days.innerHTML == 1) {
-        document.querySelector("#aboutScore").innerHTML =  "Остался 1 день"
-    }
+    document.querySelector("#daysWord").innerHTML = (days.innerHTML == 1) ? "день" : "дня"
 }
 getScore()
 
