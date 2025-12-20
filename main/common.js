@@ -5,7 +5,7 @@ script.onload = () => {
     snowStorm.excludeMobile = false
     if (matchMedia("(max-width: 999px)").matches)
     {
-        snowStorm.flakesMax = 30
+        snowStorm.flakesMax = 25
     }
 }
 document.body.appendChild(script)
