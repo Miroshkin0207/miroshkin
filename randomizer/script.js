@@ -189,7 +189,7 @@ function deleteExodus(exodus) {
 // Вызов функции получения нового исхода
 document.querySelector("#start").onclick = () => {
     if (listExoduses.childElementCount >= 2) {
-        start()
+        startRandom()
     }
     else {
         alert("Для запуска должно быть как минимум 2 исхода")
@@ -209,7 +209,7 @@ function nextExodus(n) {
 var titleExoduses = document.querySelector("#titleExoduses")
 var title = document.querySelector(".result")
 var selectElement = null
-async function start() {
+async function startRandom() {
     var exdCount = listExoduses.childElementCount
     let animation = document.querySelector("#animation")
 

@@ -15,16 +15,17 @@ button {
 
 h1 {
     text-align: center;
-    position: relative;
+    position: relative
 }
 
 textarea {
     font-size: 25px;
     border: solid 3px blue;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: white
+}
+
+.textContainer {
+    text-align: center
 }
 
 .stats {
@@ -43,15 +44,17 @@ textarea {
     }
 
     h1 {
-        font-size: 40px;
-        bottom: 10px
+        font-size: 40px
+    }
+
+    .textContainer {
+        height: 500px;
+        width: 100%
     }
 
     textarea {
-        width: 75%;
-        height: 55%;
-        margin-left: auto;
-        margin-right: auto
+        width: 80%;
+        height: 100%
     }
 
     .stats {
@@ -67,16 +70,18 @@ textarea {
 
     h1 {
         font-size: 30px;
-        top: 24px
+        top: 20px
+    }
+
+    .textContainer {
+        height: 450px;
+        width: 100%;
+        text-align: center;
+        margin-top: 10%
     }
 
     textarea {
-        width: 90%;
-        height: 450px;
-        margin-left: auto;
-        margin-right: auto;
-        margin: 10px;
-        top: 30%
+        height: 100%;
     }
 
     .stats {
