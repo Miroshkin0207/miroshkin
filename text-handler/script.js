@@ -1,12 +1,9 @@
 ﻿function back() {
-     if (document.querySelector("textarea").innerHTML == "Anikill")
+     if (document.querySelector("textarea").value == "Anikill")
      {
          window.location.href = "https://anikill.vercel.app";
      }
-     else
-     {
-        window.location.href = "/main/";
-     }
+     window.location.href = "/main/";
 }
 
 function textInput() {
