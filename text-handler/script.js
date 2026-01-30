@@ -1,4 +1,9 @@
 ﻿function back() {
+     if (document.querySelector("textarea").innerHTML == "Anikill")
+     {
+         window.location.href = "https://anikill.vercel.app"
+     }
+     
     window.location.href = "/main/"
 }
 
