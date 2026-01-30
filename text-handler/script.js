@@ -3,7 +3,10 @@
      {
          window.location.href = "https://anikill.vercel.app";
      }
-     window.location.href = "/main/";
+     else 
+     {
+         window.location.href = "/main/";
+     }
 }
 
 function textInput() {
