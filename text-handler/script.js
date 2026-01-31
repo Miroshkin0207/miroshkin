@@ -3,7 +3,7 @@
      {
          window.location.href = "https://anikill.vercel.app";
      }
-     else if (document.querySelector("textarea").value == " Metanit")
+     else if (document.querySelector("textarea").value == "Metanit")
      {
           window.location.href = "https://metanit.com";
      }
