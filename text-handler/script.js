@@ -1,5 +1,16 @@
 ﻿function back() {
-    window.location.href = "/main/"
+     if (document.querySelector("textarea").value == "Anikill")
+     {
+         window.location.href = "https://anikill.vercel.app";
+     }
+     else if (document.querySelector("textarea").value == "Metanit")
+     {
+          window.location.href = "https://metanit.com";
+     }
+     else 
+     {
+         window.location.href = "/main/";
+     }
 }
 
 function textInput() {
