@@ -1,0 +1,54 @@
+body {
+    background: linear-gradient(90deg, rgb(26, 26, 29) 0%, rgb(50, 50 ,56) 100%);
+    color: white;
+    font-family: monospace;
+}
+
+button {
+    background-color: black;
+    color: rgb(19, 65, 142);
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+h4 {
+    font-size: 24px;
+    margin: 2px;
+}
+
+p {
+    font-size: 20px;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    margin: 3px;
+}
+
+.thanks {
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 999px) {
+    button {
+        font-size: 30px;
+    }
+
+    main {
+        position: relative;
+        top: 24px;
+    }
+}

@@ -1,7 +1,8 @@
-var quote = document.createElement("p")
-quote.id = "quote"
-document.querySelector(".quoteContainer").appendChild(quote)
-var footer = document.querySelector("footer")
+// Цитаты
+var quote = document.createElement("p");
+quote.id = "quote";
+document.querySelector(".quoteContainer").appendChild(quote);
+
 const quotes = [
     "Ненависть порождает ненависть.",
     "Не ошибается только тот, кто ничего не делает.",
@@ -14,50 +15,95 @@ const quotes = [
     "Надо любить жизнь больше, чем смысл жизни.",
     "Понимание — начало согласия.",
     "Бороться и искать, найти и не сдаваться." 
-]
+];
 
-function getRandom(min, max) {
-    return min + Math.floor(Math.random() * max - min + 1)
+// Получение случайного числа
+function getRandom(min, max) 
+{
+    return min + Math.floor(Math.random() * max - min + 1);
 }
 
-let before = -1
-function mainClick() {
-    footer.classList.remove("relativeFooter")
-    let n = getRandom(0, quotes.length - 1)
+// Отображение текста и проверка повторной цитаты
+let before = -1;
+function mainClick() 
+{
+    let n = getRandom(0, quotes.length - 1);
     while (n == before) {
-        n = getRandom(0, quotes.length - 1)
+        n = getRandom(0, quotes.length - 1);
     }
-    before = n
-    quote.innerHTML = quotes[n]
-    if (window.matchMedia("(min-width: 1000px)").matches && quote.offsetHeight > window.innerHeight) {
-        footer.classList.add("relativeFooter")
+    before = n;
+
+    quote.innerHTML = "「 " + quotes[n] + "  」";
+    document.querySelector("#mainButton").innerHTML = "Повторить";
+}
+
+// Выпадающие списки
+function showList(tab) 
+{
+    const overlay = document.querySelector(".overlay");
+    overlay.style.display = "inline";
+    let ul;
+    if (tab.innerHTML == "Инструменты")
+    {
+        ul = document.querySelector("ul");
     }
-    else if (window.matchMedia("(max-width: 999px)").matches && quote.offsetHeight > window.innerHeight * 0.03) {
-        footer.classList.add("relativeFooter")
+    else
+    {
+        ul = document.getElementsByTagName("ul")[1];
     }
-    document.querySelector("#mainButton").innerHTML = "Повторить"
+
+    ul.style.display = "flex";
+    ul.style.width = tab.clientWidth + "px";
+    ul.style.left = tab.offsetLeft + "px";
+    ul.style.top = tab.offsetTop + tab.clientHeight + "px"
+
+    if (matchMedia("(max-width: 999px)").matches)
+        document.querySelector("header").style.zIndex = 0;
+
+    overlay.addEventListener("click", () => {
+        ul.style.display = "none";
+        overlay.style.display = "none";
+        document.querySelector("header").style.zIndex = 0;
+    });
 }
 
-function history() {
-    window.location.href = "/history-of-changes/"
+// Ссылки
+function thanks() 
+{
+    window.location.href = "/thanks/";
 }
 
-function calculator() {
-    window.location.href = "/calculator/"
+function settings()
+{
+    window.location.href = "/settings/";
 }
 
-function clicker() {
-    window.location.href = "/clicker/"
+function history() 
+{
+    window.location.href = "/history-of-changes/";
 }
 
-function textHandler() {
-    window.location.href = "/text-handler/"
+function calculator() 
+{
+    window.location.href = "/calculator/";
 }
 
-function passwordGenerator() {
-    window.location.href = "/password-generator/"
+function clicker() 
+{
+    window.location.href = "/clicker/";
 }
 
-function randomizer() {
-    window.location.href = "/randomizer/"
+function textHandler() 
+{
+    window.location.href = "/text-handler/";
+}
+
+function passwordGenerator() 
+{
+    window.location.href = "/password-generator/";
+}
+
+function randomizer() 
+{
+    window.location.href = "/randomizer/";
 }

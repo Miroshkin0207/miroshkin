@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Настройки</title>
+    <meta name="viewport" content="initial-scale = 1, width=device-width">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="back()">Главная</button>
+    <main>
+        <h1>Настройки</h1>
+        <p>Снег:</p>
+        <select onchange="selectSnow()">
+            <option>Включить</option>
+            <option id="off">Отключить</option>
+        </select>
+    <p id="message"></p>
+    </main>
+    <script src="script.js"></script>
+    <script src="common.js"></script>
+    <script src="/main/common.js"></script>
+</body>
+</html>
