@@ -69,12 +69,13 @@ function mouseEnd() {
 
 const table = [
     {name: "Сигма Влдмр", score: 666},
-    {name: "Левин", score: 200},
+    {name: "Министерство Казинака", score: 777},
     {name: "Козёл в очках с бородкой", score: 5000},
     {name: "Пряничный раб Козла в очках", score: 1760},
     {name: "TON-618", score: 2500},
     {name: "Сейджуро Акаши", score: 6100},
-    {name: "1337", score: 7000}
+    {name: "1337", score: 7000},
+    {name: "Серафим (СОНЯ)", score: 667}
 ]
 table.sort((a, b) => b.score - a.score)
 
