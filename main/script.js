@@ -63,7 +63,7 @@ function showList(tab)
     overlay.addEventListener("click", () => {
         ul.style.display = "none";
         overlay.style.display = "none";
-        document.querySelector("header").style.zIndex = 0;
+        document.querySelector("header").style.zIndex = 1;
     });
 }
 
