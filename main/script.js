@@ -58,12 +58,12 @@ function showList(tab)
     ul.style.top = tab.offsetTop + tab.clientHeight + "px"
 
     if (matchMedia("(max-width: 999px)").matches)
-        document.querySelector("header").style.zIndex = 0;
+        document.querySelector("header").style.zIndex = 1;
 
     overlay.addEventListener("click", () => {
         ul.style.display = "none";
         overlay.style.display = "none";
-        document.querySelector("header").style.zIndex = 0;
+        document.querySelector("header").style.zIndex = 2;
     });
 }
 
