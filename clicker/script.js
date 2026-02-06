@@ -69,7 +69,7 @@ function mouseEnd() {
 
 const table = [
     {name: "Сигма Влдмр", score: 666},
-    {name: "Левин", score: 200},
+    {name: "Министерство Казинака", score: 777},
     {name: "Козёл в очках с бородкой", score: 5000},
     {name: "Пряничный раб Козла в очках", score: 1760},
     {name: "TON-618", score: 2500},
