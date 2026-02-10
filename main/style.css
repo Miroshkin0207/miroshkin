@@ -22,6 +22,11 @@ button {
     margin: 5px;
 }
 
+button:hover {
+    background-color: rgb(19, 65, 142);
+    color: black;
+}
+
 header {
     position: fixed;
     left: 0;
@@ -43,11 +48,6 @@ header {
     width: 100%;
     border: none;
     margin: 0;
-}
-
-.tabs:hover, li button:hover {
-    background-color: rgb(19, 65, 142);
-    color: black;
 }
 
 .tabsContainers {

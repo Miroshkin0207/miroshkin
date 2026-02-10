@@ -1,109 +1,110 @@
 ﻿// Переход на главную страницу
 function back() {
-    window.location.href = "/main/"
+    window.location.href = "/main/";
 }
 
 // Ввод текста
-let output = document.querySelector(".output")
+let output = document.querySelector(".output");
 function inputChar(text) {
-    output.innerHTML += text.innerHTML
+    output.innerHTML += text.innerHTML;
 }
 
 // Расчёт
-let result = ""
+let result = "";
 function printResult() {
     if (output.innerHTML.length > 0) {
-        let countSpecChars = 0
+        let countSpecChars = 0;
 
         for (let i = 0; i < output.innerHTML.length; i++) {
-            let char = output.innerHTML[i]
+            let char = output.innerHTML[i];
 
             switch (char) {
                 case "×":
-                    result += "*"
-                    break
+                    result += "*";
+                    break;
                 case "÷":
-                    result += "/"
-                    break
+                    result += "/";
+                    break;
                 case "^":
-                    result = "Math.pow(" + result + ", "
-                    countSpecChars++
-                    break
+                    result = "Math.pow(" + result + ", ";
+                    countSpecChars++;
+                    break;
                 case "√":
-                    result += "Math.sqrt("
-                    countSpecChars++
-                    break
+                    result += "Math.sqrt(";
+                    countSpecChars++;
+                    break;
                 default:
-                    result += char
-                    break
+                    result += char;
+                    break;
             }
         }
 
         while (countSpecChars > 0) {
-            result += ")"
-            countSpecChars--
+            result += ")";
+            countSpecChars--;
         }
 
         try {
-            result = eval(result)
+            result = eval(result);
         }
         catch {
-            alert("Ошибка: некорректное выражение")
-            return
+            alert("Ошибка: некорректное выражение");
+            return;
         }
         finally {
             if (result == "Infinity") {
-                alert("Бесконечность или очень большое число")
-                return
+                alert("Бесконечность или очень большое число");
+                return;
             }
             else if (isNaN(result)) {
-                alert("Не число")
-                return
+                alert("Не число");
+                return;
             }
         }
 
         output.innerHTML = result
-        result = ""
+        result = "";
     }
 }
 
 
 // Удалить последний символ
 function delLastChar() {
-    output.innerHTML = output.innerHTML.slice(0, -1)
+    output.innerHTML = output.innerHTML.slice(0, -1);
 }
 
 // Очистить
 function clearInput() {
-    output.innerHTML = ""
-    result = ""
+    output.innerHTML = "";
+    result = "";
 }
 
-var messageCopy = document.querySelector(".messageCopy")
+var messageCopy = document.querySelector(".messageCopy");
 function waitFor() {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve()
+            resolve();
         }, 750)
     })
 }
-function timer() {
+
+function delay() {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve()
+            resolve();
         }, 15)
     })
 }
 
 // Скопировать
 async function copy() {   
-    navigator.clipboard.writeText(output.innerHTML)
-    messageCopy.style.display = "block"
-    await waitFor()
+    navigator.clipboard.writeText(output.innerHTML);
+    messageCopy.style.display = "block";
+    await waitFor();
     for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) {
-        await timer()
+        await delay();
     }
     
-    messageCopy.style.display = "none"
-    messageCopy.style.opacity = 1
+    messageCopy.style.display = "none";
+    messageCopy.style.opacity = 1;
 }

@@ -1,19 +1,25 @@
 ﻿body {
     background-color: rgb(26, 26, 29);
     color: white;
-    font-family: Tahoma
+    font-family: Tahoma;
 }
 
 button {
     background-color: black;
-    color: rgb(19, 65, 142)
+    color: rgb(19, 65, 142);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(19, 65, 142);
+    color: black;
 }
 
 #back {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 1
+    z-index: 1;
 }
 
 h1 {

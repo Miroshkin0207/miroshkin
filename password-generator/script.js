@@ -1,82 +1,82 @@
 function back() {
-    window.location.href = "/main/"
+    window.location.href = "/main/";
 }
 
 function random(min, max)
 {
-    return Math.floor(Math.random() * (max - min + 1)) + min
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const button = document.querySelector("#generator")
+const button = document.querySelector("#generator");
 function checkButtonDisabled() {
-    const minimum = Number(document.querySelector("#first").value)
-    const maximum = Number(document.querySelector("#second").value)
+    const minimum = Number(document.querySelector("#first").value);
+    const maximum = Number(document.querySelector("#second").value);
     if (minimum != "" && maximum != "") {
-        button.disabled = false
+        button.disabled = false;
     }
     else {
-        button.disabled = true
+        button.disabled = true;
     }
 
     if (button.disabled) {
-        button.classList.add("buttonDisabled")
+        button.classList.add("buttonDisabled");
     }
     else {
-        button.classList.remove("buttonDisabled")
-    }
+        button.classList.remove("buttonDisabled");
+    };
 }
-checkButtonDisabled()
+checkButtonDisabled();
 
-var password = ""
+var password = "";
 function generate() {
-    password = ""
-    const minimum = Number(document.querySelector("#first").value)
-    const maximum = Number(document.querySelector("#second").value)
+    password = "";
+    const minimum = Number(document.querySelector("#first").value);
+    const maximum = Number(document.querySelector("#second").value);
 
-    const chars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789!?"
+    const chars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789!?";
     
-    let error = false
+    let error = false;
     if (!(minimum <= maximum)) {
-        alert("Минимум должен быть меньше или равен максимуму")
-        error = true
+        alert("Минимум должен быть меньше или равен максимуму");
+        error = true;
     }
 
     if (!error) {
-        let lengthPassword = random(minimum, maximum)
+        let lengthPassword = random(minimum, maximum);
         
         while (password.length < lengthPassword)
         {
-            password += chars[random(0, chars.length - 1)]
+            password += chars[random(0, chars.length - 1)];
         }
-        document.querySelector(".password").innerHTML = password
+        document.querySelector(".password").innerHTML = password;
     }
 }
 
-var messageCopy = document.querySelector(".messageCopy")
+var messageCopy = document.querySelector(".messageCopy");
 function waitFor() {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve()
+            resolve();
         }, 1000)
     })
 }
-function timer() {
+function delay() {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve()
+            resolve();
         }, 15)
     })
 }
 
 // Скопировать
 async function copy() {   
-    navigator.clipboard.writeText(password)
-    messageCopy.style.display = "block"
-    await waitFor()
+    navigator.clipboard.writeText(password);
+    messageCopy.style.display = "block";
+    await waitFor();
     for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) {
-        await timer()
+        await delay();
     }
     
-    messageCopy.style.display = "none"
-    messageCopy.style.opacity = 1
+    messageCopy.style.display = "none";
+    messageCopy.style.opacity = 1;
 }

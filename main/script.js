@@ -107,3 +107,8 @@ function randomizer()
 {
     window.location.href = "/randomizer/";
 }
+
+function kvadratik()
+{
+    window.location.href = "/kvadratik/main/";
+}

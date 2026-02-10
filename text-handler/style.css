@@ -1,7 +1,7 @@
 ﻿body {
     background-color: rgb(26, 26, 29);
     color: white;
-    font-family: Tahoma
+    font-family: monospace;
 }
 
 button {
@@ -10,12 +10,18 @@ button {
     z-index: 1;
     position: absolute;
     left: 0;
-    top: 0
+    top: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(19, 65, 142);
+    color: black;
 }
 
 h1 {
     text-align: center;
-    position: relative
+    position: relative;
 }
 
 textarea {

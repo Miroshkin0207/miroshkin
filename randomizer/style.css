@@ -1,13 +1,19 @@
 body {
     background-color: rgb(26, 26, 29);
     color: white;
-    font-family: Tahoma
+    font-family: monospace;
 }
 
 button {
     background-color: black;
     color: rgb(19, 65, 142);  
-    position: relative
+    position: relative;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(19, 65, 142);
+    color: black;
 }
 
 #back {
