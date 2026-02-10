@@ -34,7 +34,10 @@ function mainClick()
     before = n;
 
     quote.innerHTML = "「 " + quotes[n] + "  」";
-    document.querySelector("#mainButton").innerHTML = "Повторить";
+    const mainButton = document.querySelector("#mainButton");
+    mainButton.innerHTML = "Повторить";
+    mainButton.style.backgroundColor = "black";
+    mainButton.style.color = "rgb(19, 65, 142)";
 }
 
 // Выпадающие списки
