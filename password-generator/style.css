@@ -11,11 +11,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: rgb(19, 65, 142);
-    color: black;
-}
-
 #back {
     position: absolute;
     left: 0;
@@ -72,6 +67,11 @@ h2 {
         font-size: 40px
     }
 
+    button:hover {
+        background-color: rgb(19, 65, 142);
+        color: black;
+    }
+
     label {
         font-size: 30px
     }
@@ -123,6 +123,11 @@ h2 {
     h1 {
         position: relative;
         top: 24px
+    }
+
+    button:active {
+        background-color: rgb(19, 65, 142);
+        color: black;
     }
     
     label {

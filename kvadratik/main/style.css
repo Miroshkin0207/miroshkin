@@ -24,11 +24,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: rgb(19, 65, 142);
-    color: black;
-}
-
 #back {
     font-size: 40px;
     position: absolute;
@@ -195,6 +190,11 @@ a:hover {
         top: 24px;
     }
 
+    button:hover {
+        background-color: rgb(19, 65, 142);
+        color: black;
+    }
+
     p {
         font-size: 18px;
     }
@@ -233,5 +233,13 @@ a:hover {
     
     .menuInfo button {
         font-size: 24px;
+    }
+}
+
+/*Окраска кнопок при наведении курсора на ПК*/
+@media (min-width: 1000px) {
+    button:active {
+        background-color: rgb(19, 65, 142);
+        color: black;
     }
 }

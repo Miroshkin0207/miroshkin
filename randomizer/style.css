@@ -11,11 +11,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: rgb(19, 65, 142);
-    color: black;
-}
-
 #back {
     position: absolute;
     left: 0;
@@ -144,6 +139,11 @@ input {
         font-size: 30px
     }
 
+    button:hover {
+        background-color: rgb(19, 65, 142);
+        color: black;
+    }
+
     p {
         font-size: 25px
     }
@@ -261,6 +261,11 @@ input {
 @media (max-width: 999px) {
     #back {
         font-size: 30px
+    }
+
+    button:active {
+        background-color: rgb(19, 65, 142);
+        color: black;
     }
 
     h1 {

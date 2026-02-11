@@ -14,11 +14,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: rgb(19, 65, 142);
-    color: black;
-}
-
 h1 {
     text-align: center;
     position: relative;
@@ -49,6 +44,11 @@ textarea {
         font-size: 40px
     }
 
+    button:hover {
+        background-color: rgb(19, 65, 142);
+        color: black;
+    }
+
     h1 {
         font-size: 40px
     }
@@ -72,6 +72,11 @@ textarea {
 @media (max-width: 999px) {
     button {
         font-size: 30px
+    }
+
+    button:active {
+        background-color: rgb(19, 65, 142);
+        color: black;
     }
 
     h1 {

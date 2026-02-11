@@ -14,11 +14,6 @@ button {
     top: 0;
 }
 
-button:hover {
-    background-color: rgb(19, 65, 142);
-    color: black;
-}
-
 h1 {
     text-align: center;
 }
@@ -38,8 +33,21 @@ select {
         font-size: 30px;
     }
 
+    button:active {
+        background-color: rgb(19, 65, 142);
+        color: black;
+    }
+
     main {
         position: relative;
         top: 24px;
+    }
+}
+
+/*Окраска кнопок при наведении курсора для ПК*/
+@media (min-width: 999px) {
+    button:hover {
+        background-color: rgb(19, 65, 142);
+        color: black;
     }
 }

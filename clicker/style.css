@@ -36,7 +36,8 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto;
+    cursor: pointer;
 }
 
 .buttonClicked {
@@ -160,6 +161,12 @@ h1 {
         font-size: 40px;
         position: relative;
         right: 5%
+    }
+
+    
+    button:hover {
+        background-color: rgb(19, 65, 142);
+        color: black;
     }
 
     #mainButton {
@@ -286,6 +293,11 @@ h1 {
     h1 {
         font-size: 30px;
         top: 24px
+    }
+
+    button:active {
+        background-color: rgb(19, 65, 142);
+        color: black;
     }
 
     #mainButton {

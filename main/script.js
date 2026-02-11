@@ -36,8 +36,6 @@ function mainClick()
     quote.innerHTML = "「 " + quotes[n] + "  」";
     const mainButton = document.querySelector("#mainButton");
     mainButton.innerHTML = "Повторить";
-    mainButton.style.backgroundColor = "black";
-    mainButton.style.color = "rgb(19, 65, 142)";
 }
 
 // Выпадающие списки
