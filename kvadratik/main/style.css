@@ -180,7 +180,7 @@ a:hover {
 }
 
 /*Адаптация под телефоны*/
-@media (max-width:  999px) {
+@media (max-width: 999px) {
     #back {
         font-size: 30px;
     }
@@ -190,7 +190,7 @@ a:hover {
         top: 24px;
     }
 
-    button:hover {
+    button:active {
         background-color: rgb(19, 65, 142);
         color: black;
     }
@@ -238,7 +238,7 @@ a:hover {
 
 /*Окраска кнопок при наведении курсора на ПК*/
 @media (min-width: 1000px) {
-    button:active {
+    button:hover {
         background-color: rgb(19, 65, 142);
         color: black;
     }
