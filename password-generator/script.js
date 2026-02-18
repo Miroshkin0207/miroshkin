@@ -37,7 +37,7 @@ function generate() {
     
     let error = false;
     if (!(minimum <= maximum)) {
-        alert("Минимум должен быть меньше или равен максимуму");
+        alert("Минимум должен быть меньше максимума или равен ему");
         error = true;
     }
 
