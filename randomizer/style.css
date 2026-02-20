@@ -268,10 +268,9 @@ input {
         color: black;
     }
 
-    h1 {
+    main {
         position: relative;
         top: 22px;
-        margin-bottom: 15px;
     }
 
     p {
