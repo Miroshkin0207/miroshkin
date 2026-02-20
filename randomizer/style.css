@@ -273,6 +273,10 @@ input {
         top: 22px;
     }
 
+    h1 {
+        margin-bottom: 3px;
+    }
+
     p {
         font-size: 18px;
         text-align: center;
