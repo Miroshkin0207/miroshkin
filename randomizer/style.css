@@ -271,6 +271,7 @@ input {
     h1 {
         position: relative;
         top: 22px;
+        margin: 2px;
     }
 
     p {
