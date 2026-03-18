@@ -1,0 +1,52 @@
+/* Стили поля и его объектов */
+
+/* Поле */
+.field {
+    width: 630px;
+    height: 630px;
+    background-color: rgb(29, 28, 28);
+    display: grid;
+    grid-template: repeat(11, 1fr) / repeat(11, 1fr);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: solid black 15px;
+}
+
+#kvadratik {
+    position: absolute;
+    z-index: 4;
+    left: 290px;
+    top: 290px;
+}
+
+.fieldElements {
+    position: absolute;
+    opacity: 1;
+}
+
+.grayCube {
+    position: absolute;
+    left: 290px;
+    top: 290px;
+}
+
+/* Адапатация под мобильные устройства */
+@media (max-width: 999px) {
+    .field {
+        width: 95%;
+        height: 60%;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        border: solid 7px black;
+    }
+
+    #kvadratik {
+        width: 25px;
+        height: 25px;
+        left: calc(50% - 12.5px);
+        top: calc(50% - 12.5px);
+    }
+}

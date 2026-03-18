@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Квадратик</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="field.css">
+    <link rel="stylesheet" href="gamepad.css">
+    <link rel="icon" href="/main/icon.png">
+</head>
+<body>
+    <!--Обратный отсчёт-->
+    <h4 id="hint">Используйте ← ↑ → ↓ на клавиатуре</h4>
+    <div class="countdown"> 
+        <p></p>
+    </div>
+
+    <!--Меню поражения-->
+    <div class="menus">
+        <h1>Конец игры!</h1>
+        <h4>Счёт:</h4>
+        <h4 id="result"></h4>
+        <div class="menuButtonContainer">
+            <button onclick="playAgain()">Начать сначала</button>
+            <button onclick="leave()">Выйти</button>
+        </div>
+    </div>
+
+    <!--Счёт-->
+    <div class="total">
+        <h4>Счёт:</h4>
+        <h4 id="score">0</h4>
+        <br>
+        <p id="plus"></p>
+        <br>
+        <div class="gainTimer">
+            <img src="/kvadratik/images/double.png">
+            <p>15</p>
+        </div>     
+    </div>
+
+    <!--Поле-->
+    <div class="field">
+        <img id="kvadratik" src="/kvadratik/images/kvadratik.png">
+    </div>
+
+    <!--Геймпад-->
+    <div class="gamepad">
+        <div id="row1">
+            <button onclick="gamepad('up')">
+                <img src="/kvadratik/images/up.png">
+            </button>
+        </div>
+        <div id="row2">
+            <button onclick="gamepad('left')">
+                <img src="/kvadratik/images/left.png">
+            </button>
+            <button onclick="gamepad('right')">
+                <img src="/kvadratik/images/right.png">
+            </button>
+        </div>
+        <div id="row3">
+            <button onclick="gamepad('down')">
+                <img src="/kvadratik/images/down.png">
+            </button>
+        </div>
+    </div>
+    <audio src="/kvadratik/game/Last Train Home.mp3" autoplay loop="loop"></audio>
+
+    <div class="overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>

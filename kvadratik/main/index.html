@@ -13,10 +13,15 @@
             <img id="preview" src="/kvadratik/images/preview.png">
         </div>
         <br>
-        <p>В этой захватывающей игре вам предстоит играть за Квадратика. Собирайте яблоки, избегайте бомб, получайте различные эффекты и постарайтесь набрать как можно больше очков, чтобы занять лидирующее место в таблице лидеров!</p>
-        <h2>В разработке!</h2>
-        <p>Не забудьте подписаться на наш <a href="https://t.me/miroshkin0207">телеграм-канал</a>, чтобы не пропустить релиза!</p>
+        <p>В этой захватывающей игре вам предстоит играть за Квадратика. Собирайте яблоки, избегайте бомб, получайте различные эффекты и постарайтесь набрать как можно больше очков, чтобы занять наиболее высокое место в таблице лидеров!</p>
+        <div class="playAndScore">
+            <h4></h4>
+            <button onclick="play()">Играть</button>
+            <button onclick="settings()">Настройки</button>
+            <button onclick="aboutGame()">Об игре</button>
+        </div>
 
+        <!--Таблица лидеров-->
         <div class="titleTable">
             <h3>Таблица лидеров</h3>
             <button onclick="info()">
@@ -32,8 +37,9 @@
             <h3 id="empty">Пока что пусто...</h3>
         </div>
 
+        <!--Информационное меню-->
         <div class="menuInfo">
-            <button class="exit" onclick="exit()">
+            <button class="exit" onclick="exitInfo()">
                 <img src="/clicker/images/exit.png">
             </button>
             <h2>Как попасть в таблицу лидеров?</h2>
@@ -41,7 +47,28 @@
             <p>2) Отправьте скриншот в Телеграм владельца сайта или в наш телеграм-канал (ссылки есть на главной странице)</p>
             <p>3) Туда же напишите имя, под которым вас нужно записать</p>
             <strong><p>Рекорд можно перезаписать на то же имя, если он стал больше</p></strong>
-            <button onclick="exit()">Понятно</button>
+            <button onclick="exitInfo()">Понятно</button>
+        </div>
+
+        <!--Настройки-->
+        <div class="settings">
+            <button class="exit" onclick="exitSettings()">
+                <img src="/clicker/images/exit.png">
+            </button>
+            <h2>Настройки</h2>
+            <label>Обратный отсчёт при старте:</label>
+            <select name="countdownWithStarting" onchange="countdownWithStarting()">
+                <option select>Включён</option>
+                <option>Отключён</option>
+            </select>
+
+            <br>
+
+            <label>Музыка:</label>
+            <select name="music" onchange="music()">
+                <option select>Включена</option>
+                <option select>Отключена</option>
+            </select>
         </div>
     </main>
     <div class="overlay"></div>

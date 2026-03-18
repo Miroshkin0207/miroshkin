@@ -4,7 +4,7 @@ function back() {
 
 function random(min, max)
 {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return min + Math.floor(Math.random() * (max - min + 1));
 }
 
 const button = document.querySelector("#generator");

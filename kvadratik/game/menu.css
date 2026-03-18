@@ -1,0 +1,129 @@
+/* Стили интерфейса и различных меню */
+
+/* Обратный отсчёт */
+.countdown {
+    background-color: black;
+    position: absolute;
+    z-index: 6;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown p {
+    font-size: 27px;
+    color: rgb(73, 255, 1);
+}
+
+#hint {
+    z-index: 6;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+/* Стили различных меню и их составляющих */
+.menus {
+    display: none;
+    background-color: rgb(41, 43, 44);
+    width: 50%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+.menus button {
+    margin: 7px;
+}
+
+.messageNewRecord {
+    background-color: black;
+    color: red;
+    padding: 5px;
+    font-size: 24px;
+}
+
+/* Счёт */
+.total h4 {
+    display: inline-block;
+    margin: 0;
+    font-size: 24px;
+}
+
+#plus {
+    margin: 0;
+    font-size: 25px;
+    position: absolute;
+}
+
+/* Таймер усиления */
+.gainTimer {
+    display: none;
+    position: relative;
+    top: 25px;
+    padding: 0;
+}
+
+.gainTimer p {
+    text-align: center;
+    margin: 2px;
+}
+
+.menuButtonContainer button {
+    padding: 5px;
+}
+
+/* Адаптация под мобильные устрйоства */
+@media (max-width: 999px) {
+    #hint {
+        display: none;
+    }
+
+    .total h4 {
+        font-size: 20px;
+    }
+
+    #plus {
+        font-size: 20px;
+    }
+
+    .menus {
+        width: 70%;
+        align-items: center;
+    }
+
+    .menuButtonContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gainTimer {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .gainTimer p {
+        margin: 0;
+        font-size: 19px;
+    }
+
+    .gainTimer img {
+        width: 30px;
+        height: 30px;
+    }
+}

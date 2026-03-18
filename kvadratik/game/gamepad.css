@@ -1,0 +1,36 @@
+/* На ПК геймпад не отображается */
+@media (min-width: 1000px) {
+    .gamepad {
+        display: none;
+    }
+}
+
+/* Стиль геймпада для мобильных устройств */
+@media (max-width: 999px) {
+    .gamepad {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+        width: 45%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .gamepad button {
+        border: none;
+        background: none;
+    }
+
+    #row1, #row2, #row3 {
+        display: flex;
+    }
+
+    #row1, #row3 {
+        justify-content: center;
+    }
+
+    #row2 {
+        justify-content: space-between;
+    }
+}

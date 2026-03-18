@@ -18,9 +18,27 @@ h3 {
     margin: 5px;
 }
 
+h4 {
+    font-size: 23px;
+    margin: 0;
+}
+
 button {
     background-color: black;
     color: rgb(19, 65, 142);  
+    cursor: pointer;
+}
+
+label {
+    font-size: 22px;
+}
+
+select {
+    font-size: 22px;
+    background-color: white;
+}
+
+select:hover {
     cursor: pointer;
 }
 
@@ -49,13 +67,44 @@ a:hover {
 }
 
 #preview {
-    width: 800px;
-    height: 225px;
+    width: 750px;
+    height: 200px;
     position: relative;
     right: 25px;
 }
 
-/*Заголовок таблицы*/
+/* Кнопки и рекорд */
+.playAndScore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 2% 0 2% 0;
+    gap: 7px;
+}
+
+.playAndScore button {
+    font-size: 25px;
+    width: 20%;
+    padding: 10px;
+}
+
+/* Настройки */
+.settings {
+    display: none;
+    background-color: rgb(41, 43, 44);
+    width: 50%;
+    min-height: 30%;
+    z-index: 5;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 3% 1% 2%;
+}
+
+/* Заголовок таблицы */
 .titleTable {
     display: flex;
     width: 100%;
@@ -74,7 +123,7 @@ a:hover {
     height: 35px;
 }
 
-/*Таблица*/
+/* Таблица */
 .table {
     background-color: rgb(53, 57, 64);
     width: 70%;
@@ -131,14 +180,14 @@ a:hover {
     text-align: center;
 }
 
-/*Информация*/
+/* Информация */
 .menuInfo {
     display: none;
     position: fixed;
     background-color: rgb(41, 43, 44);
     z-index: 5;
     text-align: center;
-    width: 800px;
+    width: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -162,7 +211,6 @@ a:hover {
     height: 42px;
 }
 
-
 .exit img {
     width: 35px;
     height: 35px;
@@ -179,7 +227,7 @@ a:hover {
     height: 100%;
 }
 
-/*Адаптация под телефоны*/
+/* Адаптация под телефоны */
 @media (max-width: 999px) {
     #back {
         font-size: 30px;
@@ -197,10 +245,30 @@ a:hover {
 
     p {
         font-size: 18px;
+        margin: 1px;
     }
 
     h3 {
         font-size: 20px;
+    }
+
+    h4 {
+        font-size: 21px;
+        margin: 5px;
+    }
+
+    .playAndScore button {
+        font-size: 22px;
+        width: 50%;
+    }
+
+    .settings {
+        width: 70%;
+        min-height: 50%;
+    }
+
+    .settings select {
+        margin-top: 7px;
     }
 
     #preview {
@@ -236,7 +304,7 @@ a:hover {
     }
 }
 
-/*Окраска кнопок при наведении курсора на ПК*/
+/* Окраска кнопок при наведении курсора на ПК */
 @media (min-width: 1000px) {
     button:hover {
         background-color: rgb(19, 65, 142);
