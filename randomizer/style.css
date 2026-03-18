@@ -268,24 +268,28 @@ input {
         color: black;
     }
 
-    h1 {
+    main {
         position: relative;
-        top: 24px
+        top: 22px;
+    }
+
+    h1 {
+        margin-bottom: 3px;
     }
 
     p {
         font-size: 18px;
-        text-align: center
+        text-align: center;
     }
 
     h2 {
         font-size: 21px;
-        margin: 2px
+        margin: 2px;
     }
 
     h3 {
         font-size: 21px;
-        margin: 3px
+        margin: 3px;
     }
 
     h4 {
