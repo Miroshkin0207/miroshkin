@@ -144,7 +144,6 @@ a:hover {
 .mainName {
     width: 60%;
     text-align: center;
-    border-right: solid 5px black;
 }
 
 .mainScore {
