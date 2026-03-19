@@ -147,10 +147,6 @@ a:hover {
     border-right: solid 5px black;
 }
 
-#empty {
-    text-align: center;
-}
-
 .mainScore {
     width: 40%;
     text-align: center;
@@ -158,6 +154,7 @@ a:hover {
 
 .border {
     background-color: black;
+    z-index: 5;
     width: 5px;
     height: 100%;
     position: absolute;
@@ -279,6 +276,14 @@ a:hover {
 
     .table {
         width: 100%;
+    }
+
+    .names {
+        font-size: 21px;
+    }
+
+    .scores {
+        font-size: 21px;
     }
 
     .exit {
