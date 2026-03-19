@@ -6,7 +6,7 @@ function back()
 
 // Таблица лидеров
 const leaders = [
-    
+    {name: "Вантус 🪠", score: 162}
 ];
 leaders.sort((a, b) => b.score - a.score)
 
