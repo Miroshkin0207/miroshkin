@@ -138,8 +138,10 @@ class Objects
         this.listTimeouts = [];
         this.listIntervals = [];
 
-        if (image == "/kvadratik/images/warning.png")
-            var bombIsActive = true;
+        if (image == "/kvadratik/images/apple.png")
+            var appleActive = true;
+        else if (image == "/kvadratik/images/warning.png")
+            var bombActive = true;
         else if (image == "/kvadratik/images/grayCube.png")
         {
             this.grayCube = {
@@ -165,8 +167,6 @@ class Objects
                 }, 5)
             };
         }    
-        else if (image == "/kvadratik/images/apple.png")
-            this.appleActive = true; 
 
         // Уникальная функция предмета при появлении
         switch (image)
@@ -192,7 +192,7 @@ class Objects
 
                         // Серый Куб врезается в бомбу (туда его)
                         let grayCubeBomb = setInterval(async () => {
-                            if (this.borderLeft && bombIsActive)
+                            if (bombActive)
                             {
                                 for (let i = 0; i < grayCubes.length; i++)
                                 {
@@ -215,8 +215,7 @@ class Objects
                                             {
                                             
                                             }
-                                            this.element.remove();
-                                            this.needToDel = null;                          
+                                            this.needToDel = true;                          
                                         }, 1500);
                                         clearInterval(grayCubes[i].updatePosition); 
                                                   
@@ -229,7 +228,8 @@ class Objects
                                     }
                                 }
                             }
-                        }, 5);       
+                        }, 5);     
+                        this.listIntervals.push(grayCubeBomb);  
                     }
                     catch
                     {
@@ -290,6 +290,7 @@ class Objects
                         else
                         {
                             clearInterval(grayCubeMove);
+                            clearInterval(changeDirection);
                         }                     
                     }, timeUpdateGrayCubePosition);
 
@@ -318,12 +319,12 @@ class Objects
                 && ((this.borderTop < kvadratikBorder.bottom && kvadratikBorder.bottom <= this.borderBottom)
                 || (kvadratikBorder.top <= this.borderBottom && this.borderBottom <= kvadratikBorder.bottom)))
                 {
-                    /* Функции при получении предмета*/
+                    /* Функции при получении предмета */
                     switch (image)
                     {
                         // Яблоки
                         case "/kvadratik/images/apple.png":
-                            if (this.appleActive)
+                            if (appleActive)
                             {   
                                 this.element.remove();           
                                 countApples--;                                     
@@ -342,25 +343,24 @@ class Objects
                                     newApple.waitForDel = setInterval(() => {
                                         if (newApple.needToDel || isGameover)
                                         {
-                                            for (let i = 0; i < newApple.listIntervals; i++)
+                                            for (let i = 0; i < newApple.listIntervals.length; i++)
                                                 clearInterval(newApple.listIntervals[i]);
-                                            for (let i = 0; i < newApple.listTimeouts; i++)
+                                            for (let i = 0; i < newApple.listTimeouts.length; i++)
                                                 clearTimeout(newApple.listTimeouts[i]);
                                             clearInterval(newApple.waitForDel);    
                                             newApple = null;  
                                         }     
-                                    }, 1500);
+                                    }, 1000);
                                 }
-                                this.element.remove();
                                 this.needToDel = true;
                             }                  
                             break;
 
                         // Бомбы, взрыв
-                        case "/kvadratik/images/bomb.png":
-                            this.hasGet = true;
-                            if (bombIsActive)
+                        case "/kvadratik/images/bomb.png":         
+                            if (bombActive)
                             {
+                                this.hasGet = true;
                                 this.element.src = "/kvadratik/images/exploison.png";
                                 this.element.style.width = 45 * k + "px";
                                 image = "/kvadratik/images/exploison.png";        
@@ -374,6 +374,7 @@ class Objects
                             if (doubleTimer != null)
                             {
                                 clearInterval(doubleTimer);
+                                clearTimeout(doubleIsActive);
                                 document.querySelector(".gainTimer p").innerHTML = "15";
                             }
 
@@ -401,14 +402,14 @@ class Objects
                             grayCube.waitForDel = setInterval(() => {
                                 if (grayCube.needToDel || isGameover)
                                 {
-                                    for (let i = 0; i < grayCube.listIntervals; i++)
+                                    for (let i = 0; i < grayCube.listIntervals.length; i++)
                                         clearInterval(grayCube.listIntervals[i]);
-                                    for (let i = 0; i < grayCube.listTimeouts; i++)
+                                    for (let i = 0; i < grayCube.listTimeouts.length; i++)
                                         clearTimeout(grayCube.listTimeouts[i]);
                                     clearInterval(grayCube.waitForDel);
                                     grayCube = null;                               
                                 }     
-                            }, 1500); 
+                            }, 1000); 
                             grayCubes.push(grayCube.grayCube); 
                             this.element.remove();
                             this.needToDel = true;                                             
@@ -438,7 +439,7 @@ class Objects
                 slowlyDelBomb = setTimeout(async () => {
                     if (!this.hasGet)
                     {
-                        bombIsActive = false;
+                        bombActive = false;
                         for (this.element.style.opacity = 1; this.element.style.opacity > 0; this.element.style.opacity -= 0.01)
                             await delay(5);
                         this.element.remove();
@@ -474,14 +475,14 @@ class Objects
                     {
                         if (image == "/kvadratik/images/apple.png")
                         {
+                            appleActive = false;
                             countApples--;
-                            this.appleActive = false;
                             if (countApples == 0)
                             {
                                 var newApple = new Objects("/kvadratik/images/apple.png", 38, 45);  
-                                for (let i = 0; i < newApple.listIntervals; i++)
+                                for (let i = 0; i < newApple.listIntervals.length; i++)
                                     clearInterval(newApple.listIntervals[i]);
-                                for (let i = 0; i < newApple.listTimeouts; i++)
+                                for (let i = 0; i < newApple.listTimeouts.length; i++)
                                     clearTimeout(newApple.listTimeouts[i]);
                                 clearInterval(newApple.waitForDel || isGameover);
                                 newApple = null;  
@@ -537,27 +538,27 @@ function play()
     firstApple.waitForDel = setInterval(() => {
         if (firstApple.needToDel || isGameover)
         {
-            for (let i = 0; i < firstApple.listIntervals; i++)
+            for (let i = 0; i < firstApple.listIntervals.length; i++)
                 clearInterval(firstApple.listIntervals[i]);
-            for (let i = 0; i < firstApple.listTimeouts; i++)
+            for (let i = 0; i < firstApple.listTimeouts.length; i++)
                 clearTimeout(firstApple.listTimeouts[i]);
             clearInterval(firstApple.waitForDel); 
             firstApple = null;           
         }     
-    }, 1500);
+    }, 1000);
     spawnApples = setInterval(() => {
         let apple = new Objects("/kvadratik/images/apple.png", 38, 45);
             apple.waitForDel = setInterval(() => {
             if (apple.needToDel || isGameover)
             {
-                for (let i = 0; i < apple.listIntervals; i++)
+                for (let i = 0; i < apple.listIntervals.length; i++)
                     clearInterval(apple.listIntervals[i]);
-                for (let i = 0; i < apple.listTimeouts; i++)
+                for (let i = 0; i < apple.listTimeouts.length; i++)
                     clearTimeout(apple.listTimeouts[i]);
                 clearInterval(apple.waitForDel);
                 apple = null;  
             }     
-        }, 1500);
+        }, 1000);
     }, 2500);
 
 
@@ -567,14 +568,14 @@ function play()
         bomb.waitForDel = setInterval(() => {
             if (bomb.needToDel || isGameover)
             {
-                for (let i = 0; i < bomb.listIntervals; i++)
+                for (let i = 0; i < bomb.listIntervals.length; i++)
                     clearInterval(bomb.listIntervals[i]);
-                for (let i = 0; i < bomb.listTimeouts; i++)
+                for (let i = 0; i < bomb.listTimeouts.length; i++)
                     clearTimeout(bomb.listTimeouts[i]);
                 clearInterval(bomb.waitForDel);    
                 bomb = null;  
             }     
-        }, 1500);
+        }, 250);
     }, 3000);
     
 
@@ -597,14 +598,14 @@ function play()
         gain.waitForDel = setInterval(() => {
             if (gain.needToDel || isGameover)
             {
-                for (let i = 0; i < gain.listIntervals; i++)
+                for (let i = 0; i < gain.listIntervals.length; i++)
                     clearInterval(gain.listIntervals[i]);
-                for (let i = 0; i < gain.listTimeouts; i++)
+                for (let i = 0; i < gain.listTimeouts.length; i++)
                     clearTimeout(gain.listTimeouts[i]);
                 clearInterval(gain.waitForDel);    
                 gain = null;  
             }     
-        }, 1500);
+        }, 1000);
     }, 7500);
 
 
