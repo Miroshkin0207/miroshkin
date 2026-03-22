@@ -1,4 +1,4 @@
-// Отключение музыки(
+// Отключение музыки:(
 if (localStorage.getItem("music") == "false")
     document.querySelector("audio").remove();
 
@@ -138,11 +138,11 @@ class Objects
         this.listTimeouts = [];
         this.listIntervals = [];
 
-        if (image == "/kvadratik/images/apple.png")
+        if (image == "images/apple.png")
             var appleActive = true;
-        else if (image == "/kvadratik/images/warning.png")
+        else if (image == "images/warning.png")
             var bombActive = true;
-        else if (image == "/kvadratik/images/grayCube.png")
+        else if (image == "images/grayCube.png")
         {
             this.grayCube = {
                 right: this.borderRight,
@@ -171,20 +171,20 @@ class Objects
         // Уникальная функция предмета при появлении
         switch (image)
         {
-            case "/kvadratik/images/apple.png":
+            case "images/apple.png":
                 countApples++;
                 break;
 
-            case "/kvadratik/images/warning.png":
+            case "images/warning.png":
                 waitForActivationBomb = setTimeout(async () => {
                     try
                     {
                         for (this.element.style.opacity = 1; this.element.style.opacity > 0; this.element.style.opacity -= 0.01)
                             await delay(5);
 
-                        this.element.src = "/kvadratik/images/bomb.png";
+                        this.element.src = "images/bomb.png";
                         this.element.style.zIndex = 2;
-                        image = "/kvadratik/images/bomb.png";
+                        image = "images/bomb.png";
                         this.element.style.opacity = 1;
                         this.element.style.width = 35 * k + "px";
                         this.element.width = 35 * k;
@@ -201,7 +201,7 @@ class Objects
                                         && ((this.borderTop < grayCubes[i].bottom && grayCubes[i].bottom <= this.borderBottom)
                                         || (grayCubes[i].top <= this.borderBottom && this.borderBottom <= grayCubes[i].bottom)))
                                     {
-                                        grayCubes[i].element.src = "/kvadratik/images/grayCubeKilled.png";
+                                        grayCubes[i].element.src = "images/grayCubeKilled.png";
                                         this.hasGet = true;
                                         grayCubes[i].isAlive = false;
                                         
@@ -220,8 +220,8 @@ class Objects
                                         clearInterval(grayCubes[i].updatePosition); 
                                                   
                                         await delay(55);
-                                        this.element.src = "/kvadratik/images/exploison.png";
-                                        image = "/kvadratik/images/exploison.png";
+                                        this.element.src = "images/exploison.png";
+                                        image = "images/exploison.png";
                                         this.element.style.width = 45 * k + "px";
 
                                         clearInterval(grayCubeBomb);                            
@@ -239,7 +239,7 @@ class Objects
                 this.listTimeouts.push(waitForActivationBomb);
                 break;
 
-            case "/kvadratik/images/grayCube.png":
+            case "images/grayCube.png":
                 this.element.style.zIndex = 3;
                 numberListId++;
                 waitForActivationGrayCube = setTimeout(() => {
@@ -323,7 +323,7 @@ class Objects
                     switch (image)
                     {
                         // Яблоки
-                        case "/kvadratik/images/apple.png":
+                        case "images/apple.png":
                             if (appleActive)
                             {   
                                 this.element.remove();           
@@ -339,7 +339,7 @@ class Objects
                                 this.hasGet = true;
                                 if (countApples == 0)
                                 {
-                                    var newApple = new Objects("/kvadratik/images/apple.png", 38, 45); 
+                                    var newApple = new Objects("images/apple.png", 38, 45); 
                                     newApple.waitForDel = setInterval(() => {
                                         if (newApple.needToDel || isGameover)
                                         {
@@ -357,20 +357,20 @@ class Objects
                             break;
 
                         // Бомбы, взрыв
-                        case "/kvadratik/images/bomb.png":         
+                        case "images/bomb.png":         
                             if (bombActive)
                             {
                                 this.hasGet = true;
-                                this.element.src = "/kvadratik/images/exploison.png";
+                                this.element.src = "images/exploison.png";
                                 this.element.style.width = 45 * k + "px";
-                                image = "/kvadratik/images/exploison.png";        
+                                image = "images/exploison.png";        
                                 gameover();
                             }
                             break;
 
                         /* Усиления */
                         // 2x очки
-                        case "/kvadratik/images/double.png":
+                        case "images/double.png":
                             if (doubleTimer != null)
                             {
                                 clearInterval(doubleTimer);
@@ -397,8 +397,8 @@ class Objects
                             break;    
 
                         // Серый Куб (усиление)
-                        case "/kvadratik/images/grayCubeObject.png":                       
-                            let grayCube = new Objects("/kvadratik/images/grayCube.png", 50, 50);  
+                        case "images/grayCubeObject.png":                       
+                            let grayCube = new Objects("images/grayCube.png", 50, 50);  
                             grayCube.waitForDel = setInterval(() => {
                                 if (grayCube.needToDel || isGameover)
                                 {
@@ -416,7 +416,7 @@ class Objects
                             break;   
                             
                         // Виноград
-                        case "/kvadratik/images/grape.png":
+                        case "images/grape.png":
                             score.innerHTML = Number(score.innerHTML) + pointsPerApple * 10;
                             document.querySelector("#plus").innerHTML = `+${pointsPerApple * 10}`;
                             waitForDelPlus = setTimeout(() => {
@@ -435,7 +435,7 @@ class Objects
         // Для предупреждений
         switch (image)
         {
-            case "/kvadratik/images/warning.png":
+            case "images/warning.png":
                 slowlyDelBomb = setTimeout(async () => {
                     if (!this.hasGet)
                     {
@@ -450,7 +450,7 @@ class Objects
                 break; 
 
             // Для Серого Куба
-            case "/kvadratik/images/grayCube.png": 
+            case "images/grayCube.png": 
                 let waitForDieGrayCube = setInterval(() => {
                     if (!this.grayCube.isAlive)
                     {
@@ -473,13 +473,13 @@ class Objects
                 slowlyDelOtherObjects = setTimeout(async () => {
                     if (!this.hasGet)
                     {
-                        if (image == "/kvadratik/images/apple.png")
+                        if (image == "images/apple.png")
                         {
                             appleActive = false;
                             countApples--;
                             if (countApples == 0)
                             {
-                                var newApple = new Objects("/kvadratik/images/apple.png", 38, 45);  
+                                var newApple = new Objects("images/apple.png", 38, 45);  
                                 for (let i = 0; i < newApple.listIntervals.length; i++)
                                     clearInterval(newApple.listIntervals[i]);
                                 for (let i = 0; i < newApple.listTimeouts.length; i++)
@@ -534,7 +534,7 @@ function gamepad(directionGamepad)
 function play()
 {
     // Спавн яблок
-    let firstApple = new Objects("/kvadratik/images/apple.png", 38, 45);
+    let firstApple = new Objects("images/apple.png", 38, 45);
     firstApple.waitForDel = setInterval(() => {
         if (firstApple.needToDel || isGameover)
         {
@@ -547,7 +547,7 @@ function play()
         }     
     }, 1000);
     spawnApples = setInterval(() => {
-        let apple = new Objects("/kvadratik/images/apple.png", 38, 45);
+        let apple = new Objects("images/apple.png", 38, 45);
             apple.waitForDel = setInterval(() => {
             if (apple.needToDel || isGameover)
             {
@@ -564,7 +564,7 @@ function play()
 
     // Спавн бомб
     spawnBombs = setInterval(() => {
-        let bomb = new Objects("/kvadratik/images/warning.png", 36, 44);
+        let bomb = new Objects("images/warning.png", 36, 44);
         bomb.waitForDel = setInterval(() => {
             if (bomb.needToDel || isGameover)
             {
@@ -586,13 +586,13 @@ function play()
         switch (gainNumber)
         {
             case 1:
-                gain = new Objects("/kvadratik/images/double.png", 36, 38);
+                gain = new Objects("images/double.png", 36, 38);
                 break;
             case 2:
-                gain = new Objects("/kvadratik/images/grayCubeObject.png", 30, 30);
+                gain = new Objects("images/grayCubeObject.png", 30, 30);
                 break;
             case 3:
-                gain = new Objects("/kvadratik/images/grape.png", 35, 44);
+                gain = new Objects("images/grape.png", 35, 44);
                 break;  
         }
         gain.waitForDel = setInterval(() => {
@@ -661,14 +661,32 @@ function play()
 }
 
 // Проверяем: делать ли заставку вначале
-if (localStorage.getItem("countdownWithStarting") != "false")
+let isLoad = false;
+window.addEventListener("load", function() {
+    document.querySelector(".overlay").style.display = "none";
+    document.getElementsByClassName("menus")[1].style.display = "none";
+    if (localStorage.getItem("countdownWithStarting") != "false")
+    {
+        startCountdown();
+    }
+    else
+    {
+        play();
+    }
+    isLoad = true;
+});
+
+// Загрузка
+async function loadMenu()
 {
-    startCountdown();
+    await delay(50);
+    if (!isLoad)
+    {
+        document.querySelector(".overlay").style.display = "inline-block";
+        document.getElementsByClassName("menus")[1].style.display = "inline-block";
+    }
 }
-else
-{
-    play();
-}
+loadMenu();
 
 // Конец игры
 async function gameover()
@@ -676,7 +694,7 @@ async function gameover()
     if (!isGameover)
     {
         isGameover = true;
-        kvadratik.src = "/kvadratik/images/kvadratikKilled.png";
+        kvadratik.src = "images/kvadratikKilled.png";
         for (let i = 0; i < grayCubes.length; i++)
             grayCubes[i].updatePosition = null;
       
@@ -720,7 +738,7 @@ function playAgain()
         field.children[0].remove();
     }
     kvadratik = document.createElement("img");
-    kvadratik.src = "/kvadratik/images/kvadratik.png";
+    kvadratik.src = "images/kvadratik.png";
     kvadratik.id = "kvadratik";
     field.appendChild(kvadratik);
 

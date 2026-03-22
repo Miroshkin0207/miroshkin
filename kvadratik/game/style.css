@@ -3,6 +3,7 @@ body {
     background-color: rgb(26, 26, 29);
     color: white;
     font-family: monospace;
+    user-select: none;
 }
 
 button {

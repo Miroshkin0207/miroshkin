@@ -43,6 +43,7 @@
     justify-content: space-around;
     align-items: center;
     z-index: 2;
+    padding: 5px;
 }
 
 .menus button {

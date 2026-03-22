@@ -4,7 +4,7 @@
 .field {
     width: 630px;
     height: 630px;
-    background-color: rgb(29, 28, 28);
+    background-color: rgb(37, 35, 35);
     display: grid;
     grid-template: repeat(11, 1fr) / repeat(11, 1fr);
     position: absolute;
