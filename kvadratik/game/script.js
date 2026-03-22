@@ -679,7 +679,7 @@ window.addEventListener("load", function() {
 // Загрузка
 async function loadMenu()
 {
-    await delay(50);
+    await delay(155);
     if (!isLoad)
     {
         document.querySelector(".overlay").style.display = "inline-block";
