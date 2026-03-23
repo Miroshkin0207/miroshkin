@@ -28,6 +28,10 @@ select {
     background-color: white;
 }
 
+h5 {
+    font-size: 25px;
+}
+
 @media (max-width: 999px) {
     button {
         font-size: 30px;
