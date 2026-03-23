@@ -1,54 +1,38 @@
-﻿body {
-    background-color: rgb(26, 26, 29);
-    color: white;
-    font-family: Tahoma;
-}
-
-button {
-    background-color: black;
-    color: rgb(19, 65, 142);
-    cursor: pointer;
-}
-
-#back {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-}
-
-h1 {
-    text-align: center;
-    position: relative
-}
-
-.output {
+﻿.output {
     background-color: white;
     color: black;
     position: absolute; 
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center
+    align-items: center;
 }
 
 .rect1 {
     display: grid;
     grid-template: repeat(5, 1fr) / repeat(3, 1fr);
-    position: absolute
+    position: absolute;
+    width: 300px;
+    height: 500px;      
+    left: calc(50% - 250px);
+    bottom: 0;
 }
 
 .rect2 {
     display: grid;
     grid-template: 1fr repeat(2, 1.5fr) 1fr / repeat(2, 1fr);
-    position: absolute
+    position: absolute;
+    width: 200px;
+    height: 500px;
+    left: calc(50% + 50px);
+    bottom: 0;
 }
 
 .rect2 button {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 img {
@@ -56,7 +40,7 @@ img {
     width: 100%;
     position: relative;
     right: 5%;
-    height: 75%
+    height: 75%;
 }
 
 #equal {
@@ -65,7 +49,9 @@ img {
 
 #copy {
     position: absolute;
-    right: 0
+    right: 0;
+    top: 50%;
+    font-size: 55px;
 }
 
 .messageCopy {
@@ -75,112 +61,55 @@ img {
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
-    top: 5%
+    top: 5%;
+    font-size: 30px;
+    padding: 15px;
 }
 
-@media (min-width: 1000px) {
-    #back {
-        font-size: 40px
-    }
+.output {
+    min-width: 1000px;
+    height: 70px;
+    font-size: 55px;
+    left: calc(50% - 500px);
+}
 
-    h1 {
-        font-size: 40px;
-        bottom: 15px
-    }
-
-    .output {
-        min-width: 1000px;
-        height: 70px;
-        font-size: 55px;
-        left: calc(50% - 500px);
-        top: 80px
-    }
-
-    button {
-        font-size: 55px
-    }
-
-    
-    button:hover {
-        background-color: rgb(19, 65, 142);
-        color: black;
-    }
-
-    .rect1 {
-        width: 300px;
-        height: 500px;      
-        left: calc(50% - 250px);
-        bottom: 0
-    }
-
-    .rect2 {
-        width: 200px;
-        height: 500px;
-        left: calc(50% + 50px);
-        bottom: 0
-    }
-
-    #copy {
-        font-size: 55px;
-        top: 50%;
-        transform: translateY(-50%)
-    }
-
-    .messageCopy {
-        font-size: 30px;
-        padding: 15px
-    }
+button {
+    font-size: 55px;
 }
 
 @media (max-width: 999px) {
-    #back {
-        font-size: 30px
-    }
-
-    h1 {
-        font-size: 30px;
-        top: 25px
-    }
-
-    
-    button:active {
-        background-color: rgb(19, 65, 142);
-        color: black;
-    }
-
     .output {
         font-size: 35px;
         min-width: 330px;
         height: 50px;
-        top: 95px;
-        left: calc(50% - 165px)
+        left: calc(50% - 165px);
     }
 
     #copy {
         font-size: 30px;
-        top: 165px
+        top: 100px;
     }
 
     button {
-        font-size: 50px
+        font-size: 50px;
     }
 
     .rect1 {
         width: 60%;
         height: 400px;
         left: 0;
-        bottom: 0
+        bottom: 0;
     }
 
     .rect2 {
         width: 40%;
         height: 400px;
         left: 60%;
-        bottom: 0
+        bottom: 0;
     } 
 
     .messageCopy {
         font-size: 25px;
-        padding: 5px
+        padding: 5px;
     }
 }

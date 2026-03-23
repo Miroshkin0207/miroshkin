@@ -1,12 +1,8 @@
 body {
-    color: white;
-    font-family: monospace;
-    background: linear-gradient(90deg, rgb(26, 26, 29) 0%, rgb(50, 50, 56) 100%);
     overflow-x: hidden;
 }
 
 h1 {
-    text-align: center;
     margin: 3px;
 }
 
@@ -15,9 +11,6 @@ p {
 }
 
 button {
-    background-color: black;
-    color: rgb(19, 65, 142);
-    cursor: pointer;
     font-size: 24px;
     margin: 5px;
 }
@@ -82,14 +75,8 @@ footer {
 }
 
 a {
-    color: rgb(3, 79, 200);
     font-size: 25px;
 }
-
-a:hover {
-    color: rgb(226, 8, 8);
-}
-
 
 #mainButton {
     font-size: 35px;
@@ -116,17 +103,7 @@ li::marker {
     content: none;
 }
 
-.overlay {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
+/* Адаптация под телефоны*/
 @media (max-width: 999px) {
     h1 {
         font-size: 22px;
@@ -134,11 +111,6 @@ li::marker {
 
     p {
         font-size: 20px;
-    }
-
-    button:active {
-        background-color: rgb(19, 65, 142);
-        color: black;
     }
 
     header {
@@ -182,18 +154,5 @@ li::marker {
 
     a {
         font-size: 19px;
-    }
-
-    .overlay {
-        width: 100%;
-        height: 1000px;
-    }
-}
-
-/*Окраска кнопок при наведении курсора для ПК*/
-@media (min-width: 999px) {
-    button:hover {
-        background-color: rgb(19, 65, 142);
-        color: black;
     }
 }

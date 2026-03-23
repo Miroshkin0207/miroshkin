@@ -92,19 +92,25 @@ function delay() {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve();
-        }, 15)
+        }, 15);
     })
 }
 
 // Скопировать
-async function copy() {   
+let isCopying = false;
+async function copyResult() {  
     navigator.clipboard.writeText(output.innerHTML);
-    messageCopy.style.display = "block";
-    await waitFor();
-    for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) {
-        await delay();
+    if (!isCopying) 
+    {
+        isCopying = true;    
+        messageCopy.style.display = "inline-block";
+        await waitFor();
+        for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) {
+            await delay();
+        }
+
+        messageCopy.style.display = "none";
+        messageCopy.style.opacity = 1;
+        isCopying = false;
     }
-    
-    messageCopy.style.display = "none";
-    messageCopy.style.opacity = 1;
 }
