@@ -350,7 +350,7 @@ class Objects
                                             clearInterval(newApple.waitForDel);    
                                             newApple = null;  
                                         }     
-                                    }, 1000);
+                                    }, 250);
                                 }
                                 this.needToDel = true;
                             }                  
@@ -545,7 +545,7 @@ function play()
             clearInterval(firstApple.waitForDel); 
             firstApple = null;           
         }     
-    }, 1000);
+    }, 250);
     spawnApples = setInterval(() => {
         let apple = new Objects("images/apple.png", 38, 45);
             apple.waitForDel = setInterval(() => {
@@ -558,7 +558,7 @@ function play()
                 clearInterval(apple.waitForDel);
                 apple = null;  
             }     
-        }, 1000);
+        }, 250);
     }, 2500);
 
 
