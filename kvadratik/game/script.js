@@ -665,6 +665,8 @@ let isLoad = false;
 window.addEventListener("load", function() {
     document.querySelector(".overlay").style.display = "none";
     document.getElementsByClassName("menus")[1].style.display = "none";
+    isLoad = true;
+    document.querySelector(".imagesLoadContainer").remove();
     if (localStorage.getItem("countdownWithStarting") != "false")
     {
         startCountdown();
@@ -673,7 +675,6 @@ window.addEventListener("load", function() {
     {
         play();
     }
-    isLoad = true;
 });
 
 // Загрузка
