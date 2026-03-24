@@ -348,6 +348,7 @@ class Objects
                                             for (let i = 0; i < newApple.listTimeouts.length; i++)
                                                 clearTimeout(newApple.listTimeouts[i]);
                                             clearInterval(newApple.waitForDel);    
+                                            newApple.element.remove();
                                             newApple = null;  
                                         }     
                                     }, 250);
@@ -407,6 +408,7 @@ class Objects
                                     for (let i = 0; i < grayCube.listTimeouts.length; i++)
                                         clearTimeout(grayCube.listTimeouts[i]);
                                     clearInterval(grayCube.waitForDel);
+                                    grayCube.element.remove();
                                     grayCube = null;                               
                                 }     
                             }, 1000); 
@@ -458,7 +460,6 @@ class Objects
                             for (this.element.style.opacity = 1; this.element.style.opacity > 0; this.element.style.opacity -= 0.01)
                                 await delay(5);
                             
-                            this.element.remove();
                             this.needToDel = true;
                         }, 1500);
                         grayCubes = del(grayCubes, this.grayCube.number);
@@ -485,6 +486,7 @@ class Objects
                                 for (let i = 0; i < newApple.listTimeouts.length; i++)
                                     clearTimeout(newApple.listTimeouts[i]);
                                 clearInterval(newApple.waitForDel || isGameover);
+                                
                                 newApple = null;  
                             }               
                         } 
@@ -543,6 +545,7 @@ function play()
             for (let i = 0; i < firstApple.listTimeouts.length; i++)
                 clearTimeout(firstApple.listTimeouts[i]);
             clearInterval(firstApple.waitForDel); 
+            firstApple.element.remove();
             firstApple = null;           
         }     
     }, 250);
@@ -556,6 +559,7 @@ function play()
                 for (let i = 0; i < apple.listTimeouts.length; i++)
                     clearTimeout(apple.listTimeouts[i]);
                 clearInterval(apple.waitForDel);
+                apple.element.remove();
                 apple = null;  
             }     
         }, 250);
