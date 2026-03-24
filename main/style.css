@@ -103,6 +103,11 @@ li::marker {
     content: none;
 }
 
+.overlay {
+    width: 100%;
+    height: 100%;
+}
+
 /* Адаптация под телефоны*/
 @media (max-width: 999px) {
     h1 {

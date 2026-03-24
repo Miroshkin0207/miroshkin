@@ -1,102 +1,39 @@
-﻿body {
-    background-color: rgb(26, 26, 29);
-    color: white;
-    font-family: monospace;
-}
-
-button {
-    background-color: black;
-    color: rgb(19, 65, 142);
-    z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    cursor: pointer;
-}
-
-h1 {
-    text-align: center;
-    position: relative;
-}
-
-textarea {
+﻿textarea {
     font-size: 25px;
     border: solid 3px blue;
-    background-color: white
+    background-color: white;
+    width: 80%;
+    height: 100%;
 }
 
 .textContainer {
-    text-align: center
+    text-align: center;
+    height: 500px;
+    width: 100%;
 }
 
 .stats {
     display: flex;
     flex-direction: column;
     position: relative;
+    font-size: 22px;
+    bottom: 15px;
 }
 
 .stats h2 {
-    margin: 0
+    margin: 0;
 }
 
-@media (min-width: 1000px) {
-    button {
-        font-size: 40px
-    }
-
-    button:hover {
-        background-color: rgb(19, 65, 142);
-        color: black;
-    }
-
-    h1 {
-        font-size: 40px
-    }
-
-    .textContainer {
-        height: 500px;
-        width: 100%
-    }
-
-    textarea {
-        width: 80%;
-        height: 100%
-    }
-
-    .stats {
-        font-size: 30px;
-        bottom: 15px
-    }
-}
-
+/* Адаптация под телефоны */
 @media (max-width: 999px) {
-    button {
-        font-size: 30px
-    }
-
-    button:active {
-        background-color: rgb(19, 65, 142);
-        color: black;
-    }
-
-    h1 {
-        font-size: 30px;
-        top: 20px
-    }
-
     .textContainer {
         height: 450px;
         width: 100%;
-        text-align: center;
-        margin-top: 10%
-    }
-
-    textarea {
-        height: 100%;
+        margin-top: 5%;
     }
 
     .stats {
         font-size: 17px;
-        top: 25px
+        top: 10px;
     }
 }
