@@ -480,14 +480,16 @@ class Objects
                             countApples--;
                             if (countApples == 0)
                             {
-                                var newApple = new Objects("images/apple.png", 38, 45);  
-                                for (let i = 0; i < newApple.listIntervals.length; i++)
-                                    clearInterval(newApple.listIntervals[i]);
-                                for (let i = 0; i < newApple.listTimeouts.length; i++)
-                                    clearTimeout(newApple.listTimeouts[i]);
-                                clearInterval(newApple.waitForDel || isGameover);
-                                
-                                newApple = null;  
+                                var newApple = new Objects("images/apple.png", 38, 45);
+                                newApple.waitForDel = setInterval(() => {
+                                    for (let i = 0; i < newApple.listIntervals.length; i++)
+                                        clearInterval(newApple.listIntervals[i]);
+                                    for (let i = 0; i < newApple.listTimeouts.length; i++)
+                                        clearTimeout(newApple.listTimeouts[i]);
+                                    clearInterval(newApple.waitForDel);
+                                    newApple.element.remove();
+                                    newApple = null;
+                                }, 250);    
                             }               
                         } 
 
