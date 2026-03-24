@@ -9,9 +9,9 @@ function getScore() {
     let time = localStorage.getItem("time")
     if (time != null) {
         if (Date.now() > time) {
-            localStorage.clear()          
-            localStorage.setItem("time", Date.now() + 259200000)
-            time = localStorage.getItem("time")
+            localStorage.setItem("score", "0");
+            localStorage.setItem("time", Date.now() + 259200000);
+            time = localStorage.getItem("time");
         }
     }
     else {
@@ -142,7 +142,8 @@ let isReset = false
 function reset() {
     total.innerHTML = 0
     isReset = true
-    localStorage.clear()
+    localStorage.setItem("score", "0");
+    localStorage.setItem("time", Date.now() + 259200000);
     exitReset()
     getScore()
 }
