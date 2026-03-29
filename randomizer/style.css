@@ -1,34 +1,45 @@
-body {
-    background-color: rgb(26, 26, 29);
-    color: white;
-    font-family: monospace;
-}
-
 button {
-    background-color: black;
-    color: rgb(19, 65, 142);  
-    position: relative;
-    cursor: pointer;
+    font-size: 30px;
 }
 
-#back {
-    position: absolute;
-    left: 0;
-    top: 0
+p {
+    font-size: 25px;
 }
 
-h1 {
-    text-align: center
+h2 {
+    font-size: 25px;
+    margin: 5px;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+h4 {
+    font-size: 21px;
+    margin: 0;
+}
+
+label {
+    font-size: 25px;
 }
 
 .menu {
     background-color: rgb(53, 57, 64);
     text-align: center;
-    position: relative
+    position: relative;
+    width: 55%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 input {
-    width: 75%
+    width: 75%;
+    height: 32px;
+    font-size: 27px;
+    border: solid 3px blue;
+    margin-right: 7px;
 }
 
 .event {
@@ -36,7 +47,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative
+    position: relative;
 }
 
 .eventName {
@@ -46,14 +57,22 @@ input {
     align-items: center;
     overflow-wrap: anywhere;
     width: 100%;
-    padding-bottom: 5px
+    padding-bottom: 5px;
 }
 
 .check {
     background-color: white;
     border: none;
     position: absolute;
-    left: calc(89% + 2px)
+    left: calc(89% + 2px);
+    width: 40px;
+    height: 40px;
+    bottom: 4px;
+}
+
+.check img {
+    width: 30px;
+    height: 30px;
 }
 
 .edit {
@@ -62,7 +81,12 @@ input {
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-45%)
+    transform: translateY(-45%);
+}
+
+.edit img {
+    width: 30px;
+    height: 30px;
 }
 
 #titleExoduses {
@@ -78,23 +102,38 @@ input {
     width: 100%;
     background-color: rgb(43, 44, 46);
     border-bottom: solid black;
-    padding-bottom: 3px
+    padding-bottom: 3px;
 }
 
 #exit {
     position: absolute;
     right: 0;
-    top: 0
+    top: 0;
+    width: 43px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exit img {
+    width: 30px;
+    height: 30px;
 }
 
 .exodusButtons {
     background-color: transparent;
     border: none;
-    position: absolute
+    position: absolute;
 }
 
 #delExodus {
-    right: 0
+    right: 0;
+}
+
+#delExodus img {
+    width: 30px;
+    height: 30px;
 }
 
 .exodus {
@@ -104,175 +143,70 @@ input {
     justify-content: center;
     align-items: center;
     overflow-wrap: anywhere;
-    padding: 10px
+    padding: 10px;
 }
 
 .result {
     display: none;
     background-color: rgba(12, 44, 98, 1);
     padding: 5px 0 5px 0;
-    width: 100%
+    width: 100%;
 }
 
 .buttons {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    width: 20%;
+    position: absolute;
+    left: 79%;
 }
 
 #start {
     background-color: rgb(50, 151, 32);
-    color: black
+    color: black;
 }
 
 .anim {
     display: flex;
     align-items: center;
-    position: absolute
+    position: absolute;
+    left: 79%;
+    top: 35%;
 }
 
-@media (min-width: 1000px) {
-    #back {
-        font-size: 40px
-    }
-
-    button {
-        font-size: 30px
-    }
-
-    button:hover {
-        background-color: rgb(19, 65, 142);
-        color: black;
-    }
-
-    p {
-        font-size: 25px
-    }
-
-    h2 {
-        font-size: 25px;
-        margin: 5px
-    }
-
-    h3 {
-        font-size: 23px
-    }
-
-    h4 {
-        font-size: 21px;
-        margin: 0
-    }
-
-    .menu {
-        width: 55%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%)
-    }
-
-    input {
-        height: 32px;
-        font-size: 27px;
-        border: solid 3px blue;
-        margin-right: 7px
-    }
-
-    .check {
-        width: 40px;
-        height: 40px;
-        bottom: 4px
-    }
-
-    .check img {
-        width: 30px;
-        height: 30px
-    }
-
-    .edit img {
-        width: 30px;
-        height: 30px
-    }
-
-    label {
-        font-size: 25px
-    }
-
-    .forButton {
-        padding-right: 30px
-    }
-
-    #exit {
-        width: 43px;
-        height: 40px
-    }
-
-    #exit img {
-        width: 30px;
-        height: 30px
-    }
-
-    #add {
-        margin-top: 5px
-    }
-
-    .forButtonsExd {
-        padding-right: 85px
-    }
-
-    #editExodus {
-        right: 45px
-    }
-
-    #delExodus {
-        right: 0
-    }
-
-    #editExodus img {
-        width: 30px;
-        height: 30px
-    }
-
-    #delExodus img {
-        width: 30px;
-        height: 30px
-    }
-
-    #ok {
-        font-size: 14px
-    }
-
-    .buttons {
-        width: 20%;
-        position: absolute;
-        left: 79%
-    }
-
-    .anim {
-        left: 79%;
-        top: 35%
-    }
-
-    #animation {
-        width: 25px;
-        height: 25px;
-        margin-right: 5px
-    }
+.forButton {
+    padding-right: 30px;
 }
 
+#add {
+    margin-top: 5px;
+}
+
+.forButtonsExd {
+    padding-right: 85px;
+}
+
+#editExodus {
+    right: 45px;
+}
+
+#editExodus img {
+    width: 30px;
+    height: 30px;
+}
+
+#ok {
+    font-size: 20px;
+}
+
+#animation {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+/* Адаптация под телефоны */
 @media (max-width: 999px) {
-    #back {
-        font-size: 30px
-    }
-
-    button:active {
-        background-color: rgb(19, 65, 142);
-        color: black;
-    }
-
-    main {
-        position: relative;
-        top: 22px;
-    }
-
     h1 {
         margin-bottom: 3px;
     }
@@ -280,6 +214,7 @@ input {
     p {
         font-size: 18px;
         text-align: center;
+        margin: 2px 0 7px 0;
     }
 
     h2 {
@@ -294,7 +229,7 @@ input {
 
     h4 {
         font-size: 21px;
-        margin: 0
+        margin: 0;
     }
 
     .menu {
@@ -302,99 +237,102 @@ input {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        margin-top: 5px
+        margin-top: 5px;
     }
 
     label {
-        font-size: 20px
+        font-size: 20px;
     }
 
     input {
         border: solid 2px blue;
         height: 27px;
-        font-size: 19px
+        font-size: 19px;
     }
 
     .check {
         width: 34px;
         height: 32px;
-        bottom: 6px
+        bottom: 6px;
     }
 
     .check img {
         width: 24px;
-        height: 24px
+        height: 24px;
     }
 
     .edit img {
         width: 25px;
-        height: 25px
+        height: 25px;
     }
 
     .forButton {
-        padding-right: 27px
+        padding-right: 27px;
     }
 
     #exit img {
-        width: 20px;
-        height: 22px
+        width: 27px;
+        height: 27px;
     }
 
     #add {
         font-size: 20px;
-        margin-top: 3px
+        margin-top: 3px;
     }
 
     .forButtonsExd {
-        padding-right: 60px
+        padding-right: 60px;
     }
 
     .exodusButtons img {
         width: 32px;
-        height: 32px
+        height: 32px;
     }
 
     #editExodus {
         right: 35px;
         height: 30px;
-        width: 32px
+        width: 32px;
     }
 
     #editExodus img {
         width: 25px;
-        height: 25px
+        height: 25px;
     }
 
     .checkExodus {
         margin-right: 5px;
-        width: 35px
+        width: 35px;
     }
 
     #delExodus img {
         width: 25px;
-        height: 25px
+        height: 25px;
     }
 
     #ok {
-        font-size: 20px
+        font-size: 20px;
     }
 
     .buttons {
-        width: 45%
+        width: 45%;
+        position: relative;
+        left: 0;
     }
 
     .buttons button {
         font-size: 18px;
-        padding: 3px 0 3px 0
+        padding: 3px 0 3px 0;
     }
 
     .anim {
-        right: 15px;
-        top: 175px
+        position: absolute;
+        left: 60%;
+        top: 75%;
     }
 
     #animation {
         width: 25px;
-        height: 25px
+        height: 25px;
     }
 }

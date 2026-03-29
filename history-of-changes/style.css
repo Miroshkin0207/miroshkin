@@ -1,82 +1,40 @@
-﻿body {
-    background-color: rgb(26, 26, 29);
-    color: white;
-    font-family: monospace;
+﻿p {
+    font-size: 22px;
 }
 
-button {
-    background-color: black;
-    color: rgb(19, 65, 142);
-    position: absolute;
-    left: 0;
-    top: 0;
-    cursor: pointer;
-}
-
-h1, h2 {
+h2 {
     text-align: center;
+    font-size: 35px;
 }
 
-@media (min-width: 1000px) {
-    button {
-        font-size: 40px
-    }
-
-    button:hover {
-        background-color: rgb(19, 65, 142);
-        color: black;
-    }
-
-    h1 {
-        font-size: 40px
-    }
-
-    h2 {
-        font-size: 35px
-    }
-
-    h4 {
-        font-size: 25px
-    }
-
-    h5 {
-        font-size: 22px
-    }
-
-    p {
-        font-size: 20px
-    }
+h4 {
+    font-size: 25px;
 }
 
+h5 {
+    font-size: 24px;
+}
+
+/* Адаптация под телефоны */
 @media (max-width: 999px) {
-    button {
-        font-size: 30px
-    }
-
-    button:active {
-        background-color: rgb(19, 65, 142);
-        color: black;
+    p {
+        font-size: 19px;
     }
 
     h1 {
-        font-size: 30px;
         position: relative;
-        top: 15px
+        top: 15px;
     }
 
     h2 {
-        font-size: 25px
+        font-size: 25px;
     }
 
     h4 {
-        font-size: 20px
+        font-size: 20px;
     }
 
     h5 {
-        font-size: 18px
-    }
-
-    p {
-        font-size: 19px
-    }
+        font-size: 18px;
+    }  
 }

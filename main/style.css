@@ -1,5 +1,15 @@
+@font-face {
+    font-family: "miroshkin";
+    src: url("ofont.ru_Miama\ Nueva.ttf");
+}
+
 body {
     overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.bg {
+    display: none;
 }
 
 h1 {
@@ -108,7 +118,38 @@ li::marker {
     height: 100%;
 }
 
-/* Адаптация под телефоны*/
+/* Заставка */
+.bg {
+    display: inline-block;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1000px;
+    z-index: 5;
+}
+
+.mir {
+    display: none;
+    width: 200px;
+    height: 175px;
+    z-index: 7;
+    position: absolute;
+    left: calc(50% - 125px);
+    bottom: 50%;
+}
+
+.miroshkin {
+    display: none;
+    font-family: miroshkin;
+    font-size: 55px;
+    position: absolute;    
+    z-index: 5; 
+    bottom: calc(50% + 30px); 
+}
+
+/* Адаптация под телефоны */
 @media (max-width: 999px) {
     h1 {
         font-size: 22px;
@@ -159,5 +200,16 @@ li::marker {
 
     a {
         font-size: 19px;
+    }
+
+    .mir {
+        width: 100px;
+        height: 75px;
+        left: calc(50% - 50px);
+    }
+
+    .miroshkin {
+        font-size: 35px;
+        bottom: calc(50% + 10px);
     }
 }

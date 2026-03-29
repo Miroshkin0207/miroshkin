@@ -1,7 +1,56 @@
-﻿// переход на главную страницу
-function back() {
-    window.location.href = "/main/"
+﻿// Переход на главную страницу
+const bg = document.querySelector(".bg");
+async function back() {
+    if (localStorage.getItem("animationOn") != "false")
+        await switchOn();
+    window.location.href = "/main/?dontNeedAnimation=true";
 }
+
+// Функция для ожидания
+function delay(time) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve();
+        }, time);
+    });
+}
+
+// Фон появляется
+async function switchOn()
+{    
+    bg.style.display = "inline-block";
+    bg.style.opacity = 0;
+    while (bg.style.opacity < 1)
+    {
+        bg.style.opacity = Number(bg.style.opacity) + 0.01;
+        await delay(5);
+    }
+    return new Promise(resolve => {
+        resolve();
+    });
+}
+
+// Фон исчезает
+async function switchOff() {
+    if (localStorage.getItem("animationOn") != "false")
+    {
+        bg.style.opacity = 1;
+        while (bg.style.opacity > 0)
+        {
+            bg.style.opacity -= 0.01;
+            await delay(5);
+        }
+        bg.style.display = "none";
+    }
+    else
+    {
+        bg.style.display = "none";
+    }
+}
+if (localStorage.getItem("animationOn") != "false")
+    switchOff();
+else
+    bg.style.display = "none";
 
 // Загрузка рекорда
 let total = document.querySelector("#total")
@@ -59,12 +108,12 @@ function touchMove() {
 
 function mouseStart(e) {
     e.preventDefault()
-    document.querySelector("#total").innerHTML++
-    button.classList.add("buttonClicked")
+    document.querySelector("#total").innerHTML++;
+    button.classList.add("buttonClicked");
 }
 
 function mouseEnd() {
-    button.classList.remove("buttonClicked")
+    button.classList.remove("buttonClicked");
 }
 
 const table = [
@@ -76,8 +125,8 @@ const table = [
     {name: "Сейджуро Акаши", score: 6100},
     {name: "1337", score: 7000},
     {name: "Серафим (СОНЯ)", score: 667}
-]
-table.sort((a, b) => b.score - a.score)
+];
+table.sort((a, b) => b.score - a.score);
 
 for (let i = 0; i < table.length; i++) {
     let line = document.createElement("div")
@@ -93,22 +142,22 @@ for (let i = 0; i < table.length; i++) {
     score.innerHTML = table[i].score
     line.appendChild(score)
 
-    document.querySelector(".table").appendChild(line)
+    document.querySelector(".table").appendChild(line);
 }
 
 // Замок
 var isOpen = true
 function lock() {
-    var lockImg = document.querySelector("img")
+    var lockImg = document.querySelector("img");
     if (isOpen == true) {
-        lockImg.src = "images/lockClose.png"
-        document.body.style.overflow = "hidden"
-        isOpen = false
+        lockImg.src = "images/lockClose.png";
+        document.body.style.overflow = "hidden";
+        isOpen = false;
     }
     else {
-        lockImg.src = "images/lockOpen.png"
-        document.body.style.overflow = "visible"
-        isOpen = true
+        lockImg.src = "images/lockOpen.png";
+        document.body.style.overflow = "visible";
+        isOpen = true;
     }
 }
 
@@ -152,4 +201,4 @@ setInterval(() => {
     if (total.innerHTML != 0 || isReset) {
         localStorage.setItem("score", total.innerHTML)
     }
-}, 3000)
+}, 250);

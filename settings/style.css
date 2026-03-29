@@ -1,61 +1,38 @@
-body {
-    background: linear-gradient(90deg, rgb(26, 26, 29) 0%, rgb(50, 50 ,56) 100%);
-    color: white;
-    font-family: monospace;
-}
-
-button {
-    background-color: black;
-    color: rgb(19, 65, 142);
-    font-size: 40px;
-    cursor: pointer;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-h1 {
-    text-align: center;
-}
-
 p {
     font-size: 22px;
 }
 
+label {
+    font-size: 25px;
+}
+
 select {
     font-size: 22px;
-    cursor: pointer;
-    background-color: white;
+    margin: 5px;
 }
 
 h5 {
     font-size: 25px;
 }
 
+.settings {
+    margin-bottom: 15px;
+    background-color: rgb(19, 18, 18);
+    border: solid gray;
+    padding: 5px;
+}
+
+/* Адаптация под телефоны */
 @media (max-width: 999px) {
     button {
         font-size: 30px;
     }
 
-    button:active {
-        background-color: rgb(19, 65, 142);
-        color: black;
-    }
-
-    main {
-        position: relative;
-        top: 24px;
-    }
-
     h5 {
         font-size: 20px;
     }
-}
 
-/*Окраска кнопок при наведении курсора для ПК*/
-@media (min-width: 999px) {
-    button:hover {
-        background-color: rgb(19, 65, 142);
-        color: black;
+    label {
+        font-size: 22px;
     }
 }

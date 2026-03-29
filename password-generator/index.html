@@ -3,30 +3,35 @@
 <head>
     <title>Генератор паролей</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/main/main.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="bg"></div>
     <button id="back" onclick="back()">Главная</button>
-    <h1>Генератор паролей</h1>
-    <div class="container">
-        <div class="passwordSettings">
-            <label for="first">Минимальная длина пароля:</label>
-            <br>
-            <input id="first" type="number" placeholder="Минимум" oninput="checkButtonDisabled()">
-            <br>
-            <br>
-            <label for="second">Максимальная длина пароля (включительно):</label>
-            <br>
-            <input id="second" type="number" placeholder="Максимум" oninput="checkButtonDisabled()">   
-            <br>
-            <br>
-            <button id="generator" onclick="generate()" disabled>Сгенерировать</button>
+    <main>
+        <h1>Генератор паролей</h1>
+        <div class="container">
+            <div class="passwordSettings">
+                <label for="first">Минимальная длина пароля:</label>
+                <br>
+                <input id="first" type="number" placeholder="Минимум" oninput="checkButtonDisabled()">
+                <br>
+                <br>
+                <label for="second">Максимальная длина пароля (включительно):</label>
+                <br>
+                <input id="second" type="number" placeholder="Максимум" oninput="checkButtonDisabled()">   
+                <br>
+                <br>
+                <button id="generator" onclick="generate()" disabled>Сгенерировать</button>
+            </div>
         </div>
-    </div>
-    <h2>Ваш пароль:</h2>
-    <button id="copy" onclick="copy()">Скопировать</button>
-    <div class="messageCopy">Скопировано</div>    
-    <div class="password"></div>
+        
+        <h2>Ваш пароль:</h2>
+        <button id="copy" onclick="copy()">Скопировать</button>
+        <div class="password"></div>
+    </main>
+    <div class="messageCopy">Скопировано</div>  
     <script src="script.js"></script>
     <script src="/main/common.js"></script>
 </body>

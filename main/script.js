@@ -1,3 +1,88 @@
+// Заставка вначале
+params = new URLSearchParams(window.location.search);
+const mir = document.querySelector(".mir");
+const miroshkin = document.querySelector(".miroshkin");
+const bg = document.querySelector(".bg");
+let animation;
+if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnimation") != "false")
+{ 
+    mir.style.display = "inline-block"; 
+    const start = setTimeout(() => {       
+        miroshkin.style.display = "inline-block";
+
+        var leftBorder = mir.offsetLeft - miroshkin.clientWidth / 2;
+
+        mir.style.left = mir.offsetLeft + "px";
+        miroshkin.style.left = mir.offsetLeft + "px";
+        const rightBorder = leftBorder + mir.clientWidth;
+        animation = setInterval(() => {
+            if (Number(mir.style.left.slice(0, -2)) >= leftBorder)
+                mir.style.left = mir.offsetLeft - 1 + "px";
+            if (Number(miroshkin.style.left.slice(0, -2)) <= rightBorder)
+                miroshkin.style.left = miroshkin.offsetLeft + 1 + "px";
+        }, 1);
+    }, 750);
+}
+else
+{
+    mir.remove();
+    miroshkin.remove();
+    if (localStorage.getItem("animationOn") != "false")
+    {
+        switchOff();
+    }
+    else
+        bg.style.display = "none";
+}
+
+// Функция для ожидания
+function delay(time)
+{
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve();
+        }, time);
+    });
+}
+
+// Конец анимации
+if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnimation") != "false")
+{ 
+    setTimeout(async () => {
+        clearInterval(animation);
+        mir.style.opacity = 1; 
+        miroshkin.style.opacity = 1;
+        while (mir.style.opacity > 0 || miroshkin.style.opacity > 0)
+        {
+            mir.style.opacity -= 0.01;
+            miroshkin.style.opacity -= 0.01;
+            await delay(5);
+        }
+        mir.remove();
+        miroshkin.remove();
+        await delay(500);
+        bg.style.opacity = 1;
+        while (bg.style.opacity > 0)
+        {
+            bg.style.opacity -= 0.01;
+            await delay(5);
+        }
+        bg.style.display = "none";
+        document.body.style.overflowY = "visible";
+    }, 2000);
+}
+
+// Фон исчезает
+async function switchOff() {
+    bg.style.opacity = 1;
+    while (bg.style.opacity > 0)
+    {
+        bg.style.opacity -= 0.01;
+        await delay(5);
+    }
+    bg.style.display = "none";
+}
+
 // Цитаты
 var quote = document.createElement("p");
 quote.id = "quote";
@@ -29,10 +114,12 @@ function getRandom(min, max)
 let before = -1;
 function mainClick() 
 {
-    let n = getRandom(0, quotes.length - 1);
-    while (n == before) {
+    let n;
+    do
+    {
         n = getRandom(0, quotes.length - 1);
-    }
+    } while (n == before)
+    
     before = n;
 
     quote.innerHTML = "「 " + quotes[n] + "  」";
@@ -70,48 +157,75 @@ function showList(tab)
     });
 }
 
-// Ссылки
-function thanks() 
+// Фон появляется
+async function switchOn()
 {
+    if (localStorage.getItem("animationOn") != "false")
+    {
+        bg.style.display = "inline-block";
+        bg.style.opacity = 0;
+        while (bg.style.opacity < 1)
+        {
+            bg.style.opacity = Number(bg.style.opacity) + 0.01;
+            await delay(5);
+        }     
+    }
+    return new Promise(resolve => {
+        resolve();
+    });
+}
+
+// Ссылки
+async function thanks() 
+{
+    await switchOn();
     window.location.href = "/thanks/";
 }
 
-function settings()
+async function settings()
 {
+    await switchOn();
     window.location.href = "/settings/";
 }
 
-function history() 
+async function history() 
 {
+    await switchOn();
     window.location.href = "/history-of-changes/";
 }
 
-function calculator() 
+async function calculator() 
 {
+    await switchOn();
     window.location.href = "/calculator/";
 }
 
-function clicker() 
+async function clicker() 
 {
+    await switchOn();
     window.location.href = "/clicker/";
 }
 
-function textHandler() 
+async function textHandler() 
 {
+    await switchOn();
     window.location.href = "/text-handler/";
 }
 
-function passwordGenerator() 
+async function passwordGenerator() 
 {
+    await switchOn();
     window.location.href = "/password-generator/";
 }
 
-function randomizer() 
+async function randomizer() 
 {
+    await switchOn();
     window.location.href = "/randomizer/";
 }
 
-function kvadratik()
+async function kvadratik()
 {
+    await switchOn();
     window.location.href = "/kvadratik/main/";
 }

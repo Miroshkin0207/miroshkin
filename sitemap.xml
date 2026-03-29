@@ -28,4 +28,8 @@
     <loc>https://miroshkin.vercel.app/randomizer/index.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://miroshkin.vercel.app/kvadratik/main/index.html</loc>
+    <priority>0.8</prority>
+  </url>
 </urlset>

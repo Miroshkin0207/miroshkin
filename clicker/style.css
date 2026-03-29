@@ -1,32 +1,25 @@
-﻿body {
-    background-color: rgb(26, 26, 29);
-    color: white;
-    font-family: monospace;
-    user-select: none;
+﻿button {
+    font-size: 25px;
 }
 
-button {
-    background-color: black;
-    color: rgb(19, 65, 142);
-    z-index: 1;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: rgb(19, 65, 142);
-    color: black;
-}
-
-#back {
-    position: absolute;
-    left: 0;
-    top: 0 ;
+p {
+    font-size: 20px;
 }
 
 h1 {
     position: relative;
-    text-align: center;
+    right: 5%;
 }
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 35px;
+    display: inline-block;
+    margin: 0;
+} 
 
 #mainButton {
     background-color: greenyellow;
@@ -37,6 +30,10 @@ h1 {
     align-items: center;
     margin-right: auto;
     margin-left: auto;
+    font-size: 70px;
+    width: 425px;
+    height: 400px;
+    right: 5%;
     cursor: pointer;
 }
 
@@ -44,9 +41,27 @@ h1 {
     background-color: rgb(90, 116, 51) !important;
 }
 
+#aboutScore {
+    font-size: 25px;
+    position: relative;        
+    top: 15px;
+}
+
+.score {
+    position: relative;
+    top: 30px;
+    width: 64%;
+    word-break: break-all;
+}
+
 .score h4 {
     display: inline-block;
     margin: 0;
+    font-size: 30px;
+}
+
+.score button {
+    display: none;
 }
 
 .titleTable {
@@ -65,15 +80,8 @@ h1 {
 
 #info {
     border: none;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgb(0, 0, 0, 0.7);
-    z-index: 2;
+    width: 35px;
+    height: 35px;
 }
 
 .menuInfo {
@@ -82,6 +90,16 @@ h1 {
     background-color: rgb(41, 43, 44);
     z-index: 5;
     text-align: center;
+    width: 800px;
+    height: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    padding: 0 3% 0 2%;
+}
+
+.menuInfo button {
+    font-size: 30px;
 }
 
 .menuInfo p {
@@ -92,21 +110,39 @@ h1 {
     position: absolute;
     top: 0;
     right: 0;
-    border: none
+    border: none;
+    width: 48px;
+    height: 45px;
+}
+
+.exit img {
+    width: 35px;
+    height: 35px;
+}
+
+.titleTable {
+    position: absolute;
+    right: 0;
+    top: 2%;
+    width: 35%;
+    text-align: center;
 }
 
 .table {
     background-color: rgb(53, 57, 64);
     display: flex;
     flex-direction: column;
-    right: 0
+    right: 0;
+    position: absolute;
+    width: 35%;
+    top: 75px;
 }
 
 .mainLine {
     background-color: rgb(19, 66, 142);
     font-size: 25px;
     display: flex;
-    border-bottom: solid 5px black
+    border-bottom: solid 5px black;
 }
 
 .border {
@@ -114,30 +150,35 @@ h1 {
     width: 5px;
     height: 100%;
     position: absolute;
-    left: 60%
+    left: 60%;
 }
 
 .line {
     display: flex;
-    border-bottom: solid 5px black
+    border-bottom: solid 5px black;
+    font-size: 30px;
 }
 
 .mainName {
     width: 60%;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 .names {
-    width: 60%
+    width: 60%;
+    border-left: solid black;
+    padding-left: 3px;
+    font-size: 25px;
 }
 
 .scores {
     width: 40%;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    font-size: 25px;
 }
 
 .menuReset {
@@ -145,211 +186,81 @@ h1 {
     background-color: rgb(41, 43, 44);
     z-index: 5;
     position: fixed;
-    text-align: center
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 45%;
+    height: 25%;
 }
 
-@media (min-width: 1000px) {
+/* Адаптация под телефоны */
+@media (max-width: 999px) {
     button {
-        font-size: 25px
-    }
-
-    #back {
-        font-size: 40px
-    }
-
-    h1 {
-        font-size: 40px;
-        position: relative;
-        right: 5%
-    }
-
-    
-    button:hover {
-        background-color: rgb(19, 65, 142);
-        color: black;
-    }
-
-    #mainButton {
-        font-size: 70px;
-        width: 425px;
-        height: 400px;
-        right: 5%
-    }
-
-    .score {
-        position: relative;
-        top: 30px;
-        width: 64%;
-        word-break: break-all
-    }
-
-    .score h4 {
-        font-size: 30px
-    }
-
-    .score button {
-        display: none
-    }
-
-    #aboutScore {
-        font-size: 25px;
-        position: relative;        
-        top: 15px
-    }
-
-    h3 {
-        font-size: 35px;
-        display: inline-block;
-        margin: 0;
-    }
-
-    #info {
-        width: 35px;
-        height: 35px;
-    }
-
-    .overlay {
-        width: 100%;
-        height: 100%;
-    }
-
-    .menuInfo {
-        width: 800px;
-        height: 350px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        padding: 0 3% 0 2%;
-    }
-
-    .menuInfo button {
-        font-size: 30px;
-    }
-
-    h2 {
-        font-size: 25px;
+        font-size: 22px;
     }
 
     p {
-        font-size: 20px
-    }
-
-    .exit {
-        width: 48px;
-        height: 45px
-    }
-
-    .exit img {
-        width: 35px;
-        height: 35px
-    }
-
-    .titleTable {
-        position: absolute;
-        right: 0;
-        top: 2%;
-        width: 35%;
-        text-align: center
-    }
-
-    .table {
-        position: absolute;
-        width: 35%;
-        top: 75px
-    }
-
-    .names {
-        border-left: solid black;
-        padding-left: 3px;
-        font-size: 25px
-    }
-
-    .scores {
-        font-size: 25px
-    }
-
-    .line {
-        font-size: 30px
-    }
-
-    .menuReset {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 45%;
-        height: 25%
-    }
-}
-
-@media (max-width: 999px) {
-    button {
-        font-size: 22px
-    }
-
-    #back {
-        font-size: 30px
+        font-size: 20px;
     }
 
     h1 {
         font-size: 30px;
-        top: 24px
+        right: 0;
     }
 
-    button:active {
-        background-color: rgb(19, 65, 142);
-        color: black;
-    }
-
-    #mainButton {
-        font-size: 45px;
-        width: 250px;
-        height: 250px;
-        top: 7px
-    }
-
-    .score {
-        position: relative;
-        margin-top: 7%
-    }
-
-    .score h4 {
-        font-size: 25px
-    }
-
-    .score button {
-        position: absolute;
-        right: 0
-    }
-
-    #lock {
-        background-color: white   
-    }
-
-    #lock img {
-        width: 30px;
-        height: 35px
-    }
-
-    #aboutScore {
-        position: relative;
-        top: 5px
+    h2 {
+        font-size: 20px;
     }
 
     h3 {
         font-size: 25px;
         text-align: center;
         margin: 0;
-        display: inline-block
+        display: inline-block;
+    }
+
+    #mainButton {
+        font-size: 45px;
+        width: 250px;
+        height: 250px;
+        top: 7px;
+        right: 0;
+    }
+
+    .score {
+        position: relative;
+        margin-top: 7%;
+    }
+
+    .score h4 {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .score button {
+        position: absolute;
+        right: 0;
+    }
+
+    #lock {
+        background-color: white;
+    }
+
+    #lock img {
+        width: 30px;
+        height: 35px;
+    }
+
+    #aboutScore {
+        position: relative;
+        top: 5px;
+        font-size: 20px;
     }
 
     #info {
         width: 30px;
-        height: 30px
-    }
-
-    .overlay {
-        width: 100%;
-        height: 125%;
+        height: 30px;
     }
 
     .menuInfo {
@@ -361,43 +272,39 @@ h1 {
     }
     
     .menuInfo button {
-        font-size: 24px
+        font-size: 24px;
     }
 
     .exit {
         width: 43px;
-        height: 40px
+        height: 40px;
     }
 
     .exit img {
         width: 30px;
-        height: 30px
-    }
-
-    h2 {
-        font-size: 25px
-    }
-
-    p {
-        font-size: 20px
+        height: 30px;
     }
 
     .titleTable {
         position: relative;
         text-align: center;
         width: 100%;
-        margin: 0 auto 2%
+        margin: 0 auto 2%;
     }
 
     .table {
         position: relative;
         margin: 0;
-
-        width: 100%
+        width: 100%;
+        top: 0;
     }
 
-    .line {
-        font-size: 20px
+    .names, .scores {
+        font-size: 21px;
+    }
+
+    .line  {
+        font-size: 10px;
     }
 
     .menuReset {
@@ -406,6 +313,6 @@ h1 {
         transform: translate(-50%, -50%);
         width: 75%;
         height: 30%;
-        padding: 5% 2% 2% 5%
+        padding: 5% 2% 2% 5%;
     }
 }

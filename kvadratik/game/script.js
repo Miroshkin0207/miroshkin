@@ -774,7 +774,24 @@ function playAgain()
 }
 
 // Выход из игры
-function leave()
-{
-    window.location.href = "/kvadratik/main/"
+const bg = document.querySelector(".bg");
+async function leave() {
+    if (localStorage.getItem("animationOn") != "false")
+        await switchOn();
+    window.location.href = "/kvadratik/main/";
+}
+
+// Фон появляется
+async function switchOn()
+{    
+    bg.style.display = "inline-block";
+    bg.style.opacity = 0;
+    while (bg.style.opacity < 1)
+    {
+        bg.style.opacity = Number(bg.style.opacity) + 0.01;
+        await delay(5);
+    }
+    return new Promise(resolve => {
+        resolve();
+    });
 }

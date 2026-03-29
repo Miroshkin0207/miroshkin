@@ -3,14 +3,29 @@
 <head>
     <title>Настройки</title>
     <meta name="viewport" content="initial-scale = 1, width=device-width">
+    <link rel="stylesheet" href="/main/main.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="back()">Главная</button>
+    <div class="bg"></div>
+    <button onclick="back()" id="back">Главная</button>
     <main>
         <h1>Настройки</h1>
-        <h5>Пока что тут ничего нет, но уже скоро появится нечто интересное! ^^</h5>
-    <p id="message"></p>
+        <div class="settings">
+            <label for="mainAnimation">Анимация при запуске сайта: </label>
+            <select onchange="mainAnimation()" id="mainAnimation">     
+                <option>Включена</option>
+                <option>Отключена</option>
+            </select>
+        </div>
+
+        <div class="settings">
+            <label for="animations">Анимации при переходе между страницами:</label>
+            <select onchange="animationOn()" id="animations">
+                <option>Включены</option>
+                <option>Отключены</option>
+            </select>
+        </div>
     </main>
     <script src="script.js"></script>
     <script src="/main/common.js"></script>

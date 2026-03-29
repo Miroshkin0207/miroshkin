@@ -3,61 +3,64 @@
 <head>
     <title>Кликер</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/main/main.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="bg"></div>
     <button id="back" onclick="back()">Главная</button>
-    <h1>Кликер</h1>
-        
-    <div id="mainButton">Кликай!</div>
-    <div class="score">
-        <h4>Счёт:</h4>
-        <h4 id="total">0</h4>
-        <button id="lock" onclick="lock()">
-            <img src="images/lockOpen.png">
-        </button>
-    </div>
-    <p id="aboutScore">Рекорд сбросится через <span id="days">0</span> <span id="daysWord">дня</span></p>
-    <button onclick="showMenuReset()">Сбросить</button>
+    <main>
+        <h1>Кликер</h1>
 
-    <div class="titleTable">
-        <h3>Таблица лидеров</h3>
-        <button id="help" onclick="info()">
-            <img id="info" src="images/info.png">
-        </button>
-    </div>
-
-    <div class="table">
-        <div class="mainLine">
-            <div class="mainName">Имя</div>
-            <div class="scores">Рекорд</div>
+        <div id="mainButton">Кликай!</div>
+        <div class="score">
+            <h4>Счёт:</h4>
+            <h4 id="total">0</h4>
+            <button id="lock" onclick="lock()">
+                <img src="images/lockOpen.png">
+            </button>
         </div>
-        <div class="border"></div>
-    </div>
+        <p id="aboutScore">Рекорд сбросится через <span id="days">0</span> <span id="daysWord">дня</span></p>
+        <button onclick="showMenuReset()">Сбросить</button>
 
+        <div class="titleTable">
+            <h3>Таблица лидеров</h3>
+            <button id="help" onclick="info()">
+                <img id="info" src="images/info.png">
+            </button>
+        </div>
+
+        <div class="table">
+            <div class="mainLine">
+                <div class="mainName">Имя</div>
+                <div class="scores">Рекорд</div>
+            </div>
+            <div class="border"></div>
+        </div>
+
+        <div class="menuInfo">
+            <button class="exit" onclick="exit()">
+                <img src="images/exit.png">
+            </button>
+            <h2>Как попасть в таблицу лидеров?</h2>
+            <p>1) Сделайте скриншот, подтверждающий ваш рекорд</p>
+            <p>2) Отправьте скриншот в Телеграм владельца сайта или в наш телеграм-канал (ссылки есть на главной странице)</p>
+            <p>3) Туда же напишите имя, под которым вас нужно записать</p>
+            <strong><p>Рекорд можно перезаписать на то же имя, если он стал больше</p></strong>
+            <button onclick="exit()">Понятно</button>
+        </div>
+
+        <div class="menuReset">
+            <button class="exit" onclick="exitReset()">
+                <img src="images/exit.png">
+            </button>
+            <h2>Подтверждение</h2>
+            <p>Вы уверены, что хотите сбросить свой рекорд?</p>       
+            <button onclick="exitReset()">Нет</button>
+            <button onclick="reset()">Да</button>
+        </div>
+    </main>
     <div class="overlay"></div>
-
-    <div class="menuInfo">
-        <button class="exit" onclick="exit()">
-            <img src="images/exit.png">
-        </button>
-        <h2>Как попасть в таблицу лидеров?</h2>
-        <p>1) Сделайте скриншот, подтверждающий ваш рекорд</p>
-        <p>2) Отправьте скриншот в Телеграм владельца сайта или в наш телеграм-канал (ссылки есть на главной странице)</p>
-        <p>3) Туда же напишите имя, под которым вас нужно записать</p>
-        <strong><p>Рекорд можно перезаписать на то же имя, если он стал больше</p></strong>
-        <button onclick="exit()">Понятно</button>
-    </div>
-
-    <div class="menuReset">
-        <button class="exit" onclick="exitReset()">
-            <img src="images/exit.png">
-        </button>
-        <h2>Подтверждение</h2>
-        <p>Вы уверены, что хотите сбросить свой рекорд?</p>       
-        <button onclick="exitReset()">Нет</button>
-        <button onclick="reset()">Да</button>
-    </div>
     <script src="script.js"></script>
     <script src="/main/common.js"></script>
 </body>
