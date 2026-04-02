@@ -25,7 +25,7 @@ if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnima
         while (miroshkin.style.opacity < 1)
         {
             miroshkin.style.opacity = Number(miroshkin.style.opacity) + 0.01;
-            await delay(5);
+            await delay(7);
         }
     }, 750);
 }
