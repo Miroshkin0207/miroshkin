@@ -12,7 +12,7 @@ if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnima
         miroshkin.style.display = "inline-block";
         while (miroshkin.style.opacity < 1)
         {
-            miroshkin.style.opacity += 0.01;
+            miroshkin.style.opacity = Number(miroshkin.style.opacity) + 0.01;
             await delay(3);
         }
 
