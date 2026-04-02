@@ -10,11 +10,6 @@ if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnima
     const start = setTimeout(async () => {       
         miroshkin.style.opacity = 0;
         miroshkin.style.display = "inline-block";
-        while (miroshkin.style.opacity < 1)
-        {
-            miroshkin.style.opacity = Number(miroshkin.style.opacity) + 0.01;
-            await delay(3);
-        }
 
         var leftBorder = mir.offsetLeft - miroshkin.clientWidth / 2;
 
@@ -27,6 +22,11 @@ if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnima
             if (Number(miroshkin.style.left.slice(0, -2)) <= rightBorder)
                 miroshkin.style.left = miroshkin.offsetLeft + 1 + "px";
         }, 1);
+        while (miroshkin.style.opacity < 1)
+        {
+            miroshkin.style.opacity = Number(miroshkin.style.opacity) + 0.01;
+            await delay(5);
+        }
     }, 750);
 }
 else
