@@ -7,7 +7,7 @@ let animation;
 if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnimation") != "false")
 { 
     mir.style.display = "inline-block"; 
-    const start = setTimeout(() => {       
+    const start = setTimeout(async () => {       
         miroshkin.style.opacity = 0;
         miroshkin.style.display = "inline-block";
         while (miroshkin.style.opacity < 1)
