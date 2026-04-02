@@ -8,7 +8,10 @@ if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnima
 { 
     mir.style.display = "inline-block"; 
     const start = setTimeout(() => {       
+        miroshkin.style.opacity = 0;
         miroshkin.style.display = "inline-block";
+        while (miroshkin.style.opacity < 1)
+            miroshkin.style.opacity += 0.01;
 
         var leftBorder = mir.offsetLeft - miroshkin.clientWidth / 2;
 
