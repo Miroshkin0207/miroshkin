@@ -33,6 +33,7 @@ else
 {
     mir.remove();
     miroshkin.remove();
+    document.body.style.overflowY = "visible";
     if (localStorage.getItem("animationOn") != "false")
     {
         switchOff();
