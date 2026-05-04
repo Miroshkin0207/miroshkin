@@ -25,7 +25,6 @@ if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnima
             if (Number(miroshkin.style.left.slice(0, -2)) <= rightBorder)
                 miroshkin.style.left = miroshkin.offsetLeft + 1 + "px";
         }, 1);
-
         while (miroshkin.style.opacity < 1)
         {
             miroshkin.style.opacity = Number(miroshkin.style.opacity) + 0.01;
