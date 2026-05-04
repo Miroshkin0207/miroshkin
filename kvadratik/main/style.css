@@ -14,14 +14,6 @@ h4 {
     margin: 0;
 }
 
-label {
-    font-size: 22px;
-}
-
-select {
-    font-size: 22px;
-}
-
 p {
     font-size: 24px;
 }
@@ -56,17 +48,9 @@ p {
 }
 
 /* Настройки */
-.settings {
-    display: none;
-    background-color: rgb(41, 43, 44);
-    width: 50%;
-    min-height: 30%;
-    z-index: 5;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 0 3% 1% 2%;
+label {
+    width: 55%;
+    margin: 10px;
 }
 
 /* Заголовок таблицы */
@@ -142,43 +126,32 @@ p {
 }
 
 /* Информация */
-.menuInfo {
-    display: none;
-    position: fixed;
-    background-color: rgb(41, 43, 44);
-    z-index: 5;
-    text-align: center;
-    width: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    padding: 0 3% 1% 2%;
+#menuInfo {
+    padding-bottom: 2%;
 }
 
-.menuInfo button {
+#menuInfo button {
     font-size: 30px;
 }
 
-.menuInfo p {
+#menuInfo p {
     text-align: start;
 }
 
-.exit {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: none;
-    width: 46px;
-    height: 42px;
+#info {
+    background-color: transparent !important;
 }
 
-.exit img {
-    width: 35px;
-    height: 35px;
+#info:hover {
+    background-color: transparent !important;
 }
 
 .bg {
     height: 1000px;
+}
+
+br {
+    display: none;
 }
 
 /* Адаптация под телефоны */
@@ -202,13 +175,8 @@ p {
         width: 50%;
     }
 
-    .settings {
-        width: 70%;
-        min-height: 50%;
-    }
-
-    .settings select {
-        margin-top: 7px;
+    #settingsMenu {
+        width: 75%;
     }
 
     #preview {
@@ -229,25 +197,16 @@ p {
         font-size: 21px;
     }
 
-    .exit {
-        width: 43px;
-        height: 40px;
-    }
-
-    .exit img {
-        width: 30px;
-        height: 30px;
-    }
-
-    .menuInfo {
+    #menuInfo {
         width: 90%;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 15%;
         padding: 7% 3% 3% 3%;
     }
     
-    .menuInfo button {
+    #menuInfo button {
         font-size: 24px;
+    }
+
+    br {
+        display: inline-block;
     }
 }

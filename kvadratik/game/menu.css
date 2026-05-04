@@ -32,18 +32,9 @@
 
 /* Стили различных меню и их составляющих */
 .menus {
-    display: none;
-    background-color: rgb(41, 43, 44);
-    width: 50%;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    z-index: 2;
-    padding: 5px;
 }
 
 .menus button {

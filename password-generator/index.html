@@ -8,31 +8,31 @@
 </head>
 <body>
     <div class="bg"></div>
-    <button id="back" onclick="back()">Главная</button>
+    <button id="back">Главная</button>
     <main>
         <h1>Генератор паролей</h1>
         <div class="container">
             <div class="passwordSettings">
                 <label for="first">Минимальная длина пароля:</label>
                 <br>
-                <input id="first" type="number" placeholder="Минимум" oninput="checkButtonDisabled()">
+                <input id="first" type="number" placeholder="Минимум">
                 <br>
                 <br>
                 <label for="second">Максимальная длина пароля (включительно):</label>
                 <br>
-                <input id="second" type="number" placeholder="Максимум" oninput="checkButtonDisabled()">   
+                <input id="second" type="number" placeholder="Максимум">   
                 <br>
                 <br>
-                <button id="generator" onclick="generate()" disabled>Сгенерировать</button>
+                <button id="generator" disabled>Сгенерировать</button>
             </div>
         </div>
         
         <h2>Ваш пароль:</h2>
-        <button id="copy" onclick="copy()">Скопировать</button>
+        <button id="copy">Скопировать</button>
         <div class="password"></div>
     </main>
     <div class="messageCopy">Скопировано</div>  
-    <script src="script.js"></script>
-    <script src="/main/common.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/main/common.js"></script>
 </body>
 </html>

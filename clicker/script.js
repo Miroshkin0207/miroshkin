@@ -1,56 +1,13 @@
-﻿// Переход на главную страницу
-const bg = document.querySelector(".bg");
+﻿// Импорт
+import { switchOn, switchOff } from "/main/common.js";
+
+// Переход на главную страницу
+document.querySelector("#back").onclick = () => back();
 async function back() {
-    if (localStorage.getItem("animationOn") != "false")
-        await switchOn();
+    await switchOn();
     window.location.href = "/main/?dontNeedAnimation=true";
 }
-
-// Функция для ожидания
-function delay(time) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve();
-        }, time);
-    });
-}
-
-// Фон появляется
-async function switchOn()
-{    
-    bg.style.display = "inline-block";
-    bg.style.opacity = 0;
-    while (bg.style.opacity < 1)
-    {
-        bg.style.opacity = Number(bg.style.opacity) + 0.01;
-        await delay(5);
-    }
-    return new Promise(resolve => {
-        resolve();
-    });
-}
-
-// Фон исчезает
-async function switchOff() {
-    if (localStorage.getItem("animationOn") != "false")
-    {
-        bg.style.opacity = 1;
-        while (bg.style.opacity > 0)
-        {
-            bg.style.opacity -= 0.01;
-            await delay(5);
-        }
-        bg.style.display = "none";
-    }
-    else
-    {
-        bg.style.display = "none";
-    }
-}
-if (localStorage.getItem("animationOn") != "false")
-    switchOff();
-else
-    bg.style.display = "none";
+switchOff();
 
 // Загрузка рекорда
 let total = document.querySelector("#total")
@@ -116,6 +73,7 @@ function mouseEnd() {
     button.classList.remove("buttonClicked");
 }
 
+// Таблица лидеров
 const table = [
     {name: "Сигма Влдмр", score: 666},
     {name: "Министерство Казинака", score: 777},
@@ -146,7 +104,8 @@ for (let i = 0; i < table.length; i++) {
 }
 
 // Замок
-var isOpen = true
+var isOpen = true;
+document.querySelector("#lock").onclick = () => lock();
 function lock() {
     var lockImg = document.querySelector("img");
     if (isOpen == true) {
@@ -162,32 +121,38 @@ function lock() {
 }
 
 // Открыть меню
+document.querySelector("#help").onclick = () => info();
 function info() {
-    document.querySelector(".menuInfo").style.display = "block"
+    document.querySelector("#menuInfo").style.display = "block"
     document.querySelector(".overlay").style.display = "block"
 }
 
 // Закрыть меню
+document.querySelector("#exit").onclick = () => exit();
+document.querySelector(".exit").onclick = () => exit();
 function exit() {
-    document.querySelector(".menuInfo").style.display = "none"
+    document.querySelector("#menuInfo").style.display = "none"
     document.querySelector(".overlay").style.display = "none"
 }
 
 // Меню сброса рекорда
+document.querySelector("#showMenuReset").onclick = () => showMenuReset();
 function showMenuReset() {
     document.querySelector(".overlay").style.display = "block"
-    document.querySelector(".menuReset").style.display = "block"
+    document.querySelector("#menuReset").style.display = "block"
 }
 
-
 // Выйти из меню сброса рекорда
+document.getElementsByClassName("exit")[1].onclick = () => exitReset();
+document.querySelector("#exitReset").onclick = () => exitReset();
 function exitReset() {
-    document.querySelector(".menuReset").style.display = "none"
+    document.querySelector("#menuReset").style.display = "none"
     document.querySelector(".overlay").style.display = "none"
 }
 
 // Сбросить рекорд
 let isReset = false
+document.querySelector("#reset").onclick = () => reset();
 function reset() {
     total.innerHTML = 0
     isReset = true

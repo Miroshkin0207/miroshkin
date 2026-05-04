@@ -8,13 +8,13 @@
 </head>
 <body>
     <div class="bg"></div>
-    <button id="back" onclick="back()">Главная</button>
+    <button id="back">Главная</button>
     <main>
     <h1>Рандомайзер</h1>
     <p>Здесь вы можете добавить возможные исходы какого-то события и получить один случайный.</p>
 
     <div class="buttons">
-        <button id="newExodus" onclick="newExodus()">+Новый исход</button>
+        <button id="newExodus">+Новый исход</button>
         <button id="start">Запустить</button>       
     </div>        
 
@@ -27,9 +27,9 @@
         <div class="event">
             <div class="eventName">
                 <label for="eventNameInput">Имя события:</label>
-                <input id="eventNameInput" placeholder="Введите событие" oninput="showCheck()">
+                <input id="eventNameInput" placeholder="Введите событие">
             </div>
-            <button class="check" onclick="showEventName()">
+            <button class="check">
                 <img src="images/check.png">
             </button>
         </div>
@@ -47,17 +47,17 @@
                         <img src="images/exit.png">
                     </button>
                 </div>
-                <div class="listExoduses" ></div>
+                <div class="listExoduses"></div>
         </div>
 
         <div class="result">
             <h4>Итог:</h4>
-            <button id="ok" onclick="afterResult()">Ок</button>
+            <button id="ok">Ок</button>
         </div>
     </div>
     </main>
 
-    <script src="script.js"></script>
-    <script src="/main/common.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/main/common.js"></script>
 </body>
 </html>

@@ -1,8 +1,10 @@
-﻿// Переход на главную страницу
-const bg = document.querySelector(".bg");
+﻿// Импорт
+import { switchOn, switchOff } from "/main/common.js";
+
+// Переход на главную страницу
+document.querySelector("#back").onclick = () => back();
 async function back() {
-    if (localStorage.getItem("animationOn") != "false")
-        await switchOn();
+    await switchOn();
 
     if (document.querySelector("textarea").value == "Anikill")
     {
@@ -17,53 +19,9 @@ async function back() {
         window.location.href = "/main/?dontNeedAnimation=true";
     }
 }
+switchOff();
 
-// Функция для ожидания
-function delay(time) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve();
-        }, time);
-    });
-}
-
-// Фон появляется
-async function switchOn()
-{    
-    bg.style.display = "inline-block";
-    bg.style.opacity = 0;
-    while (bg.style.opacity < 1)
-    {
-        bg.style.opacity = Number(bg.style.opacity) + 0.01;
-        await delay(5);
-    }
-    return new Promise(resolve => {
-        resolve();
-    });
-}
-
-// Фон исчезает
-async function switchOff() {
-    if (localStorage.getItem("animationOn") != "false")
-    {
-        bg.style.opacity = 1;
-        while (bg.style.opacity > 0)
-        {
-            bg.style.opacity -= 0.01;
-            await delay(5);
-        }
-        bg.style.display = "none";
-    }
-    else
-    {
-        bg.style.display = "none";
-    }
-}
-if (localStorage.getItem("animationOn") != "false")
-    switchOff();
-else
-    bg.style.display = "none";
-
+document.querySelector("textarea").oninput = () => textInput();
 function textInput() {
     let chars = document.querySelectorAll("h2")[0]
     let words = document.querySelectorAll("h2")[1]

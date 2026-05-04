@@ -1,65 +1,26 @@
-﻿// Переход на главную страницу
-const bg = document.querySelector(".bg");
+﻿// Импорт
+import { switchOn, switchOff, delay } from "/main/common.js";
+switchOff();
+
+// Переход на главную страницу
+document.querySelector("button").onclick = () => back();
 async function back() {
-    if (localStorage.getItem("animationOn") != "false")
-        await switchOn();
+    await switchOn();
     window.location.href = "/main/?dontNeedAnimation=true";
 }
 
-// Функция для ожидания
-function delay(time) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve();
-        }, time);
-    });
-}
-
-// Фон появляется
-async function switchOn()
-{    
-    bg.style.display = "inline-block";
-    bg.style.opacity = 0;
-    while (bg.style.opacity < 1)
-    {
-        bg.style.opacity = Number(bg.style.opacity) + 0.01;
-        await delay(5);
-    }
-    return new Promise(resolve => {
-        resolve();
-    });
-}
-
-// Фон исчезает
-async function switchOff() {
-    if (localStorage.getItem("animationOn") != "false")
-    {
-        bg.style.opacity = 1;
-        while (bg.style.opacity > 0)
-        {
-            bg.style.opacity -= 0.01;
-            await delay(5);
-        }
-        bg.style.display = "none";
-    }
-    else
-    {
-        bg.style.display = "none";
-    }
-}
-if (localStorage.getItem("animationOn") != "false")
-    switchOff();
-else
-    bg.style.display = "none";
-
 // Ввод текста
 let output = document.querySelector(".output");
+const countButtons = 22;
+for (let i = 2; i <= countButtons; i++)
+    document.getElementsByTagName("button")[i].onclick = () => inputChar(document.getElementsByTagName("button")[i]);
 function inputChar(text) {
     output.innerHTML += text.innerHTML;
 }
 
 // Расчёт
 let result = "";
+document.querySelector("#equal").onclick = () => printResult(this);
 function printResult() {
     if (output.innerHTML.length > 0) {
         let countSpecChars = 0;
@@ -116,13 +77,14 @@ function printResult() {
     }
 }
 
-
 // Удалить последний символ
+document.querySelector("#delLastChar").onclick = () => delLastChar();
 function delLastChar() {
     output.innerHTML = output.innerHTML.slice(0, -1);
 }
 
 // Очистить
+document.getElementsByTagName("button")[2].onclick = () => clearInput();
 function clearInput() {
     output.innerHTML = "";
     result = "";
@@ -139,6 +101,7 @@ function waitFor() {
 
 // Скопировать
 let isCopying = false;
+document.querySelector("#copy").onclick = () => copyResult();
 async function copyResult() {  
     navigator.clipboard.writeText(output.innerHTML);
     if (!isCopying) 

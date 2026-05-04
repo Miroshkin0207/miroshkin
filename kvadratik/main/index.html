@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="bg"></div>
-    <button onclick="back()" id="back">Главная</button>
+    <button id="back">Главная</button>
     <main>
         <h1>Квадратик</h1>
         <div class="preview">
@@ -18,15 +18,16 @@
         <p>В этой захватывающей игре вам предстоит играть за Квадратика. Собирайте яблоки, избегайте бомб, получайте различные эффекты и постарайтесь набрать как можно больше очков, чтобы занять наиболее высокое место в таблице лидеров!</p>
         <div class="playAndScore">
             <h4></h4>
-            <button onclick="play()">Играть</button>
-            <button onclick="settings()">Настройки</button>
-            <button onclick="aboutGame()">Об игре</button>
+            <button>Играть</button>
+            <button>Настройки</button>
+            <button>Об игре</button>
         </div>
 
         <!--Таблица лидеров-->
         <div class="titleTable">
             <h3>Таблица лидеров</h3>
-            <img onclick="info()" src="/clicker/images/info.png">
+            <button id="info">
+                <img src="/clicker/images/info.png">
             </button>
         </div>
 
@@ -39,41 +40,46 @@
         </div>
 
         <!--Информационное меню-->
-        <div class="menuInfo">
-            <button class="exit" onclick="exitInfo()">
+        <div class="menus" id="menuInfo">
+            <button class="exit">
                 <img src="/clicker/images/exit.png">
             </button>
-            <h2>Как попасть в таблицу лидеров?</h2>
-            <p>1) Сделайте скриншот, подтверждающий ваш рекорд</p>
-            <p>2) Отправьте скриншот в Телеграм владельца сайта или в наш телеграм-канал (ссылки есть на главной странице)</p>
-            <p>3) Туда же напишите имя, под которым вас нужно записать</p>
-            <strong><p>Рекорд можно перезаписать на то же имя, если он стал больше</p></strong>
-            <button onclick="exitInfo()">Понятно</button>
+            <h2 class="menusLabel">Как попасть в таблицу лидеров?</h2>
+            <p class="menusLabel">1) Сделайте скриншот, подтверждающий ваш рекорд</p>
+            <br>
+            <p class="menusLabel">2) Отправьте скриншот в <a href="https://t.me/anonaskbot?start=miroshkin">анонимные сообщения</a>, в <a href="https://t.me/mirowww">мой Телеграм</a> или в наш <a href="https://t.me/miroshkin0207">телеграм-канал</a></p>
+            <br>
+            <p class="menusLabel">3) Туда же напишите имя, под которым вас нужно записать</p>
+            <br>
+            <strong><p class="menusLabel">Рекорд можно перезаписать на то же имя, если он стал больше</p></strong>
+            <button id="ponyatno">Понятно</button>
         </div>
 
         <!--Настройки-->
-        <div class="settings">
-            <button class="exit" onclick="exitSettings()">
+        <div class="menus" id="settingsMenu">
+            <button class="exit">
                 <img src="/clicker/images/exit.png">
             </button>
-            <h2>Настройки</h2>
-            <label>Обратный отсчёт при старте:</label>
-            <select name="countdownWithStarting" onchange="countdownWithStarting()">
-                <option select>Включён</option>
-                <option>Отключён</option>
-            </select>
+            <h2 class="menusLabel">Настройки</h2>
+            <div class="settings">
+                <label class="menusLabel">Обратный отсчёт при старте:</label>
+                <div class="switches">
+                    <div class="circles"></div>
+                </div>
+            </div>
 
             <br>
 
-            <label>Музыка:</label>
-            <select name="music" onchange="music()">
-                <option select>Включена</option>
-                <option select>Отключена</option>
-            </select>
+            <div class="settings">
+                <label class="menusLabel">Музыка:</label>
+                <div class="switches">
+                    <div class="circles"></div>
+                </div>
+            </div>
         </div>
     </main>
     <div class="overlay"></div>
-    <script src="script.js"></script>
-    <script src="/main/common.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/main/common.js"></script>
 </body>
 </html>

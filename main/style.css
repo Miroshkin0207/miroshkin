@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "miroshkin";
-    src: url("ofont.ru_Miama\ Nueva.ttf");
-}
-
 body {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -13,7 +8,7 @@ body {
 }
 
 h1 {
-    margin: 3px;
+    margin: 0px;
 }
 
 p {
@@ -41,7 +36,6 @@ header {
 }
 
 .tabs {
-    background: black;
     height: 100%;
     width: 100%;
     border: none;
@@ -84,10 +78,6 @@ footer {
     top: 15vh;
 }
 
-a {
-    font-size: 25px;
-}
-
 #mainButton {
     font-size: 35px;
 }
@@ -111,11 +101,6 @@ li button {
 
 li::marker {
     content: none;
-}
-
-.overlay {
-    width: 100%;
-    height: 100%;
 }
 
 /* Заставка */
@@ -142,7 +127,7 @@ li::marker {
 
 .miroshkin {
     display: none;
-    font-family: miroshkin;
+    font-family: MiamaNueva;
     font-size: 55px;
     position: absolute;    
     z-index: 5; 
@@ -196,10 +181,6 @@ li::marker {
     #interesting {
         font-size: 18px;
         margin-top: 7%;
-    }
-
-    a {
-        font-size: 19px;
     }
 
     .mir {

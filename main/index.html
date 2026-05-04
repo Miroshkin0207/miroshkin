@@ -23,24 +23,24 @@
     <div class="miroshkin">ирошкин</div>
     <header>
         <div class="tabsContainers">
-            <button class="tabs" onclick="showList(this)">Инструменты</button>
-            <button class="tabs" onclick="showList(this)">Игры</button>
+            <button class="tabs">Инструменты</button>
+            <button class="tabs">Игры</button>
         </div>
         <h1>Мирошкин</h1>
         <div class="tabsContainers">
-            <button class="tabs" onclick="thanks()">Благодарности</button>
-            <button class="tabs" onclick="settings()">Настройки</button>
+            <button class="tabs">Благодарности</button>
+            <button class="tabs">Настройки</button>
         </div>
     </header>
 
     <main>
         <h1><em>Добро пожаловать на сайт Мирошкин!</em></h1>
         <p>Нажми на кнопку ниже</p>
-        <button id="mainButton" onclick="mainClick()">Нажми</button>
+        <button id="mainButton">Нажми</button>
         <div class="quoteContainer"></div>
         <p>Мирошкин — сайт, на котором вы найдёте множество интересных инструментов и игр. Вы можете работать с текстом, вычислениями, рандомом и многим другим!</p>
         <p style="margin-bottom: 0;">Сайт довольно активно развивается, выходят новые обновления и их документация. Кстати, вы можете посмотреть их полный список с датами и планируемые обновления в истории изменений:</p>
-        <button onclick="history()">История изменений</button>
+        <button>История изменений</button>
     </main>
        
     <!--Выпадающие списки-->
@@ -68,15 +68,14 @@
 
     <footer>
         <p id="interesting"><strong>Интересные ссылки:</strong></p>
-        <a href="https://t.me/mirowww">Мой телеграм (по вопросам обращайтесь сюда)</a>
+        <a href="https://t.me/mirowww">Мой телеграм</a>
+        <a href="https://t.me/anonaskbot?start=miroshkin">Анонимные сообщения</a>
         <a href="https://t.me/miroshkin0207">Телеграм-канал сайта</a>
         <a href="https://vk.com/id674344044">Мой ВК</a>
-        <a href="https://www.tiktok.com/@miroshkin0207?_t=ZT-8uygPIYr1yg&_r=1">Тик-ток сайта</a>
     </footer>
     
     <div class="overlay"></div>
-
-    <script src="common.js"></script>
-    <script src="script.js"></script>
+    <script type="module" src="common.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

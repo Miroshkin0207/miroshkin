@@ -47,6 +47,10 @@ h3 {
     top: 15px;
 }
 
+#lock {
+    display: none;
+}
+
 .score {
     position: relative;
     top: 30px;
@@ -84,25 +88,16 @@ h3 {
     height: 35px;
 }
 
-.menuInfo {
-    display: none;
-    position: fixed;
-    background-color: rgb(41, 43, 44);
-    z-index: 5;
-    text-align: center;
+#menuInfo {
     width: 800px;
     height: 350px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    padding: 0 3% 0 2%;
 }
 
-.menuInfo button {
+#menuInfo button {
     font-size: 30px;
 }
 
-.menuInfo p {
+#menuInfo p {
     text-align: start;
 }
 
@@ -181,15 +176,8 @@ h3 {
     font-size: 25px;
 }
 
-.menuReset {
-    display: none;
-    background-color: rgb(41, 43, 44);
-    z-index: 5;
-    position: fixed;
+#menuReset {
     text-align: center;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     width: 45%;
     height: 25%;
 }
@@ -231,6 +219,7 @@ h3 {
     .score {
         position: relative;
         margin-top: 7%;
+        width: 100%;
     }
 
     .score h4 {
@@ -244,7 +233,11 @@ h3 {
     }
 
     #lock {
+        display: inline-block;
         background-color: white;
+        position: absolute;
+        right: 0;
+        bottom: 5px;
     }
 
     #lock img {
@@ -263,15 +256,12 @@ h3 {
         height: 30px;
     }
 
-    .menuInfo {
+    #menuInfo {
         width: 90%;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 7%;
-        padding: 7% 3% 3% 3%;
+        height: auto;
     }
     
-    .menuInfo button {
+    #menuInfo button {
         font-size: 24px;
     }
 
@@ -307,10 +297,7 @@ h3 {
         font-size: 10px;
     }
 
-    .menuReset {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+    #menuReset {
         width: 75%;
         height: 30%;
         padding: 5% 2% 2% 5%;

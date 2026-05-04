@@ -1,0 +1,75 @@
+/* Адаптация под телефоны */
+@media (max-width: 999px) {
+    h1 {
+        font-size: 24px;
+        margin: 5px;
+    }
+
+    h4 {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 20px;
+    }
+
+    .checkColor {
+        width: 17px;
+        height: 17px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #reset {
+        font-size: 20px;
+        position: absolute;
+        top: 5px;
+        right: 2px;
+    }
+
+    #selectFontFamily:active {
+        #triangle {
+            border-top: 20px solid var(--buttonHoverColor) !important;
+        }
+
+        #selectFontFamilyText {
+            color: var(--buttonHoverColor) !important;
+        }
+    }
+
+    #delete:active {
+        cursor: pointer;
+        opacity: 0.75;
+    }
+
+    .buttonSettings {
+        display: block;
+    }
+
+    .colorBg, .color, .changeColor {
+        width: 1.7em;
+        height: 1.7em;
+    }
+
+    .menus {
+        width: 90%;
+    }
+
+    #delete img {
+        width: 25px;
+        height: 30px;
+    }
+
+    #plus {
+        font-size: 25px;
+        bottom: 15%;
+    }
+}

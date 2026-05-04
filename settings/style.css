@@ -1,38 +1,263 @@
+h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    text-align: center;
+    font-size: 24px;
+    margin: 8px 0 8px 0;
+    background-color: rgba(46, 41, 41, 0.75);
+}
+
 p {
-    font-size: 22px;
-}
-
-label {
-    font-size: 25px;
-}
-
-select {
-    font-size: 22px;
-    margin: 5px;
+    font-size: 24px;
+    display: inline-block;
 }
 
 h5 {
+    font-size: 20px;
+    margin: 5px;
+}
+
+button {
+    font-size: 24px;
+}
+
+img {
+    cursor: pointer;
+}
+
+input {
+    cursor: pointer;
+}
+
+#inputColor {
+    display: none;
+}
+
+#reset {
+    font-size: 25px;
+    position: absolute;
+    right: 5%;
+    top: 2%;
+}
+
+#no, #yes {
+    margin: 7px;
     font-size: 25px;
 }
 
-.settings {
-    margin-bottom: 15px;
-    background-color: rgb(19, 18, 18);
-    border: solid gray;
-    padding: 5px;
+/* Элемент позади элемента выбора цвета (подстилка)*/
+.colorBg {
+    background-color: transparent;
+    border-top: white solid;
+    border-right: black solid;
+    border-bottom: black solid;
+    border-left: white solid;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 1px 0 5px 0;
+    position: relative;
 }
 
-/* Адаптация под телефоны */
-@media (max-width: 999px) {
-    button {
-        font-size: 30px;
+#colorBgBackground {
+    background-color: white;
+}
+
+.changeColor, .color {
+    width: 2.5em;
+    height: 2.5em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.colorSettings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#changeColorMenu {
+    min-height: 30%;
+    display: none;
+}
+
+.colorPanel {
+    background-color: rgba(26, 25, 25, 0.9);
+    padding: 5px;
+    margin: 7px 7px 10px 7px;
+    position: relative;
+}
+
+.colorsContainer {
+    flex-wrap: wrap;
+}
+
+#mainColorsPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#userColors {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 90%;
+}
+
+#newColor {
+    background-color: black;  
+    display: flex;
+    justify-content: center;
+}
+
+#plus {
+    font-size: 30px;
+    position: relative;
+    bottom: 5%;
+}
+
+#delete {
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: black solid;
+}
+
+#delete img {
+    width: 35px;
+    height: 40px;
+}
+
+.checkColor {
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 10%;
+    top: 0;
+}
+
+#mainColor {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(12, 1fr);
+    width: 95%;
+}
+
+.borderOff {
+    border: solid black 1px;
+}
+
+.colorSelected {
+    border-top: white solid;
+    border-right: black solid;
+    border-bottom: black solid;
+    border-left: white solid;
+}
+
+
+.changeFontFamily {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+#selectFontFamily {
+    display: flex;
+    align-items: center;
+}
+
+#selectFontFamilyText {
+    margin: 0;
+    color: rgb(19, 65, 142);
+}
+
+#selectFontFamilyMenu {
+    flex-direction: column;
+    height: 65%;
+}
+
+#selectFontFamilyMenu p {
+    padding: 5px;
+    border-top: solid black;
+    border-left: solid black;
+    border-right: solid black;
+    margin: 0;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#selectFontFamilyMenu p:hover {
+    border: solid white;
+    cursor: pointer;
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid rgb(19, 65, 142);
+    margin: 3px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+}
+
+#Monospace {
+    font-family: Monospace;
+}
+
+#TimesNewRoman {
+    font-family: Times New Roman;
+}
+
+#Calibri {
+    font-family: Calibri;
+}
+
+#Arial {
+    font-family: Arial;
+}
+
+#MiamaNueva {
+    font-family: MiamaNueva;
+    border-bottom: solid black;
+}
+
+.buttonSettings {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    gap: 55px;
+}
+
+#onCursorText {
+    margin: 4px;
+}
+
+@media (min-width: 1000px) {
+    #selectFontFamily:hover {
+        #triangle {
+            border-top: 20px solid var(--buttonHoverColor) !important;
+        }
+
+        #selectFontFamilyText {
+            color: var(--buttonHoverColor) !important;
+        }
     }
 
-    h5 {
-        font-size: 20px;
-    }
-
-    label {
-        font-size: 22px;
+    #delete:hover {
+        cursor: pointer;
+        opacity: 0.75;
     }
 }

@@ -5,29 +5,174 @@
     <meta name="viewport" content="initial-scale = 1, width=device-width">
     <link rel="stylesheet" href="/main/main.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adapdation.css">
 </head>
 <body>
     <div class="bg"></div>
     <button onclick="back()" id="back">Главная</button>
+    <button id="reset">Сбросить все</button>
     <main>
         <h1>Настройки</h1>
+
+        <h4>Анимации</h4>
         <div class="settings">
-            <label for="mainAnimation">Анимация при запуске сайта: </label>
-            <select onchange="mainAnimation()" id="mainAnimation">     
-                <option>Включена</option>
-                <option>Отключена</option>
-            </select>
+            <label for="mainAnimation" class="menusLabel">Анимация при запуске сайта: </label>
+            <div class="switches" id="mainAnimation">
+                <div class="circles"></div>
+            </div>
+        </div>
+        <div class="settings">
+            <label for="animations" class="menusLabel">Анимации при переходе между страницами:</label>
+            <div class="switches" id="animations">
+                <div class="circles"></div>
+            </div>
         </div>
 
-        <div class="settings">
-            <label for="animations">Анимации при переходе между страницами:</label>
-            <select onchange="animationOn()" id="animations">
-                <option>Включены</option>
-                <option>Отключены</option>
-            </select>
+        <h4>Общие цвета и шрифт</h4>
+        <div class="colorSettings">
+            <p>Цвет фона:</p>
+            <div class="colorBg" id="colorBgBackground">
+                <div class="changeColor"></div>   
+            </div> 
+        </div>
+
+        <div class="colorSettings">
+            <p>Цвет текста:</p>
+            <div class="colorBg">
+                <div class="changeColor"></div>
+            </div>
+        </div>
+
+        <!--Меню выбора цвета-->
+        <div class="menus" id="changeColorMenu">
+            <button class="exit">
+                <img src="/clicker/images/exit.png">
+            </button>
+            <h4 class="menusLabel">Выберите цвет</h4>
+            <div class="colorPanel" id="mainColorsPanel">
+                <h5 class="menusLabel">Основные цвета</h5>
+                <div class="colorsContainer" id="mainColor"></div>
+            </div>
+            <div class="colorPanel">
+                <h5 class="menusLabel">Ваши цвета</h5>
+                <div class="colorsContainer" id="userColors">
+                    <div class="color" id="newColor">
+                        <div id="plus">+</div>
+                        <input type="color" id="inputColor">
+                    </div>                  
+                </div>
+                <div id="delete">
+                    <img src="/randomizer/images/del.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="changeFontFamily">
+            <p>Шрифт:</p>
+            <button id="selectFontFamily">
+                <p id="selectFontFamilyText">Monospace</p>
+                <div id="triangle"></div>
+            </button>
+        </div>
+
+        <!--Меню выбора шрифта-->
+        <div class="menus" id="selectFontFamilyMenu">
+            <button class="exit">
+                <img src="/clicker/images/exit.png">
+            </button>
+            <h4 class="menusLabel">Выберите шрифт</h4>
+            <p id="Monospace">Monospace</p>
+            <p id="TimesNewRoman">Times New Roman</p>
+            <p id="Calibri">Calibri</p>
+            <p id="Arial">Arial</p>
+            <p id="MiamaNueva">Прописной (Miama Nueva)</p>
+        </div>
+
+        <!--Кнопки-->
+        <h4>Кнопки</h4>
+
+        <div class="buttonSettings">
+            <div>
+                <div class="colorSettings">
+                    <p>Цвет фона:</p>
+                    <div class="colorBg">
+                        <div class="changeColor"></div>   
+                    </div> 
+                </div>
+                <div class="colorSettings">
+                    <p>Цвет текста:</p>
+                    <div class="colorBg">
+                        <div class="changeColor"></div>   
+                    </div>
+                </div> 
+            </div>
+
+            <button>Образец</button>
+
+            <div>
+                <p id="onCursorText"><em>При нажатии или наведении курсора:</em></p>
+                <div class="colorSettings">
+                    <p>Цвет фона:</p>
+                    <div class="colorBg">
+                        <div class="changeColor"></div>   
+                    </div> 
+                </div>
+                <div class="colorSettings">
+                    <p>Цвет текста:</p>
+                    <div class="colorBg">
+                        <div class="changeColor"></div>   
+                    </div>
+                </div> 
+            </div>
+        </div>  
+        
+        <h4>Различные окна и меню</h4>
+        <div class="menuSettings">
+            <div class="colorSettings">
+                <p>Цвет фона:</p>
+                <div class="colorBg">
+                    <div class="changeColor"></div>   
+                </div> 
+            </div>
+
+            <div class="colorSettings">
+                <p>Цвет текста:</p>
+                <div class="colorBg">
+                    <div class="changeColor"></div>
+                </div>
+            </div>
+        </div>
+
+        <h4>Ссылки</h4>
+        <div class="colorSettings">
+            <p>Цвет текста:</p>
+            <div class="colorBg">
+                <div class="changeColor"></div>   
+            </div> 
+        </div>
+        <div class="colorSettings">
+            <p>При нажатии или наведении курсора:</p>
+            <div class="colorBg">
+                <div class="changeColor"></div>
+            </div>
+        </div>
+        <a>Образец</a>
+
+        <!--Меню сброса настроек-->
+        <div id="resetMenu" class="menus">
+            <button class="exit">
+                <img src="/clicker/images/exit.png">
+            </button>
+            <h1>Подтверждение</h1>
+            <p>Вы уверены, что хотите сбросить все настройки?</p>
+            <br>
+            <button id="no">Нет</button>
+            <button id="yes">Да</button>
         </div>
     </main>
-    <script src="script.js"></script>
-    <script src="/main/common.js"></script>
+    
+    <div class="overlay"></div>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/main/common.js"></script>
 </body>
 </html>

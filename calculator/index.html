@@ -8,51 +8,51 @@
 </head>
 <body>
     <div class="bg"></div>
-    <button id="back" onclick="back()">Главная</button>
+    <button id="back">Главная</button>
     <main>
         <h1>Калькулятор</h1>
         <div class="output"></div>
-        <button onclick="copyResult()" id="copy">Скопировать</button>
+        <button id="copy">Скопировать</button>
     </main>
         
     <div class="rect1">
-        <button onclick="clearInput()">C</button>
-        <button onclick="inputChar(this)">^</button>
-        <button onclick="inputChar(this)">(</button>
+        <button>C</button>
+        <button>^</button>
+        <button>(</button>
     
-        <button onclick="inputChar(this)">7</button>
-        <button onclick="inputChar(this)">8</button>
-        <button onclick="inputChar(this)">9</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
     
-        <button onclick="inputChar(this)">4</button>
-        <button onclick="inputChar(this)">5</button>
-        <button onclick="inputChar(this)">6</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
     
-        <button onclick="inputChar(this)">1</button>
-        <button onclick="inputChar(this)">2</button>
-        <button onclick="inputChar(this)">3</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
     
-        <button onclick="inputChar(this)">√</button>
-        <button onclick="inputChar(this)">0</button>
-        <button onclick="inputChar(this)">.</button>
+        <button>√</button>
+        <button>0</button>
+        <button>.</button>
     </div>
 
     <div class="rect2">
-        <button onclick="inputChar(this)">)</button>
-        <button onclick="delLastChar(this)">
+        <button>)</button>
+        <button id="delLastChar">
             <img src="delete.png">
         </button>
     
-        <button onclick="inputChar(this)" class="signs">+</button>
-        <button onclick="inputChar(this)" class="signs">-</button>    
-        <button onclick="inputChar(this)" class="signs">×</button>
-        <button onclick="inputChar(this)" class="signs">÷</button>
+        <button class="signs">+</button>
+        <button class="signs">-</button>    
+        <button class="signs">×</button>
+        <button class="signs">÷</button>
     
-        <button onclick="printResult()" id="equal">=</button>
+        <button id="equal">=</button>
     </div>
 
     <div class="messageCopy">Скопировано</div>
-    <script src="script.js"></script>
-    <script src="/main/common.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/main/common.js"></script>
 </body>
 </html>

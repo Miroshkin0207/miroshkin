@@ -1,3 +1,6 @@
+// Импорт
+import { delay, switchOn } from "/main/common.js";
+
 // Отключение музыки:(
 if (localStorage.getItem("music") == "false")
     document.querySelector("audio").remove();
@@ -103,14 +106,6 @@ function del(array, index)
             newArray[i] = array[i + 1];
     }
     return newArray;
-}
-
-// Функция для ожидания
-function delay(time)
-{
-    return new Promise(resolve => {
-        setTimeout(() => resolve(), time);
-    });
 }
 
 // Класс предметов
@@ -515,6 +510,10 @@ class Objects
 
 // Управление на мобильных устройствах
 let direction = "right";
+document.getElementsByTagName("button")[2].onclick = () => gamepad('up');
+document.getElementsByTagName("button")[3].onclick = () => gamepad('left');
+document.getElementsByTagName("button")[4].onclick = () => gamepad('right');
+document.getElementsByTagName("button")[5].onclick = () => gamepad('down');
 function gamepad(directionGamepad)
 {
     switch (String(directionGamepad))
@@ -736,6 +735,7 @@ async function gameover()
 }
 
 // Начать игру сначала
+document.querySelector("button").onclick = () => playAgain();
 function playAgain()
 {
     document.querySelector(".overlay").style.display = "none";
@@ -774,24 +774,8 @@ function playAgain()
 }
 
 // Выход из игры
-const bg = document.querySelector(".bg");
+document.getElementsByTagName("button")[1].onclick = () => leave();
 async function leave() {
-    if (localStorage.getItem("animationOn") != "false")
-        await switchOn();
+    await switchOn();
     window.location.href = "/kvadratik/main/";
-}
-
-// Фон появляется
-async function switchOn()
-{    
-    bg.style.display = "inline-block";
-    bg.style.opacity = 0;
-    while (bg.style.opacity < 1)
-    {
-        bg.style.opacity = Number(bg.style.opacity) + 0.01;
-        await delay(5);
-    }
-    return new Promise(resolve => {
-        resolve();
-    });
 }

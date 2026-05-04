@@ -1,56 +1,13 @@
+// Импорт
+import { delay, switchOn, switchOff } from "/main/common.js";
+
 // Переход на главную страницу
-const bg = document.querySelector(".bg");
+document.querySelector("#back").onclick = () => back();
 async function back() {
-    if (localStorage.getItem("animationOn") != "false")
-        await switchOn();
+    await switchOn();
     window.location.href = "/main/?dontNeedAnimation=true";
 }
-
-// Функция для ожидания
-function delay(time) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve();
-        }, time);
-    });
-}
-
-// Фон появляется
-async function switchOn()
-{    
-    bg.style.display = "inline-block";
-    bg.style.opacity = 0;
-    while (bg.style.opacity < 1)
-    {
-        bg.style.opacity = Number(bg.style.opacity) + 0.01;
-        await delay(5);
-    }
-    return new Promise(resolve => {
-        resolve();
-    });
-}
-
-// Фон исчезает
-async function switchOff() {
-    if (localStorage.getItem("animationOn") != "false")
-    {
-        bg.style.opacity = 1;
-        while (bg.style.opacity > 0)
-        {
-            bg.style.opacity -= 0.01;
-            await delay(5);
-        }
-        bg.style.display = "none";
-    }
-    else
-    {
-        bg.style.display = "none";
-    }
-}
-if (localStorage.getItem("animationOn") != "false")
-    switchOff();
-else
-    bg.style.display = "none";
+switchOff();
 
 function random(min, max)
 {
@@ -58,26 +15,26 @@ function random(min, max)
 }
 
 const button = document.querySelector("#generator");
+document.querySelector("input").oninput = () => checkButtonDisabled();
+document.getElementsByTagName("input")[1].oninput = () => checkButtonDisabled();
 function checkButtonDisabled() {
     const minimum = Number(document.querySelector("#first").value);
     const maximum = Number(document.querySelector("#second").value);
-    if (minimum != "" && maximum != "") {
-        button.disabled = false;
-    }
-    else {
-        button.disabled = true;
-    }
 
-    if (button.disabled) {
+    if (minimum != "" && maximum != "") 
+        button.disabled = false;
+    else
+        button.disabled = true;
+
+    if (button.disabled)
         button.classList.add("buttonDisabled");
-    }
-    else {
+    else 
         button.classList.remove("buttonDisabled");
-    };
 }
 checkButtonDisabled();
 
 var password = "";
+document.querySelector("#generator").onclick = () => generate();
 function generate() {
     password = "";
     const minimum = Number(document.querySelector("#first").value);
@@ -112,6 +69,7 @@ function waitFor() {
 }
 
 // Скопировать
+document.querySelector("#copy").onclick = () => copy();
 async function copy() {   
     navigator.clipboard.writeText(password);
     messageCopy.style.display = "block";

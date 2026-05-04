@@ -1,13 +1,17 @@
+// Импорт
+import { switchOn, switchOff, delay } from "./common.js";
+
 // Заставка вначале
-params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
 const mir = document.querySelector(".mir");
 const miroshkin = document.querySelector(".miroshkin");
-const bg = document.querySelector(".bg");
 let animation;
+const bg = document.querySelector(".bg");
+
 if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnimation") != "false")
 { 
     mir.style.display = "inline-block"; 
-    const start = setTimeout(() => {       
+    setTimeout(async () => {       
         miroshkin.style.display = "inline-block";
 
         var leftBorder = mir.offsetLeft - miroshkin.clientWidth / 2;
@@ -21,28 +25,20 @@ if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnima
             if (Number(miroshkin.style.left.slice(0, -2)) <= rightBorder)
                 miroshkin.style.left = miroshkin.offsetLeft + 1 + "px";
         }, 1);
+
+        while (miroshkin.style.opacity < 1)
+        {
+            miroshkin.style.opacity = Number(miroshkin.style.opacity) + 0.01;
+            await delay(7);
+        }
     }, 750);
 }
 else
 {
+    document.body.style.overflowY = "visible";
     mir.remove();
     miroshkin.remove();
-    if (localStorage.getItem("animationOn") != "false")
-    {
-        switchOff();
-    }
-    else
-        bg.style.display = "none";
-}
-
-// Функция для ожидания
-function delay(time)
-{
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve();
-        }, time);
-    });
+    switchOff();   
 }
 
 // Конец анимации
@@ -61,26 +57,9 @@ if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnima
         mir.remove();
         miroshkin.remove();
         await delay(500);
-        bg.style.opacity = 1;
-        while (bg.style.opacity > 0)
-        {
-            bg.style.opacity -= 0.01;
-            await delay(5);
-        }
-        bg.style.display = "none";
-        document.body.style.overflowY = "visible";
+        switchOff();
+        setTimeout(() => document.body.style.overflowY = "visible", 750);   
     }, 2000);
-}
-
-// Фон исчезает
-async function switchOff() {
-    bg.style.opacity = 1;
-    while (bg.style.opacity > 0)
-    {
-        bg.style.opacity -= 0.01;
-        await delay(5);
-    }
-    bg.style.display = "none";
 }
 
 // Цитаты
@@ -101,7 +80,8 @@ const quotes = [
     "Понимание — начало согласия.",
     "Бороться и искать, найти и не сдаваться.",
     "Время лечит все раны.",
-    "Если быть — так быть лучшим!"
+    "Если быть — так быть лучшим!",
+    "Книги — корабли мысли, странствующие по волнам времени и бережно несущие свой драгоценный груз от поколения к поколению."
 ];
 
 // Получение случайного числа
@@ -112,6 +92,7 @@ function getRandom(min, max)
 
 // Отображение текста и проверка повторной цитаты
 let before = -1;
+document.querySelector("#mainButton").onclick = () => mainClick();
 function mainClick() 
 {
     let n;
@@ -128,6 +109,8 @@ function mainClick()
 }
 
 // Выпадающие списки
+document.querySelector(".tabs").onclick = () => showList(document.querySelector(".tabs"));
+document.getElementsByClassName("tabs")[1].onclick = () => showList(document.getElementsByClassName("tabs")[1]);
 function showList(tab) 
 {
     const overlay = document.querySelector(".overlay");
@@ -157,73 +140,64 @@ function showList(tab)
     });
 }
 
-// Фон появляется
-async function switchOn()
-{
-    if (localStorage.getItem("animationOn") != "false")
-    {
-        bg.style.display = "inline-block";
-        bg.style.opacity = 0;
-        while (bg.style.opacity < 1)
-        {
-            bg.style.opacity = Number(bg.style.opacity) + 0.01;
-            await delay(5);
-        }     
-    }
-    return new Promise(resolve => {
-        resolve();
-    });
-}
-
 // Ссылки
+document.getElementsByClassName("tabs")[2].onclick = () => thanks();
 async function thanks() 
 {
     await switchOn();
     window.location.href = "/thanks/";
 }
 
+document.getElementsByClassName("tabs")[3].onclick = () => settings();
 async function settings()
 {
     await switchOn();
     window.location.href = "/settings/";
 }
 
+document.getElementsByTagName("button")[5].onclick = () => history();
 async function history() 
 {
     await switchOn();
     window.location.href = "/history-of-changes/";
 }
 
+document.getElementsByTagName("button")[6].onclick = () => calculator();
 async function calculator() 
 {
     await switchOn();
     window.location.href = "/calculator/";
 }
 
-async function clicker() 
-{
-    await switchOn();
-    window.location.href = "/clicker/";
-}
-
+document.getElementsByTagName("button")[7].onclick = () => textHandler();
 async function textHandler() 
 {
     await switchOn();
     window.location.href = "/text-handler/";
 }
 
+document.getElementsByTagName("button")[8].onclick = () => passwordGenerator();
 async function passwordGenerator() 
 {
     await switchOn();
     window.location.href = "/password-generator/";
 }
 
+document.getElementsByTagName("button")[9].onclick = () => randomizer();
 async function randomizer() 
 {
     await switchOn();
     window.location.href = "/randomizer/";
 }
 
+document.getElementsByTagName("button")[10].onclick = () => clicker();
+async function clicker() 
+{
+    await switchOn();
+    window.location.href = "/clicker/";
+}
+
+document.getElementsByTagName("button")[11].onclick = () => kvadratik();
 async function kvadratik()
 {
     await switchOn();

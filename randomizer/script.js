@@ -1,79 +1,35 @@
+// Импорт
+import { switchOn, switchOff } from "/main/common.js";
+
 // Переход на главную страницу
-const bg = document.querySelector(".bg");
+document.querySelector("#back").onclick = () => back();
 async function back() {
-    if (localStorage.getItem("animationOn") != "false")
-        await switchOn();
+    await switchOn();
     window.location.href = "/main/?dontNeedAnimation=true";
 }
-
-// Функция для ожидания
-function delay(time) {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve();
-        }, time);
-    });
-}
-
-// Фон появляется
-async function switchOn()
-{    
-    bg.style.display = "inline-block";
-    bg.style.opacity = 0;
-    while (bg.style.opacity < 1)
-    {
-        bg.style.opacity = Number(bg.style.opacity) + 0.01;
-        await delay(5);
-    }
-    return new Promise(resolve => {
-        resolve();
-    });
-}
-
-// Фон исчезает
-async function switchOff() {
-    if (localStorage.getItem("animationOn") != "false")
-    {
-        bg.style.opacity = 1;
-        while (bg.style.opacity > 0)
-        {
-            bg.style.opacity -= 0.01;
-            await delay(5);
-        }
-        bg.style.display = "none";
-    }
-    else
-    {
-        bg.style.display = "none";
-    }
-}
-if (localStorage.getItem("animationOn") != "false")
-    switchOff();
-else
-    bg.style.display = "none";
+switchOff();
 
 // Получение случайного числа
 function getRandom(min, max) {
-    return min + Math.floor(Math.random() * (max - min + 1))
+    return min + Math.floor(Math.random() * (max - min + 1));
 }
 
 // Показ/скрытие галочки
-var check = document.querySelector(".check")
-var eventNameInput = document.querySelector("#eventNameInput")
-
+var check = document.querySelector(".check");
+var eventNameInput = document.querySelector("#eventNameInput");
+document.querySelector("#eventNameInput").oninput = () => showCheck();
 function showCheck() { 
-    if (eventNameInput.value != "") {
-        check.hidden = false
-    }
-    else {
-        check.hidden = true
-    }
+    if (eventNameInput.value != "")
+        check.hidden = false;
+    else
+        check.hidden = true;
 }
-showCheck()
+showCheck();
 
 // Отображение имени события
 var isEventEdit = false
 var eventNameText = document.createElement("h2")
+document.querySelector(".check").onclick = () => showEventName();
 function showEventName() {
     var checkImg = document.querySelector("img")
     var eventTitle = document.getElementsByTagName("label")[1]
@@ -102,10 +58,10 @@ function showEventName() {
         eventNameText.replaceWith(eventNameInput)      
         eventNameInput.value = eventNameText.innerHTML
 
-        check.classList.remove("edit")
-        check.classList.add("check")
-        checkImg.src = "images/check.png"
-        isEventEdit = false
+        check.classList.remove("edit");
+        check.classList.add("check");
+        checkImg.src = "images/check.png";
+        isEventEdit = false;
     }
 }
 
@@ -113,6 +69,7 @@ function showEventName() {
 var menuNewExodus = document.querySelector(".menuNewExodus")
 var noExoduses = document.querySelector("#noExoduses")
 
+document.querySelector("#newExodus").onclick = () => newExodus();
 function newExodus() {
     noExoduses.style.display = "none"
     menuNewExodus.style.display = "flex"
@@ -131,9 +88,7 @@ function newExodus() {
         addExodus(exodusNameInput)
         exodusNameInput.remove()
     }
-    document.querySelector("#exit").onclick = () => {
-            exit(exodusNameInput)
-    }
+    document.querySelector("#exit").onclick = () => exit(exodusNameInput)
 }
 
 var listExoduses = document.querySelector(".listExoduses")
@@ -237,27 +192,26 @@ function deleteExodus(exodus) {
 
 // Вызов функции получения нового исхода
 document.querySelector("#start").onclick = () => {
-    if (listExoduses.childElementCount >= 2) {
+    if (listExoduses.childElementCount >= 2) 
         startRandom()
-    }
-    else {
+    else
         alert("Для запуска должно быть как минимум 2 исхода")
-    }
 }
 
 // Выбор случайного исхода
-function nextExodus(n) {
+function nextExodus(n, time) {
     return new Promise(resolve => {       
         setTimeout(() => { 
-            listExoduses.children[n].style.border = "solid"
-            resolve()
-        }, 150)
-    })  
+            listExoduses.children[n].style.border = "solid";
+            resolve();
+        }, time);
+    });
 }
 
 var titleExoduses = document.querySelector("#titleExoduses")
 var title = document.querySelector(".result")
-var selectElement = null
+var selectElement = null;
+let select;
 async function startRandom() {
     var exdCount = listExoduses.childElementCount
     let animation = document.querySelector("#animation")
@@ -272,31 +226,22 @@ async function startRandom() {
             selectElement.style.borderBottom = "solid black"
         }
     }
-
-    select = document.createElement("h2")
+    select = document.createElement("h2");
 
     // С анимацией
-    var n
+    var n;
     if (animation.checked) {
-        if (exdCount <= 15) {
-            var winner
-            winner = getRandom(0, exdCount - 1)
-            n = getRandom(15, 20)
-            if (n % exdCount <= winner) {
-                n += winner - n % exdCount
-            }
-            else {
-                n -= n % exdCount - winner
-            }
-        }
-
-        else {
-            n = getRandom(exdCount + 1, exdCount * 2)
-        }
+        var winner;
+        winner = getRandom(0, exdCount - 1);
+        let countScrollings = exdCount * 4;
+        while (countScrollings % exdCount < winner)
+            countScrollings++;
+        while (countScrollings % exdCount > winner)
+            countScrollings--;
         
-        var count = 0
-        for (let i = 0; count <= n; i++) {
-            await nextExodus(i)
+        var count = 0;
+        for (let i = 0; count <= countScrollings; i++) {
+            await nextExodus(i, 155 / (exdCount - 1) * 1.75);
             if (i != 0) {
                 listExoduses.children[i - 1].style.border = "none"
                 listExoduses.children[i - 1].style.borderBottom = "solid black"
@@ -308,7 +253,7 @@ async function startRandom() {
             if (i == exdCount - 1) {
                 i = -1
             }    
-            count++              
+            count++;         
         }
     }
 
@@ -351,6 +296,7 @@ function waitForResult() {
     })
 }
 
+document.querySelector("#ok").onclick = () => afterResult();
 function afterResult() {
     title.removeChild(select)
     title.replaceWith(titleExoduses)
@@ -363,7 +309,7 @@ function afterResult() {
 function fontSizeUp() {
     return new Promise(resolve => {
         setTimeout(() => {
-            resolve()
-        }, 15)
+            resolve();
+        }, 15);
     })
 }
