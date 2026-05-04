@@ -370,10 +370,10 @@ for (let i = 0; i < document.querySelectorAll(".changeColor").length; i++)
     switch (i + 1)
     {
         case 1:
-            bg = localStorage.getItem("bgColor") || "rgb(255, 255, 255)";
+            bg = localStorage.getItem("bgColor") || "rgba(0, 0, 0, 0.9)";
             break;
         case 2:
-            bg = localStorage.getItem("fontColor") || "rgb(0, 0, 0)";
+            bg = localStorage.getItem("fontColor") || "rgb(255, 255, 255)";
             break;
         case 6:
         case 3:
