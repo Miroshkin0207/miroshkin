@@ -713,7 +713,7 @@ async function gameover()
         await delay(1500);
 
         let record = document.querySelector("#score").innerHTML;
-        const gameoverMenu = document.querySelector(".menus");
+        const gameoverMenu = document.querySelector(".menus")[1];
         document.querySelector("#result").innerHTML = record;
         if (Number(record) > Number(oldRecord))
         {
