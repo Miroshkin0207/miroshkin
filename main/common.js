@@ -151,10 +151,10 @@ document.querySelectorAll("button, header").forEach(element => {
     {
         element.style.backgroundColor = localStorage.getItem("buttonBg");
         element.style.color = localStorage.getItem("buttonColor"); 
-        document.querySelector(":root").style.setProperty("--buttonHoverBg", localStorage.getItem("buttonHoverBg"));
-        document.querySelector(":root").style.setProperty("--buttonHoverColor", localStorage.getItem("buttonHoverColor"));
     }    
 });
+document.querySelector(":root").style.setProperty("--buttonHoverBg", localStorage.getItem("buttonHoverBg"));
+document.querySelector(":root").style.setProperty("--buttonHoverColor", localStorage.getItem("buttonHoverColor"));    
 
 // Фон и цвет текста меню
 document.querySelectorAll(".menus").forEach(element => {
