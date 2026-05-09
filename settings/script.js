@@ -163,7 +163,10 @@ function selectColor(colorElement, isFirst = false)
                         for (let i = 0; i < listExceptionsButton.length; i++)
                         {
                             if (element == listExceptionsButton[i])
-                                isException = true;     
+                            {
+                                isException = true; 
+                                break;  
+                            }  
                         }
                         if (!isException)
                             element.style.backgroundColor = colorElement.style.backgroundColor;     
@@ -405,17 +408,18 @@ for (let i = 0; i < document.querySelectorAll(".changeColor").length; i++)
     document.querySelectorAll(".changeColor")[i].style.backgroundColor = bg;
 }
 
-// Установка названия шрифта для кнопки выбора шрифта
+// Установка названия шрифта и цвета для кнопки выбора шрифта
 function selectFontFamilyTextChange()
 {
     if (localStorage.getItem("fontFamily") != null)
     {
-        let familyText = localStorage.getItem("fontFamily")[0] == "\"" ? localStorage.getItem("fontFamily").slice(1, -1) : localStorage.getItem("fontFamily");
+        let familyText = localStorage.getItem("fontFamily")[0] == '"' ? localStorage.getItem("fontFamily").slice(1, -1) : localStorage.getItem("fontFamily");
         let selectFontFamilyText = document.querySelector("#selectFontFamilyText");
         selectFontFamilyText.innerText = familyText.charAt(0).toUpperCase() + familyText.slice(1);
-        selectFontFamilyText.style.color = localStorage.getItem("buttonColor") || "rgb(19, 65, 142)";
-        document.querySelector("#triangle").style.borderTop = getComputedStyle(document.querySelector("#triangle")).borderTop.split(" ")[0] + " solid " + (localStorage.getItem("buttonColor" || "rgb(19, 65, 142)"));
+        
     }
+    selectFontFamilyText.style.color = localStorage.getItem("buttonColor") || "rgb(19, 65, 142)";
+    document.querySelector("#triangle").style.borderTop = getComputedStyle(document.querySelector("#triangle")).borderTop.split(" ")[0] + " solid " + (localStorage.getItem("buttonColor" || "rgb(19, 65, 142)"));
 }
 selectFontFamilyTextChange();
 

@@ -3,6 +3,12 @@
     src: url("/main/ofont.ru_Miama\ Nueva.ttf");
 }
 
+:root {
+    --buttonHoverBg: rgb(19, 65, 142);
+    --buttonHoverColor: black;
+    --linkHoverColor: rgba(255, 0, 0, 0.9);
+}
+
 body {
     color: white;
     font-family: monospace;
@@ -174,8 +180,8 @@ select {
 /* Адаптация под телефоны */
 @media (max-width: 999px) {
     button:active {
-        background-color: var(--buttonHoverBg);
-        color: var(--buttonHoverColor);
+        background-color: var(--buttonHoverBg) !important;
+        color: var(--buttonHoverColor) !important;
     }
 
     #back {
@@ -224,14 +230,10 @@ select {
     }
 }
 
-:root {
-    --buttonHoverBg: rgb(19, 65, 142);
-    --buttonHoverColor: black;
-    --linkHoverColor: rgba(255, 0, 0, 0.9);
-}
-
 /* Окраска кнопок при наведении курсора на ПК */
 @media (min-width: 1000px) {
+    /* Ставим !important, потому что, когда мы перебираем кнопки и устанавливаем им цвет
+    для обычного состояния, оно становится главным. Нам это не надо */
     button:hover {
         background-color: var(--buttonHoverBg) !important;
         color: var(--buttonHoverColor) !important;
