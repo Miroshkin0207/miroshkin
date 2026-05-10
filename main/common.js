@@ -30,6 +30,7 @@ export async function switchOff() {
 // Фон появляется
 export async function switchOn()
 {
+    document.body.style.overflowY = "hidden";
     if (localStorage.getItem("animationOn") != "false")
     {
         bg.style.display = "inline-block";
