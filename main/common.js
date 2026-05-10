@@ -13,6 +13,7 @@ export function delay(time)
 
 // Фон исчезает
 export async function switchOff() {
+    document.body.style.overflowY = "hidden";
     if (localStorage.getItem("animationOn") != "false")
     {
         bg.style.opacity = 1;
@@ -25,6 +26,7 @@ export async function switchOff() {
     }
     else
         bg.style.display = "none";
+    document.body.style.overflowY = "visible";
 }
 
 // Фон появляется
