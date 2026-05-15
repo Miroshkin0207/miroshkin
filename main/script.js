@@ -11,7 +11,7 @@ const bg = document.querySelector(".bg");
 if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnimation") != "false")
 { 
     mir.style.display = "inline-block"; 
-    if (document.fonts.check("MiamaNueva"))
+    document.fonts.ready.then(() =>
     {
         setTimeout(async () => {       
             miroshkin.style.display = "inline-block";
@@ -33,7 +33,7 @@ if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnima
                 await delay(7);
             }
         }, 750);
-    }
+    });
 }
 else
 {
