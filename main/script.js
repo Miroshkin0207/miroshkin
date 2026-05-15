@@ -11,26 +11,29 @@ const bg = document.querySelector(".bg");
 if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnimation") != "false")
 { 
     mir.style.display = "inline-block"; 
-    setTimeout(async () => {       
-        miroshkin.style.display = "inline-block";
+    if (document.fonts.check("Miama Nueva")
+    {
+        setTimeout(async () => {       
+            miroshkin.style.display = "inline-block";
 
-        var leftBorder = mir.offsetLeft - miroshkin.clientWidth / 2;
+            var leftBorder = mir.offsetLeft - miroshkin.clientWidth / 2;
 
-        mir.style.left = mir.offsetLeft + "px";
-        miroshkin.style.left = mir.offsetLeft + "px";
-        const rightBorder = leftBorder + mir.clientWidth;
-        animation = setInterval(() => {
-            if (Number(mir.style.left.slice(0, -2)) >= leftBorder)
-                mir.style.left = mir.offsetLeft - 1 + "px";
-            if (Number(miroshkin.style.left.slice(0, -2)) <= rightBorder)
-                miroshkin.style.left = miroshkin.offsetLeft + 1 + "px";
-        }, 1);
-        while (miroshkin.style.opacity < 1)
-        {
-            miroshkin.style.opacity = Number(miroshkin.style.opacity) + 0.01;
-            await delay(7);
-        }
-    }, 750);
+            mir.style.left = mir.offsetLeft + "px";
+            miroshkin.style.left = mir.offsetLeft + "px";
+            const rightBorder = leftBorder + mir.clientWidth;
+            animation = setInterval(() => {
+                if (Number(mir.style.left.slice(0, -2)) >= leftBorder)
+                    mir.style.left = mir.offsetLeft - 1 + "px";
+                if (Number(miroshkin.style.left.slice(0, -2)) <= rightBorder)
+                    miroshkin.style.left = miroshkin.offsetLeft + 1 + "px";
+            }, 1);
+            while (miroshkin.style.opacity < 1)
+            {
+                miroshkin.style.opacity = Number(miroshkin.style.opacity) + 0.01;
+                await delay(7);
+            }
+        }, 750);
+    }
 }
 else
 {
