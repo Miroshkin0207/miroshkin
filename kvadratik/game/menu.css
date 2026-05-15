@@ -78,6 +78,11 @@
     padding: 5px;
 }
 
+#loading {
+    height: auto;
+    padding: 10px;
+}
+
 /* Адаптация под мобильные устрйоства */
 @media (max-width: 999px) {
     #hint {
