@@ -11,7 +11,7 @@ const bg = document.querySelector(".bg");
 if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnimation") != "false")
 { 
     mir.style.display = "inline-block"; 
-    if (document.fonts.check("Miama Nueva")
+    if (document.fonts.check("Miama Nueva"))
     {
         setTimeout(async () => {       
             miroshkin.style.display = "inline-block";
