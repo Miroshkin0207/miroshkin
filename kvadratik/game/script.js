@@ -718,7 +718,7 @@ async function gameover()
         if (Number(record) > Number(oldRecord))
         {
             localStorage.setItem("scoreKvadratik", record);
-            messageNewRecord = document.createElement("p");
+            let messageNewRecord = document.createElement("p");
             messageNewRecord.innerHTML = "Новый рекорд!";
             messageNewRecord.classList.add("messageNewRecord");
             gameoverMenu.appendChild(messageNewRecord);
