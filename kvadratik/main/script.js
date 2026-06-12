@@ -87,9 +87,9 @@ async function aboutGame()
 }
 
 document.querySelectorAll(".switches")[0].onclick = () => 
-    switchSetting(document.querySelectorAll(".switches")[0], document.querySelectorAll(".circles")[0], null, null, null, "countdownWithStarting");
+    switchSetting(document.querySelectorAll(".switches")[0], document.querySelectorAll(".circles")[0], "countdownWithStarting");
 document.querySelectorAll(".switches")[1].onclick = () => 
-    switchSetting(document.querySelectorAll(".switches")[1], document.querySelectorAll(".circles")[1], null, null, null, "music");
+    switchSetting(document.querySelectorAll(".switches")[1], document.querySelectorAll(".circles")[1], "music");
 
 // Установка переключателей
 if (localStorage.getItem("countdownWithStarting") == "false")
