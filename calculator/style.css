@@ -54,18 +54,6 @@ img {
     font-size: 55px;
 }
 
-.messageCopy {
-    display: none;
-    z-index: 5;
-    background-color: black;
-    left: 50%;
-    transform: translateX(-50%);
-    position: fixed;
-    top: 5%;
-    font-size: 30px;
-    padding: 15px;
-}
-
 .output {
     min-width: 1000px;
     height: 70px;

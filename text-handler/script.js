@@ -19,7 +19,6 @@ async function back() {
         window.location.href = "/main/?dontNeedAnimation=true";
     }
 }
-switchOff();
 
 document.querySelector("textarea").oninput = () => textInput();
 function textInput() {

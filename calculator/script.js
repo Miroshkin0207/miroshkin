@@ -1,10 +1,8 @@
 ﻿// Импорт
-import { switchOn, switchOff, delay } from "/main/common.js";
-switchOff();
+import { switchOn, switchOff, delay, copyResult } from "/main/common.js";
 
 // Переход на главную страницу
-document.querySelector("button").onclick = () => back();
-async function back() {
+document.querySelector("button").onclick = async () => {
     await switchOn();
     window.location.href = "/main/?dontNeedAnimation=true";
 }
@@ -90,31 +88,5 @@ function clearInput() {
     result = "";
 }
 
-var messageCopy = document.querySelector(".messageCopy");
-function waitFor() {
-    return new Promise(resolve => {
-        setTimeout(() => {
-            resolve();
-        }, 750);
-    })
-}
-
 // Скопировать
-let isCopying = false;
-document.querySelector("#copy").onclick = () => copyResult();
-async function copyResult() {  
-    navigator.clipboard.writeText(output.innerHTML);
-    if (!isCopying) 
-    {
-        isCopying = true;    
-        messageCopy.style.display = "inline-block";
-        await waitFor();
-        for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) {
-            await delay(15);
-        }
-
-        messageCopy.style.display = "none";
-        messageCopy.style.opacity = 1;
-        isCopying = false;
-    }
-}
+document.querySelector("#copy").onclick = () => copyResult(output.innerHTML);

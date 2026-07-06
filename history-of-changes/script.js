@@ -1,6 +1,5 @@
 // Импорт
 import { switchOn, switchOff } from "/main/common.js";
-switchOff();
 
 // Переход на главную страницу
 document.querySelector("button").onclick = () => back();

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Шифратор текста</title>
+    <link rel="stylesheet" href="/main/main.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+</head>
+<body>
+    <div class="bg"></div>
+    <button id="back">Главная</button>
+    <main>
+        <div class="hint">
+            <h1>Шифратор текста</h1>
+            <button>
+                <div class="triangle"></div>
+            </button>
+        </div>
+        <div class="info">
+            <p>Этот инструмент позволит вам зашифровать и расшифровать текст с помощью азбуки Морзе.</p>
+            <p>Пробел — разделитель букв;</p>
+            <p>/ — разделитель слов;</p>
+            <p>| — переход на новую строку.</p>
+            <p>Поддерживаются кириллические буквы, цифры и символы ,.!—?:-;'/()". Остальное пропускается.</p>
+            <br>
+        </div>
+
+        <div class="textSettings">
+            <div id="area1" class="typeEncryptContainer">
+                <p>Режим:</p>
+                <hr>
+                <div class="mode">
+                    <label for="encrypt">Зашифровать</label>
+                    <input id="encrypt" type="checkbox" checked>
+                </div>
+                <div class="mode">
+                    <label for="decrypt">Расшифровать</label>
+                    <input id="decrypt" type="checkbox">
+                </div>  
+            </div>
+        
+            <div class="textContainer">
+                <textarea placeholder="Введите текст, который нужно зашифровать"></textarea>
+            </div>
+
+            <div id="area3" class="typeEncryptContainer">
+                <p>Использовать:</p>
+                <hr>
+                <div class="mode">
+                    <label for="dotsDashes">Точки и тире</label>
+                    <input id="dotsDashes" type="checkbox" checked>
+                </div>
+                <div class="mode">
+                    <label for="zeroOne">Нули и единицы</label>
+                    <input id="zeroOne" type="checkbox">
+                </div>                  
+            </div>
+            <button id="encryptButton">Зашифровать</button>
+        </div>
+
+        <button id="copy">Скопировать</button>
+        <p id="finalText"></p>
+    </main>
+    <div class="messageCopy">Скопировано</div>   
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/main/common.js"></script>
+</body>
+</html>

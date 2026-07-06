@@ -7,4 +7,3 @@ async function back() {
     await switchOn();
     window.location.href = "/kvadratik/main/";
 }
-switchOff();

@@ -19,8 +19,8 @@ export async function switchOff() {
         bg.style.opacity = 1;
         while (bg.style.opacity > 0)
         {
-            bg.style.opacity -= 0.01;
-            await delay(5);
+            bg.style.opacity -= 0.02;
+            await delay(4);
         }
         bg.style.display = "none";
     }
@@ -28,6 +28,9 @@ export async function switchOff() {
         bg.style.display = "none";
     document.body.style.overflowY = "visible";
 }
+
+if (document.querySelector("title").innerHTML != "Сайт Мирошкин")
+    switchOff();
 
 // Фон появляется
 export async function switchOn()
@@ -39,13 +42,20 @@ export async function switchOn()
         bg.style.opacity = 0;
         while (bg.style.opacity < 1)
         {
-            bg.style.opacity = Number(bg.style.opacity) + 0.01;
-            await delay(5);
+            bg.style.opacity = Number(bg.style.opacity) + 0.02;
+            await delay(4);
         }     
     }
     return new Promise(resolve => {
         resolve();
     });
+}
+
+// Переход на главную
+export async function back()
+{
+    await switchOn();
+    window.location.href = "/main/?dontNeedAnimation=true";
 }
 
 // Переключатели в настройках
@@ -156,6 +166,7 @@ document.querySelectorAll("button, header").forEach(element => {
         element.style.color = localStorage.getItem("buttonColor"); 
     }    
 });
+document.querySelector(":root").style.setProperty("--buttonColor", localStorage.getItem("buttonColor"));
 document.querySelector(":root").style.setProperty("--buttonHoverBg", localStorage.getItem("buttonHoverBg"));
 document.querySelector(":root").style.setProperty("--buttonHoverColor", localStorage.getItem("buttonHoverColor"));    
 
@@ -170,3 +181,22 @@ document.querySelectorAll(".menusLabel").forEach(element => {
 // Ссылки
 document.querySelectorAll("a").forEach(element => element.style.color = localStorage.getItem("linkColor"));
 document.querySelector(":root").style.setProperty("--linkHoverColor", localStorage.getItem("linkHoverColor"));
+
+// Скопировать
+let isCopying = false;
+export async function copyResult(result) {     
+    const messageCopy = document.querySelector(".messageCopy");
+    navigator.clipboard.writeText(result);
+    if (!isCopying) 
+    {
+        isCopying = true;    
+        messageCopy.style.display = "inline-block";
+        await delay(750);
+        for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) 
+            await delay(15);
+
+        messageCopy.style.display = "none";
+        messageCopy.style.opacity = 1;
+        isCopying = false;
+    }
+}

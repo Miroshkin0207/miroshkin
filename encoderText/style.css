@@ -1,0 +1,203 @@
+:root {
+    --triangleBottom: 21px solid var(--buttonColor);
+    --triangleTop: none;
+    --triangleBottomHover: 21px solid var(--buttonHoverColor);
+    --triangleTopHover: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 22px;
+    margin: 3px;
+}
+
+button {
+    font-size: 22px;
+}
+
+hr {
+    border: black 1px solid;
+}
+
+.hint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hint button {
+    height: 35%;
+    margin: 2px 0 0 5px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: var(--triangleTop);
+    border-bottom: var(--triangleBottom);
+    margin: 3px;
+}
+
+.typeEncryptContainer {
+    background-color: rgb(46, 41, 41);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 4%;
+    padding: 4px;
+}
+
+.mode {
+    display: flex;
+    text-align: start;
+    align-items: center;
+}
+
+label {
+    font-size: 20px;
+}
+
+input {
+    width: 25px;
+    height: 25px;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.textSettings {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 1fr 0.35fr/ 1fr 3fr;
+    row-gap: 15px;
+    justify-items: center;
+}
+
+.textContainer {
+    text-align: start;
+    width: 95%;
+    margin: 0;
+    height: 100%;
+    grid-row: span 3;
+}
+
+textarea {
+    width: 95%;
+    height: 100%;
+    font-size: 20px;
+    border: solid Blue;  
+}
+
+#encryptButton {
+    height: auto;
+}
+
+#copy {
+    margin: 7px;
+    display: none;
+    position: absolute;
+    right: 5px;
+}
+
+#finalText {
+    margin-top: 35px;
+    text-align: center;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 1000px)
+{
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .hint {
+        margin-bottom: 5px;
+    }
+
+    #triangle {
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+    }
+
+    :root {
+        --triangleBottom: 19px solid var(--buttonColor);
+        --triangleBottomHover: 19px solid var(--buttonColor);
+    } 
+
+    .hint button:active {
+        .triangle {
+            border-top: var(--triangleTopHover);
+            border-bottom: var(--triangleBottomHover);
+        }
+    }
+
+    #area1 {
+        grid-area: area1;       
+        grid-column: span 1;
+    }
+
+    .textContainer {
+        height: 125px;
+        grid-column: span 2;
+        text-align: center;
+    }
+
+    #area3 {
+        grid-area: area3;
+        grid-column: span 1;
+    }
+    
+    #encryptButton {
+        margin: auto;
+        grid-column: span 2;
+    }
+
+    .textSettings {
+        column-gap: 15px;
+        width: 100%;
+        grid-template: none;
+        grid-template-areas: "area1 area3" "area2";
+    }
+
+    textarea {
+        font-size: 15px;
+    }
+
+    #copy {
+        margin: 5px 0 0 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #finalText {
+        font-size: 20px;
+        margin-top: 45px;
+        left: 50%;      
+    }
+}
+
+/* Для ПК */
+@media (min-width: 1000px)
+{
+    .hint button:hover {
+        .triangle {
+            border-top: var(--triangleTopHover);
+            border-bottom: var(--triangleBottomHover);
+        }
+    }
+}

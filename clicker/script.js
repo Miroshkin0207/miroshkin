@@ -2,12 +2,10 @@
 import { switchOn, switchOff } from "/main/common.js";
 
 // Переход на главную страницу
-document.querySelector("#back").onclick = () => back();
-async function back() {
+document.querySelector("#back").onclick = async () => {
     await switchOn();
     window.location.href = "/main/?dontNeedAnimation=true";
 }
-switchOff();
 
 // Загрузка рекорда
 let total = document.querySelector("#total")

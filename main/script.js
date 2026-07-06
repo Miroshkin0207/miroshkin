@@ -82,7 +82,9 @@ const quotes = [
     "Время лечит все раны.",
     "Если быть — так быть лучшим!",
     "Книги — корабли мысли, странствующие по волнам времени и бережно несущие свой драгоценный груз от поколения к поколению.",
-    "Тяжело в учении, легко в бою."
+    "Тяжело в учении, легко в бою.",
+    "Истина — это иллюзия, о которой забыли, что она иллюзия.",
+    "Лидеры — торговцы надеждами."
 ];
 
 // Получение случайного числа
@@ -93,7 +95,7 @@ function getRandom(min, max)
 
 // Отображение текста и проверка повторной цитаты
 let before = -1;
-document.querySelector("#mainButton").onclick = () => mainClick();
+document.querySelector("#mainButton").onclick = async () => mainClick();
 function mainClick() 
 {
     let n;
@@ -110,8 +112,8 @@ function mainClick()
 }
 
 // Выпадающие списки
-document.querySelector(".tabs").onclick = () => showList(document.querySelector(".tabs"));
-document.getElementsByClassName("tabs")[1].onclick = () => showList(document.getElementsByClassName("tabs")[1]);
+document.querySelector(".tabs").onclick = async () => showList(document.querySelector(".tabs"));
+document.getElementsByClassName("tabs")[1].onclick = async () => showList(document.getElementsByClassName("tabs")[1]);
 function showList(tab) 
 {
     const overlay = document.querySelector(".overlay");
@@ -141,66 +143,56 @@ function showList(tab)
     });
 }
 
-// Ссылки
-document.getElementsByClassName("tabs")[2].onclick = () => thanks();
-async function thanks() 
-{
+/* Ссылки */
+document.getElementsByClassName("tabs")[2].onclick = async () => {
     await switchOn();
     window.location.href = "/thanks/";
 }
 
-document.getElementsByClassName("tabs")[3].onclick = () => settings();
-async function settings()
-{
+document.getElementsByClassName("tabs")[3].onclick = async () => {
     await switchOn();
     window.location.href = "/settings/";
 }
 
-document.getElementsByTagName("button")[5].onclick = () => history();
-async function history() 
-{
+document.getElementsByTagName("button")[5].onclick = async () => {
     await switchOn();
     window.location.href = "/history-of-changes/";
 }
 
-document.getElementsByTagName("button")[6].onclick = () => calculator();
-async function calculator() 
-{
+// Инструменты
+document.querySelector("#tools").children[0].onclick = async () => {
     await switchOn();
     window.location.href = "/calculator/";
 }
 
-document.getElementsByTagName("button")[7].onclick = () => textHandler();
-async function textHandler() 
-{
+document.querySelector("#tools").children[1].onclick = async () => {
     await switchOn();
     window.location.href = "/text-handler/";
 }
 
-document.getElementsByTagName("button")[8].onclick = () => passwordGenerator();
-async function passwordGenerator() 
-{
+document.querySelector("#tools").children[2].onclick = async () => {
     await switchOn();
     window.location.href = "/password-generator/";
 }
 
-document.getElementsByTagName("button")[9].onclick = () => randomizer();
-async function randomizer() 
-{
+document.querySelector("#tools").children[3].onclick = async () => {
     await switchOn();
     window.location.href = "/randomizer/";
 }
 
-document.getElementsByTagName("button")[10].onclick = () => clicker();
-async function clicker() 
-{
+document.querySelector("#tools").children[4].onclick = async () => {
+    await switchOn();
+    window.location.href = "/encoderText/";
+}
+
+
+// Игры
+document.querySelector("#games").children[0].onclick = async () => {
     await switchOn();
     window.location.href = "/clicker/";
 }
 
-document.getElementsByTagName("button")[11].onclick = () => kvadratik();
-async function kvadratik()
-{
+document.querySelector("#games").children[1].onclick = async () => {
     await switchOn();
     window.location.href = "/kvadratik/main/";
 }

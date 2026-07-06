@@ -4,6 +4,7 @@
 }
 
 :root {
+    --buttonColor: rgb(19, 65, 142);
     --buttonHoverBg: rgb(19, 65, 142);
     --buttonHoverColor: black;
     --linkHoverColor: rgba(255, 0, 0, 0.9);
@@ -24,6 +25,10 @@ body {
     height: 100%;
     background-color: rgb(0, 0, 0, 0.5);
     z-index: 1;
+}
+
+.infoVisible {
+    display: none !important;
 }
 
 h1 {
@@ -62,7 +67,7 @@ select {
     left: 0;
     top: 0;
     z-index: 1;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .bg {
@@ -148,6 +153,18 @@ select {
 
 #help:hover {
     background-color: transparent !important;
+}
+
+.messageCopy {
+    display: none;
+    z-index: 5;
+    background-color: black;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    top: 5%;
+    font-size: 30px;
+    padding: 15px;
 }
 
 /* Анимации */

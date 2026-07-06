@@ -42,18 +42,6 @@ label {
     font-size: 40px;
 }
 
-.messageCopy {
-    display: none;
-    z-index: 5;
-    background-color: black;
-    left: 50%;
-    transform: translateX(-50%);
-    position: fixed;
-    top: 5%;
-    font-size: 30px;
-    padding: 15px;
-}
-
 .passwordSettings {
     background-color: rgb(53, 57, 64);
     width: 50%;

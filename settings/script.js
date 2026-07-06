@@ -1,6 +1,5 @@
 // Импорт
 import { switchOn, switchOff, switchSetting } from "/main/common.js";
-switchOff();
 import { openMenu, exitMenu } from "/main/common.js";
 import { listExceptionsColor, listExceptionsFontFamily, listExceptionsButton } from "/main/common.js";
 

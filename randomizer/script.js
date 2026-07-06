@@ -7,7 +7,6 @@ async function back() {
     await switchOn();
     window.location.href = "/main/?dontNeedAnimation=true";
 }
-switchOff();
 
 // Получение случайного числа
 function getRandom(min, max) {

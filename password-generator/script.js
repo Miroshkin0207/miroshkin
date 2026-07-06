@@ -1,5 +1,5 @@
 // Импорт
-import { delay, switchOn, switchOff } from "/main/common.js";
+import { delay, switchOn, switchOff, copyResult } from "/main/common.js";
 
 // Переход на главную страницу
 document.querySelector("#back").onclick = () => back();
@@ -7,7 +7,6 @@ async function back() {
     await switchOn();
     window.location.href = "/main/?dontNeedAnimation=true";
 }
-switchOff();
 
 function random(min, max)
 {
@@ -69,15 +68,4 @@ function waitFor() {
 }
 
 // Скопировать
-document.querySelector("#copy").onclick = () => copy();
-async function copy() {   
-    navigator.clipboard.writeText(password);
-    messageCopy.style.display = "block";
-    await waitFor();
-    for (messageCopy.style.opacity = 1; messageCopy.style.opacity >= 0; messageCopy.style.opacity -= 0.01) {
-        await delay(15);
-    }
-    
-    messageCopy.style.display = "none";
-    messageCopy.style.opacity = 1;
-}
+document.querySelector("#copy").onclick = () => copyResult();
