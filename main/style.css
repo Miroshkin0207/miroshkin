@@ -166,6 +166,7 @@ li::marker {
         margin: 0;
         z-index: 2;
         width: 50%;
+        box-shadow: 0 3px 5px;
     }
 
     .tabsContainers {
