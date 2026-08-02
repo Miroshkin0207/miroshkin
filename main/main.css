@@ -38,7 +38,12 @@ h1 {
 button {
     background-color: black;
     color: rgb(19, 65, 142);
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
+    box-shadow: 0 3px 5px;
 }
 
 a {

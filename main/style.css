@@ -59,9 +59,17 @@ main {
     top: 15vh;
 }
 
+.quoteContainer {
+    margin-bottom: 35px;
+}
+
 #quote {
     overflow-wrap: break-word;
     font-style: italic;
+}
+
+#author {
+    font-weight: bold;
 }
 
 #interesting {

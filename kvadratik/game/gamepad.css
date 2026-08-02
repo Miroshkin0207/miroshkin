@@ -20,6 +20,7 @@
     .gamepad button {
         border: none;
         background: none;
+        box-shadow: none;
     }
 
     #row1, #row2, #row3 {

@@ -49,6 +49,7 @@ h3 {
 
 #lock {
     display: none;
+    box-shadow: none;
 }
 
 .score {
@@ -86,6 +87,7 @@ h3 {
     border: none;
     width: 35px;
     height: 35px;
+    box-shadow: none;
 }
 
 #menuInfo {

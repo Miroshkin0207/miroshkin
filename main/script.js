@@ -63,9 +63,12 @@ if (params.get("dontNeedAnimation") != "true" && localStorage.getItem("mainAnima
 }
 
 // Цитаты
-var quote = document.createElement("p");
+const quote = document.createElement("p");
+const author = document.createElement("p");
 quote.id = "quote";
+author.id = "author";
 document.querySelector(".quoteContainer").appendChild(quote);
+document.querySelector(".quoteContainer").appendChild(author);
 
 const quotes = [
     "Ненависть порождает ненависть.",
@@ -82,9 +85,61 @@ const quotes = [
     "Время лечит все раны.",
     "Если быть — так быть лучшим!",
     "Книги — корабли мысли, странствующие по волнам времени и бережно несущие свой драгоценный груз от поколения к поколению.",
+    "Забыть друзей не значит повзрослеть.",
     "Тяжело в учении, легко в бою.",
     "Истина — это иллюзия, о которой забыли, что она иллюзия.",
-    "Лидеры — торговцы надеждами."
+    "Лидеры — торговцы надеждами.",
+    "Отсутствие сна — не проблема. Проблема, когда ты не знаешь, ради чего просыпаешься по утрам.",
+    "Всё, что мы слышим, — это мнение, а не факт. Всё, что мы видим, — это точка зрения, а не истина.",
+    "Я мыслю, следовательно, я существую.",
+    "Когда кажется, что весь мир настроен против тебя, помни, что самолёт взлетает против ветра!",
+    "\"Невозможно\" — это слово из словаря глупцов.",
+    "Бойся не того, кто изучает десять тысяч различных ударов. Бойся того, кто изучает один удар десять тысяч раз.",
+    "Неважно, как медленно ты идёшь, пока не останавливаешься.",
+    "Иногда люди не хотят слышать правду, потому что не желают разрушать свои иллюзии.",
+    "То, что мы знаем, — это капля, а то, что не знаем, — океан.",
+    "Никто тебе не друг, никто тебе не враг, но всякий человек тебе учитель.",
+    "Любите врагов ваших.",
+    "Человек видит мир таким, каков он сам.",
+    "Логика может привести вас от пункта А к пункту Б, а воображение — куда угодно.",
+    "Сложнее всего начать действовать, всё остальное зависит только от упорства.",
+    "Всегда выбирайте самый трудный путь: на нём вы не встретите конкурентов."
+];
+
+const authors = [
+    "Нагато",
+    "Альберт Эйнштейн",
+    "Итачи",
+    "Итачи",
+    "Итачи",
+    "Сократ",
+    "Сократ",
+    "Шикамару Нара",
+    "Фёдор Михайлович Достоевский", 
+    "Бенедикт Спиноза",  
+    "Кровавая клятва дружбы из книги Вениамина Каверина «Два капитана»",   
+    "Менандр",
+    "Чкалов из книги Вениамина Каверина «Два капитана»",
+    "Фрэнсис Бэкон",
+    "Сайт <a href=\"https://jutsu.ru\">Jutsu.ru</a>",
+    "Александр Васильевич Суворов",
+    "Фридрих Ницше",
+    "Наполеон Бонапарт",  
+    "Альберт Эйнштейн",
+    "Марк Аврелий",
+    "Декарт",
+    "Генри Форд",
+    "Наполеон Бонапар",
+    "Брюс Ли",
+    "Конфуций",
+    "Фридрих Ницше",
+    "Исаак Ньютон",
+    "Сократ",
+    "Иисус Христос",
+    "Иоганн Вольфганг Гёте",
+    "Альберт Эйнштейн",
+    "Амелия Эрхарт",
+    "Шарль де Голль"
 ];
 
 // Получение случайного числа
@@ -95,18 +150,17 @@ function getRandom(min, max)
 
 // Отображение текста и проверка повторной цитаты
 let before = -1;
-document.querySelector("#mainButton").onclick = async () => mainClick();
-function mainClick() 
-{
+document.querySelector("#mainButton").onclick = async () => {
     let n;
     do
     {
         n = getRandom(0, quotes.length - 1);
-    } while (n == before)
-    
+    } while (n == before)  
     before = n;
 
-    quote.innerHTML = "「 " + quotes[n] + "  」";
+    quote.innerHTML = "「 " + quotes[n] + "」";
+    author.innerHTML = "— " + authors[n];
+
     const mainButton = document.querySelector("#mainButton");
     mainButton.innerHTML = "Повторить";
 }
@@ -159,6 +213,11 @@ document.getElementsByTagName("button")[5].onclick = async () => {
     window.location.href = "/history-of-changes/";
 }
 
+document.getElementsByTagName("button")[6].onclick = async () => {
+    await switchOn();
+    window.location.href = "/list-quotes/";
+}
+
 // Инструменты
 document.querySelector("#tools").children[0].onclick = async () => {
     await switchOn();
@@ -182,7 +241,7 @@ document.querySelector("#tools").children[3].onclick = async () => {
 
 document.querySelector("#tools").children[4].onclick = async () => {
     await switchOn();
-    window.location.href = "/encoderText/";
+    window.location.href = "/encoder-text/";
 }
 
 

@@ -140,6 +140,7 @@ label {
 
 #info {
     background-color: transparent !important;
+    box-shadow: none;
 }
 
 #info:hover {
