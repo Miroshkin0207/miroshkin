@@ -1,0 +1,41 @@
+p {
+    font-size: 22px;
+    display: inline;
+}
+
+button {
+    font-size: 30px;
+}
+
+select {
+    font-size: 20px;
+}
+
+img {
+    text-align: center;
+}
+
+.icon {
+    background-color: rgb(31, 29, 29);
+    width: 20%;
+    gap: 5%;
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.download button {
+    padding: 15px;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 999px)
+{
+    p {
+        font-size: 18px;
+    }
+}

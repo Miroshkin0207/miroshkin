@@ -167,20 +167,19 @@ document.querySelector("#mainButton").onclick = async () => {
 
 // Выпадающие списки
 document.querySelector(".tabs").onclick = async () => showList(document.querySelector(".tabs"));
-document.getElementsByClassName("tabs")[1].onclick = async () => showList(document.getElementsByClassName("tabs")[1]);
+document.querySelectorAll(".tabs")[1].onclick = async () => showList(document.querySelectorAll(".tabs")[1]);
+document.querySelectorAll(".tabs")[2].onclick = async () => showList(document.querySelectorAll(".tabs")[2]);
 function showList(tab) 
 {
     const overlay = document.querySelector(".overlay");
     overlay.style.display = "inline";
     let ul;
     if (tab.innerHTML == "Инструменты")
-    {
         ul = document.querySelector("ul");
-    }
-    else
-    {
-        ul = document.getElementsByTagName("ul")[1];
-    }
+    else if (tab.innerHTML == "Игры")
+        ul = document.querySelectorAll("ul")[1];
+    else if (tab.innerHTML == "Приложения")
+        ul = document.querySelectorAll("ul")[2];
 
     ul.style.display = "flex";
     ul.style.width = tab.clientWidth + "px";
@@ -198,11 +197,6 @@ function showList(tab)
 }
 
 /* Ссылки */
-document.getElementsByClassName("tabs")[2].onclick = async () => {
-    await switchOn();
-    window.location.href = "/thanks/";
-}
-
 document.getElementsByClassName("tabs")[3].onclick = async () => {
     await switchOn();
     window.location.href = "/settings/";
@@ -254,4 +248,11 @@ document.querySelector("#games").children[0].onclick = async () => {
 document.querySelector("#games").children[1].onclick = async () => {
     await switchOn();
     window.location.href = "/kvadratik/main/";
+}
+
+
+// Приложения
+document.querySelector("#apps").children[0].onclick = async () => {
+    await switchOn();
+    window.location.href = "/apps/kvadratik/";
 }
