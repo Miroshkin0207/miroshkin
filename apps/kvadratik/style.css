@@ -16,9 +16,11 @@ img {
 }
 
 .icon {
-    background-color: rgb(31, 29, 29);
+    background-color: rgb(51, 48, 48);
     width: 20%;
-    gap: 5%;
+    display: flex;
+    align-items: center;
+    gap: 5%;  
 }
 
 .download {
@@ -37,5 +39,20 @@ img {
 {
     p {
         font-size: 18px;
+    }
+
+    select {
+        margin: 7px;
+    }
+
+    .icon {
+        width: 50%;
+        padding: 5px;
+        margin: 7px 0 15px 0;
+        gap: 10%;
+    }
+
+    .download {
+        gap: 15%;
     }
 }
