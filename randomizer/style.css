@@ -68,6 +68,7 @@ input {
     width: 40px;
     height: 40px;
     bottom: 4px;
+    box-shadow: none;
 }
 
 .check img {
@@ -82,6 +83,7 @@ input {
     right: 0;
     top: 50%;
     transform: translateY(-45%);
+    box-shadow: none;
 }
 
 .edit img {
@@ -129,6 +131,7 @@ input {
 
 #delExodus {
     right: 0;
+    box-shadow: none;
 }
 
 #delExodus img {
@@ -188,6 +191,7 @@ input {
 
 #editExodus {
     right: 45px;
+    box-shadow: none;
 }
 
 #editExodus img {
