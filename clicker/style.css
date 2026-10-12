@@ -81,13 +81,13 @@ h3 {
     position: relative;
     top: 7px;
     right: 3px;
+    box-shadow: none;
 }
 
 #info {
     border: none;
     width: 35px;
     height: 35px;
-    box-shadow: none;
 }
 
 #menuInfo {
@@ -256,7 +256,6 @@ h3 {
     #info {
         width: 30px;
         height: 30px;
-        box-shadow: none;
     }
 
     #menuInfo {
