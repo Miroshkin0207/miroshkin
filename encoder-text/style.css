@@ -101,8 +101,6 @@ textarea {
 #copy {
     margin: 7px;
     display: none;
-    position: absolute;
-    right: 5px;
 }
 
 #finalText {
