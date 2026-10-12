@@ -99,17 +99,16 @@ textarea {
 }
 
 #copyContainer {
-    text-align: end;
-}
-
-#copy {
-    margin: 7px;
-    display: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 15px;
 }
 
 #finalText {
     margin-top: 35px;
     text-align: center;
+    margin: 2px;
 }
 
 /* Адаптация под телефоны */
