@@ -98,6 +98,10 @@ textarea {
     height: auto;
 }
 
+#copyContainer {
+    text-align: end;
+}
+
 #copy {
     margin: 7px;
     display: none;
