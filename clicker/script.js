@@ -80,7 +80,8 @@ const table = [
     {name: "TON-618", score: 2500},
     {name: "Сейджуро Акаши", score: 6100},
     {name: "1337", score: 7000},
-    {name: "Серафим (СОНЯ)", score: 667}
+    {name: "Серафим (СОНЯ)", score: 667},
+    {name: "АртёмХакер228", score: 474}
 ];
 table.sort((a, b) => b.score - a.score);
 
