@@ -68,4 +68,4 @@ function waitFor() {
 }
 
 // Скопировать
-document.querySelector("#copy").onclick = () => copyResult();
+document.querySelector("#copy").onclick = () => copyResult(document.querySelector(".password").innerHTML);
