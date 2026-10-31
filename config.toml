@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/"
+to = "/main"
+status = 301
