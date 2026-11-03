@@ -1,1 +1,1 @@
-RedirectMatch 301 / /main/
+RedirectMatch 301 ^/$ /main/
