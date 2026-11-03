@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Генератор паролей</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/main/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <button id="back">Главная</button>
+    <main>
+        <h1>Генератор паролей</h1>
+        <div class="container">
+            <div class="passwordSettings">
+                <label for="first">Минимальная длина пароля:</label>
+                <br>
+                <input id="first" type="number" placeholder="Минимум">
+                <br>
+                <br>
+                <label for="second">Максимальная длина пароля (включительно):</label>
+                <br>
+                <input id="second" type="number" placeholder="Максимум">   
+                <br>
+                <br>
+                <button id="generator" disabled>Сгенерировать</button>
+            </div>
+        </div>
+        
+        <h2>Ваш пароль:</h2>
+        <button id="copy">Скопировать</button>
+        <div class="password"></div>
+    </main>
+    <div class="messageCopy">Скопировано</div>  
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/main/common.js"></script>
+</body>
+</html>

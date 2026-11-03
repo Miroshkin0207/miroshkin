@@ -1,0 +1,30 @@
+h4 {
+    font-size: 24px;
+    margin: 2px;
+}
+
+p {
+    font-size: 22px;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    margin: 3px;
+}
+
+.thanks {
+    display: flex;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 999px) {
+    button {
+        font-size: 30px;
+    }
+}

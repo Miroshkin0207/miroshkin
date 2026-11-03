@@ -1,0 +1,22 @@
+h4 {
+    font-size: 23px;
+    text-align: center;
+    margin: 5px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.gainsDescriptions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 999px) {
+    button {
+        font-size: 25px;
+    }
+}

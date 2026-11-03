@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Рандомайзер</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/main/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <button id="back">Главная</button>
+    <main>
+    <h1>Рандомайзер</h1>
+    <p>Здесь вы можете добавить возможные исходы какого-то события и получить один случайный.</p>
+
+    <div class="buttons">
+        <button id="newExodus">+Новый исход</button>
+        <button id="start">Запустить</button>       
+    </div>        
+
+    <div class="anim">
+            <input id="animation" type="checkbox" checked>
+            <label for="animation">Анимация</label>
+    </div>
+    
+    <div class="menu">
+        <div class="event">
+            <div class="eventName">
+                <label for="eventNameInput">Имя события:</label>
+                <input id="eventNameInput" placeholder="Введите событие">
+            </div>
+            <button class="check">
+                <img src="images/check.png">
+            </button>
+        </div>
+
+        <div id="titleExoduses">
+            <h2>Исходы:</h2>
+        </div>
+        <h2 id="noExoduses">Пока что исходов нет :)</h2>
+            <div class="exoduses">
+                <div class="menuNewExodus">
+                    <h3>Новый исход</h3>
+                    <label for="add">Имя исхода:</label>
+                    <button id="add">Добавить</button>
+                    <button id="exit">
+                        <img src="images/exit.png">
+                    </button>
+                </div>
+                <div class="listExoduses"></div>
+        </div>
+
+        <div class="result">
+            <h4>Итог:</h4>
+            <button id="ok">Ок</button>
+        </div>
+    </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/main/common.js"></script>
+</body>
+</html>

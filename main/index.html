@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Сайт Мирошкин</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="yandex-verification" content="2ab11659add5733b" />
+    <meta name="author" content="Владимир Мирошкин">
+    <meta name="description" content="Мирошкин — сайт с полезными, интересными инструментами и играми.
+    Работа с текстом, рандомом, вычислениями и многое другое!">
+    <meta name="keywords" content="Сайт Мирошкин, Мирошкин, Сайт Мирошкина, Мирошкина,
+    Мирошкин главная, Мирошкин главная страница, полезный сайт, сайт с полезными 
+    инструментами, полезные инструменты, игры, сайт с играми, цитаты, мудрые цитаты, 
+    философские цитаты, рандом, рандомайзер, рулетка">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Заставка вначале-->
+    <div class="bg"></div>
+    <img class="mir" src="logotip.png">
+    <div class="miroshkin">ирошкин</div>
+    <header>
+        <div class="tabsContainers">
+            <button class="tabs">Инструменты</button>
+            <button class="tabs">Игры</button>
+        </div>
+        <h1>Мирошкин</h1>
+        <div class="tabsContainers">
+            <button class="tabs">Приложения</button>
+            <button class="tabs">Настройки</button>
+        </div>
+    </header>
+
+    <main>
+        <h1><em>Добро пожаловать на сайт Мирошкин!</em></h1>
+        <p>Нажми на кнопку ниже</p>
+        <button id="mainButton">Нажми</button>
+        <div class="quoteContainer"></div>
+        <p>Мирошкин — сайт, на котором вы найдёте множество интересных инструментов и игр. Вы можете работать с текстом, вычислениями, рандомом и многим другим!</p>
+        <p style="margin-bottom: 0;">Сайт довольно активно развивается, выходят новые обновления и их документация. Кстати, вы можете посмотреть их полный список с датами и планируемые обновления в истории изменений:</p>
+        <button>История изменений</button>
+        <button>Все цитаты</button>
+    </main>
+       
+    <!--Выпадающие списки-->
+    <ul id="tools">
+        <li>
+            <button>Калькулятор</button>
+        </li>
+        <li>
+            <button>Обработчик текста</button>
+        </li>
+        <li>
+            <button>Генератор паролей</button>
+        </li>
+        <li>
+            <button>Рандомайзер</button>
+        </li>
+        <li>
+            <button>Шифратор текста</button>
+        </li>
+    </ul>
+
+    <ul id="games">
+        <li>
+            <button>Кликер</button>            
+        </li>
+        <li>
+            <button>Квадратик</button>
+        </li>
+    </ul>
+
+    <ul id="apps">
+        <li>
+            <button>Квадратик</button>
+        </li>
+    </ul>
+
+    <footer>
+        <p id="interesting"><strong>Интересные ссылки:</strong></p>
+        <a href="https://t.me/mirowww">Мой телеграм</a>
+        <a href="https://t.me/anonaskbot?start=miroshkin">Анонимные сообщения</a>
+        <a href="https://t.me/miroshkin0207">Телеграм-канал сайта</a>
+        <a href="https://vk.com/id674344044">Мой ВК</a>
+    </footer>
+    
+    <div class="overlay"></div>
+    <script type="module" src="common.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

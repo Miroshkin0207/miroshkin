@@ -1,0 +1,130 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <title>Кликер</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/main/main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <button id="back">Главная</button>
+    <main>
+        <h1>Кликер</h1>
+
+        <div id="mainButton">Кликай!</div>
+        <div class="score">
+            <h4>Счёт:</h4>
+            <h4 id="total">0</h4>
+            <button id="lock">
+                <img src="images/lockOpen.png">
+            </button>
+        </div>
+        <p id="aboutScore">Рекорд сбросится через <span id="days">0</span> <span id="daysWord">дня</span></p>
+        <button id="showMenuReset">Сбросить</button>
+
+        <div class="titleTable">
+            <h3>Таблица лидеров</h3>
+            <button id="add">
+                <img id="addImg" src="images/plus.png">
+            </button>
+        </div>
+
+        <div class="menus" id="menuScore">
+            <button id="exitMenuScore" class="exit">
+                <img src="images/exit.png">
+            </button>
+            <h2>Добавить рекорд в таблицу</h2>
+            <button id="showMenuCreateRecord">Создать новый</button>
+            <button id="showMenuEditRecord">Перезаписать существующий</button>
+            <button id="showMenuEditData">Изменить данные</button>
+        </div>
+
+        <div class="menus" id="menuCreateRecord">
+            <button id="exitMenuCreateRecord" class="exit">
+                <img src="images/exit.png">
+            </button>
+            <h2>Новый рекорд</h2>
+            <div class="form">
+                <label for="recordName">Имя:</label>
+                <input id="recordName" placeholder="Введите уникальное имя">
+                <label for="recordPassword">Пароль:</label>
+                <input id="recordPassword" placeholder="Придумайте пароль">
+                <button id="createRecord">Добавить</button>
+                <p class="points"></p>
+            </div>
+        </div>
+
+        <div class="menus" id="menuEditRecord">
+            <button id="exitMenuEditRecord" class="exit">
+                <img src="images/exit.png">
+            </button>
+            <h2>Перезаписать рекорд</h2>
+            <div class="form">
+                <label for="editRecordName">Имя:</label>
+                <input id="editRecordName" placeholder="Введите имя">
+                <label for="editRecordPassword">Пароль:</label>
+                <input id="editRecordPassword" placeholder="Введите пароль">
+                <button id="editRecord">Перезаписать</button>
+                <p class="points"></p>
+            </div>
+        </div>
+
+        <div class="menus" id="menuEditData">
+            <button id="exitMenuEditData" class="exit">
+                <img src="images/exit.png">
+            </button>
+            <h2>Изменить данные</h2>          
+            <div class="form">
+                <p>Старые данные</p>
+                <label for="oldRecordName">Имя:</label>
+                <input id="oldRecordName" placeholder="Старое имя">
+                <label for="oldRecordPassword">Пароль:</label>
+                <input id="oldRecordPassword" placeholder="Старый пароль">
+            </div>            
+            <div class="form">
+                <p>Новые данные</p>
+                <label for="newRecordName">Имя:</label>
+                <input id="newRecordName" placeholder="Новое имя">
+                <label for="newRecordPassword">Пароль:</label>
+                <input id="newRecordPassword" placeholder="Новый пароль">
+            </div>
+            <button id="editData">Изменить</button>
+            <button id="deleteRecord">Удалить</button>
+            <p class="points"></p>
+        </div>
+
+        <div class="table">
+            <div class="mainLine">
+                <div class="mainName">Имя</div>
+                <div class="scores">Рекорд</div>
+            </div>
+            <div class="border"></div>
+        </div>
+        <div id="loading">
+            <p>Загрузка...</p>
+        </div>
+
+        <div class="menus" id="menuReset">
+            <button id="exitMenuReset" class="exit">
+                <img src="images/exit.png">
+            </button>
+            <h2 class="menusLabel">Подтверждение</h2>
+            <p class="menusLabel">Вы уверены, что хотите сбросить свой рекорд?</p>  
+            <div> 
+                <button id="exitReset">Нет</button>
+                <button id="reset">Да</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="caution">
+        <p id="cautionText"></p>
+    </div>
+    <div class="overlay"></div>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="record.js"></script>
+    <script type="module" src="/main/common.js"></script>
+</body>
+</html>

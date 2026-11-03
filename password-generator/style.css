@@ -1,0 +1,107 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+}
+
+.passwordSettings {
+    text-align: center;
+}
+
+input {
+    border: solid 3px blue;
+    font-size: 30px;
+    position: relative;
+    top: 5px;
+}
+
+.buttonDisabled {
+    opacity: 0.55;
+    background-color: black !important;
+    color: rgb(19, 65, 142) !important;
+    cursor: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    margin: 10px auto 0;
+}
+
+label {
+    font-size: 30px;
+}
+
+.password {
+    text-align: center;
+    word-break: break-all;  
+    position: relative;
+    font-size: 40px;
+}
+
+.passwordSettings {
+    background-color: rgb(53, 57, 64);
+    width: 50%;
+}
+
+#generator {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+#copy {
+    font-size: 45px;
+    position: absolute;
+    right: 5px;
+    bottom: 45%;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 999px) {  
+    label {
+        font-size: 20px;
+    }
+
+    .passwordSettings {
+        background-color: rgb(53, 57, 64);
+        width: 85%;
+    }
+
+    input {
+        font-size: 20px;
+        width: 95%;
+        position: relative;
+        top: 4px;
+    }
+
+    #generator {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+        position: relative;
+        margin: 10px auto 5px;
+    }
+
+    #copy {
+        position: relative;
+        font-size: 30px;
+        left: 100%;
+        transform: translateX(-100%);
+    }
+
+    .messageCopy {
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .password {
+        font-size: 30px;
+        margin-top: 1%;     
+    }
+}

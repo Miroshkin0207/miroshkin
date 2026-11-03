@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>Квадратик</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/main/main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/clicker/menu.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <button id="back">Главная</button>
+    <main>
+        <h1>Квадратик</h1>
+        <div class="preview">
+            <img id="preview" src="preview.png">
+        </div>
+        <br>
+        <p>В этой захватывающей игре вам предстоит играть за Квадратика. Собирайте яблоки, избегайте бомб, получайте различные эффекты и постарайтесь набрать как можно больше очков, чтобы занять наиболее высокое место в таблице лидеров!</p>
+        <div class="playAndScore">
+            <h4></h4>
+            <button>Играть</button>
+            <button>Настройки</button>
+            <button>Об игре</button>
+        </div>
+
+        <!--Таблица лидеров-->
+        <div class="titleTable">
+            <h3>Таблица лидеров</h3>
+            <button id="add">
+                <img id="addImg" src="/clicker/images/plus.png">
+            </button>
+        </div>
+
+        <div class="tableContainer">
+            <div class="table">
+                <div class="mainLine">
+                    <div class="mainName">Имя</div>
+                    <div class="mainScore">Рекорд</div>
+                </div>
+                <div class="border"></div>
+            </div>
+        </div>
+        <p id="loading">Загрузка...</p>
+
+        <!--Настройки-->
+        <div class="menus" id="settingsMenu">
+            <button class="exit">
+                <img src="/clicker/images/exit.png">
+            </button>
+            <h2>Настройки</h2>
+            <div class="settings">
+                <label>Обратный отсчёт при старте:</label>
+                <div class="switches">
+                    <div class="circles"></div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="settings">
+                <label>Музыка:</label>
+                <div class="switches">
+                    <div class="circles"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menus" id="menuScore">
+            <button id="exitMenuScore" class="exit">
+                <img src="/clicker/images/exit.png">
+            </button>
+            <h2>Добавить рекорд в таблицу</h2>
+            <button id="showMenuCreateRecord">Создать новый</button>
+            <button id="showMenuEditRecord">Перезаписать существующий</button>
+            <button id="showMenuEditData">Изменить данные</button>
+        </div>
+
+        <div class="menus" id="menuCreateRecord">
+            <button id="exitMenuCreateRecord" class="exit">
+                <img src="/clicker/images/exit.png">
+            </button>
+            <h2>Новый рекорд</h2>
+            <div class="form">
+                <label for="recordName">Имя:</label>
+                <input id="recordName" placeholder="Введите уникальное имя">
+                <label for="recordPassword">Пароль:</label>
+                <input id="recordPassword" placeholder="Придумайте пароль">
+                <button id="createRecord">Добавить</button>
+                <p class="points"></p>
+            </div>
+        </div>
+
+        <div class="menus" id="menuEditRecord">
+            <button id="exitMenuEditRecord" class="exit">
+                <img src="/clicker/images/exit.png">
+            </button>
+            <h2>Перезаписать рекорд</h2>
+            <div class="form">
+                <label for="editRecordName">Имя:</label>
+                <input id="editRecordName" placeholder="Введите имя">
+                <label for="editRecordPassword">Пароль:</label>
+                <input id="editRecordPassword" placeholder="Введите пароль">
+                <button id="editRecord">Перезаписать</button>
+                <p class="points"></p>
+            </div>
+        </div>
+
+        <div class="menus" id="menuEditData">
+            <button id="exitMenuEditData" class="exit">
+                <img src="/clicker/images/exit.png">
+            </button>
+            <h2>Изменить данные</h2>          
+            <div class="form">
+                <p>Старые данные</p>
+                <label for="oldRecordName">Имя:</label>
+                <input id="oldRecordName" placeholder="Старое имя">
+                <label for="oldRecordPassword">Пароль:</label>
+                <input id="oldRecordPassword" placeholder="Старый пароль">
+            </div>            
+            <div class="form">
+                <p>Новые данные</p>
+                <label for="newRecordName">Имя:</label>
+                <input id="newRecordName" placeholder="Новое имя">
+                <label for="newRecordPassword">Пароль:</label>
+                <input id="newRecordPassword" placeholder="Новый пароль">
+            </div>
+            <button id="editData">Изменить</button>
+            <button id="deleteRecord">Удалить</button>
+            <p class="points"></p>
+        </div>
+
+        <div class="caution">
+            <p id="cautionText"></p>
+        </div>
+    </main>
+    <div class="overlay"></div>       
+    <script type="module" src="/main/common.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/clicker/record.js"></script>
+</body>
+</html>

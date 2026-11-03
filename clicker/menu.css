@@ -1,0 +1,122 @@
+.form {
+    background-color: rgb(29, 27, 27);
+    border-radius: 15px;
+    padding: 0 3% 2% 3%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form button {
+    width: auto;
+    margin-top: 2%;
+}
+
+input {
+    width: 100%;
+}
+
+label {
+    width: 100%;
+    text-align: start;
+    margin: 15px 0 5px 0;
+}
+
+.menus {
+    text-align: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#menuScore {
+    gap: 10px;
+}
+
+#menuScore button {
+    width: 40%;
+}
+
+#menuEditData p {
+    margin: 1% 0 0 0;
+}
+
+#menuEditData label {
+    margin: 0px 0 5px 0;
+}
+
+#menuEditData input {
+    margin-bottom: 2%;
+}
+
+#editData, #deleteRecord {
+    width: 25%;
+    padding: 7px;
+    margin: 0.5%;
+}
+
+.caution {
+    display: none;
+    background-color: black;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    z-index: 5;
+}
+
+#cautionText {
+    font-size: 30px;
+}
+
+.points {
+    display: flex;
+    align-items: center;
+    height: 10px;
+    margin: 9px;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 999px)
+{
+    label {
+        margin: 0 0 5px 0;
+    }
+
+    #menuReset {
+        padding: 5%;
+    }
+
+    .form {
+        background-color: transparent;
+    }
+
+    input {
+        margin-bottom: 10px;
+    }
+
+    #menuScore button {
+        width: 75%;
+        padding: 7px;
+    }
+
+    .caution {
+        width: 75%;
+        padding: 5px
+    }
+
+    #cautionText {
+        font-size: 24px;
+    }
+
+    #menuEditData .form {
+        margin-top: 15px;
+        background-color: rgb(29, 27, 27);
+    }
+
+    #menuEditData button {
+        width: 75%;
+    }
+}

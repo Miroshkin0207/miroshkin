@@ -1,0 +1,342 @@
+button {
+    font-size: 30px;
+}
+
+p {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 5px;
+}
+
+h3 {
+    font-size: 23px;
+}
+
+h4 {
+    font-size: 21px;
+    margin: 0;
+}
+
+label {
+    font-size: 25px;
+}
+
+.menu {
+    background-color: rgb(53, 57, 64);
+    text-align: center;
+    position: relative;
+    width: 55%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+input {
+    width: 75%;
+    height: 32px;
+    font-size: 27px;
+    border: solid 3px blue;
+    margin-right: 7px;
+}
+
+.event {
+    word-break: word-break;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.eventName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: anywhere;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+.check {
+    background-color: white;
+    border: none;
+    position: absolute;
+    left: calc(89% + 2px);
+    width: 40px;
+    height: 40px;
+    bottom: 4px;
+    box-shadow: none;
+}
+
+.check img {
+    width: 30px;
+    height: 30px;
+}
+
+.edit {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-45%);
+    box-shadow: none;
+}
+
+.edit img {
+    width: 30px;
+    height: 30px;
+}
+
+#titleExoduses {
+    background-color: black;
+    padding: 5px;
+}
+
+.menuNewExodus {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: rgb(43, 44, 46);
+    border-bottom: solid black;
+    padding-bottom: 3px;
+}
+
+#exit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 43px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exit img {
+    width: 30px;
+    height: 30px;
+}
+
+.exodusButtons {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+}
+
+#delExodus {
+    right: 0;
+    box-shadow: none;
+}
+
+#delExodus img {
+    width: 30px;
+    height: 30px;
+}
+
+.exodus {
+    border-bottom: solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: anywhere;
+    padding: 10px;
+}
+
+.result {
+    display: none;
+    background-color: rgba(12, 44, 98, 1);
+    padding: 5px 0 5px 0;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    position: absolute;
+    left: 79%;
+}
+
+#start {
+    background-color: rgb(50, 151, 32);
+    color: black;
+}
+
+.anim {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 79%;
+    top: 35%;
+}
+
+.forButton {
+    padding-right: 30px;
+}
+
+#add {
+    margin-top: 5px;
+}
+
+.forButtonsExd {
+    padding-right: 85px;
+}
+
+#editExodus {
+    right: 45px;
+    box-shadow: none;
+}
+
+#editExodus img {
+    width: 30px;
+    height: 30px;
+}
+
+#ok {
+    font-size: 20px;
+}
+
+#animation {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 999px) {
+    h1 {
+        margin-bottom: 3px;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
+        margin: 2px 0 7px 0;
+    }
+
+    h2 {
+        font-size: 21px;
+        margin: 2px;
+    }
+
+    h3 {
+        font-size: 21px;
+        margin: 3px;
+    }
+
+    h4 {
+        font-size: 21px;
+        margin: 0;
+    }
+
+    .menu {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    input {
+        border: solid 2px blue;
+        height: 27px;
+        font-size: 19px;
+    }
+
+    .check {
+        width: 34px;
+        height: 32px;
+        bottom: 6px;
+    }
+
+    .check img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .edit img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .forButton {
+        padding-right: 27px;
+    }
+
+    #exit img {
+        width: 27px;
+        height: 27px;
+    }
+
+    #add {
+        font-size: 20px;
+        margin-top: 3px;
+    }
+
+    .forButtonsExd {
+        padding-right: 60px;
+    }
+
+    .exodusButtons img {
+        width: 32px;
+        height: 32px;
+    }
+
+    #editExodus {
+        right: 35px;
+        height: 30px;
+        width: 32px;
+    }
+
+    #editExodus img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .checkExodus {
+        margin-right: 5px;
+        width: 35px;
+    }
+
+    #delExodus img {
+        width: 25px;
+        height: 25px;
+    }
+
+    #ok {
+        font-size: 20px;
+    }
+
+    .buttons {
+        width: 45%;
+        position: relative;
+        left: 0;
+    }
+
+    .buttons button {
+        font-size: 18px;
+        padding: 3px 0 3px 0;
+    }
+
+    .anim {
+        position: absolute;
+        left: 60%;
+        top: 75%;
+    }
+
+    #animation {
+        width: 25px;
+        height: 25px;
+    }
+}

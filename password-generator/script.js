@@ -1,0 +1,71 @@
+// Импорт
+import { delay, switchOn, switchOff, copyResult } from "/main/common.js";
+
+// Переход на главную страницу
+document.querySelector("#back").onclick = () => back();
+async function back() {
+    await switchOn();
+    window.location.href = "/main/?dontNeedAnimation=true";
+}
+
+function random(min, max)
+{
+    return min + Math.floor(Math.random() * (max - min + 1));
+}
+
+const button = document.querySelector("#generator");
+document.querySelector("input").oninput = () => checkButtonDisabled();
+document.getElementsByTagName("input")[1].oninput = () => checkButtonDisabled();
+function checkButtonDisabled() {
+    const minimum = Number(document.querySelector("#first").value);
+    const maximum = Number(document.querySelector("#second").value);
+
+    if (minimum != "" && maximum != "") 
+        button.disabled = false;
+    else
+        button.disabled = true;
+
+    if (button.disabled)
+        button.classList.add("buttonDisabled");
+    else 
+        button.classList.remove("buttonDisabled");
+}
+checkButtonDisabled();
+
+var password = "";
+document.querySelector("#generator").onclick = () => generate();
+function generate() {
+    password = "";
+    const minimum = Number(document.querySelector("#first").value);
+    const maximum = Number(document.querySelector("#second").value);
+
+    const chars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM0123456789!?";
+    
+    let error = false;
+    if (!(minimum <= maximum)) {
+        alert("Минимум должен быть меньше максимума или равен ему");
+        error = true;
+    }
+
+    if (!error) {
+        let lengthPassword = random(minimum, maximum);
+        
+        while (password.length < lengthPassword)
+        {
+            password += chars[random(0, chars.length - 1)];
+        }
+        document.querySelector(".password").innerHTML = password;
+    }
+}
+
+var messageCopy = document.querySelector(".messageCopy");
+function waitFor() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve();
+        }, 1000)
+    })
+}
+
+// Скопировать
+document.querySelector("#copy").onclick = () => copyResult(document.querySelector(".password").innerHTML);

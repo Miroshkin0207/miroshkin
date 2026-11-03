@@ -1,0 +1,58 @@
+p {
+    font-size: 22px;
+    display: inline;
+}
+
+button {
+    font-size: 30px;
+}
+
+select {
+    font-size: 20px;
+}
+
+img {
+    text-align: center;
+}
+
+.icon {
+    background-color: rgb(51, 48, 48);
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 5%;  
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.download button {
+    padding: 15px;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 999px)
+{
+    p {
+        font-size: 18px;
+    }
+
+    select {
+        margin: 7px;
+    }
+
+    .icon {
+        width: 50%;
+        padding: 5px;
+        margin: 7px 0 15px 0;
+        gap: 10%;
+    }
+
+    .download {
+        gap: 15%;
+    }
+}

@@ -1,0 +1,276 @@
+﻿button {
+    font-size: 25px;
+}
+
+p {
+    font-size: 24px;
+}
+
+h1 {
+    position: relative;
+    right: 5%;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 35px;
+    display: inline-block;
+    margin: 0;
+} 
+
+#mainButton {
+    background-color: greenyellow;
+    color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 70px;
+    width: 425px;
+    height: 400px;
+    right: 5%;
+    cursor: pointer;
+}
+
+.buttonClicked {
+    background-color: rgb(90, 116, 51) !important;
+}
+
+#aboutScore {
+    font-size: 25px;
+    position: relative;        
+    top: 15px;
+}
+
+#lock {
+    display: none;
+    box-shadow: none;
+}
+
+#add {
+    background-color: rgb(53, 57, 64);
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    box-shadow: none;
+}
+
+#addImg {
+    width: 35px;
+    height: 35px;
+}
+
+.score {
+    position: relative;
+    top: 30px;
+    width: 64%;
+    word-break: break-all;
+}
+
+.score h4 {
+    display: inline-block;
+    margin: 0;
+    font-size: 30px;
+}
+
+.score button {
+    display: none;
+}
+
+.titleTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5%;
+    position: absolute;
+    right: 0;
+    top: 2%;
+    width: 35%;
+}
+
+.table {
+    background-color: rgb(53, 57, 64);
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    position: absolute;
+    width: 35%;
+    top: 75px;
+}
+
+.mainLine {
+    background-color: rgb(19, 66, 142);
+    font-size: 25px;
+    display: flex;
+    border-bottom: solid 5px black;
+}
+
+#loading {
+    text-align: center;
+    position: absolute;
+    width: 35%;
+    right: 0;
+    top: 105px;
+    margin: 0;
+}
+
+.border {
+    background-color: black;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 60%;
+}
+
+.line {
+    display: flex;
+    border-bottom: solid 5px black;
+    font-size: 30px;
+}
+
+.mainName {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.names {
+    width: 60%;
+    border-left: solid black;
+    padding: 0 3px 0 3px;
+    font-size: 25px;
+}
+
+.scores {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+/* Адаптация под телефоны */
+@media (max-width: 999px) {
+    button {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        right: 0;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 22px;
+        text-align: center;
+        margin: 0;
+        display: inline-block;
+    }
+
+    #mainButton {
+        font-size: 45px;
+        width: 250px;
+        height: 250px;
+        top: 7px;
+        right: 0;
+    }
+
+    .score {
+        position: relative;
+        margin-top: 7%;
+        width: 100%;
+    }
+
+    .score h4 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .score button {
+        position: absolute;
+        right: 0;
+    }
+
+    #lock {
+        display: inline-block;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+    }
+
+    #lock img {
+        width: 30px;
+        height: 35px;
+    }
+
+    #aboutScore {
+        position: relative;
+        top: 5px;
+        font-size: 20px;
+    }
+
+    #add {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #addImg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .titleTable {
+        position: relative;
+        width: 100%;
+        margin: 2% auto 2%;
+    }
+
+    .table {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        top: 0;
+    }
+
+    .names, .scores {
+        font-size: 21px;
+    }
+
+    .line  {
+        font-size: 10px;
+    }
+
+    #loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        top: 0;
+        bottom: 0;
+    }
+
+    #loading p {
+        margin: 0;
+    }
+}
