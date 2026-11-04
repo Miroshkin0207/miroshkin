@@ -38,7 +38,7 @@ document.querySelector("#exitMenuEditData").onclick = () => exitMenu("#menuEditD
 // Таблица лидеров
 async function getTable()
 {
-    const answer = await fetch(`https://miroshkin.vercel.app/api/getTable/${gameTitle}`, {
+    const answer = await fetch(`https://miroshkin-git-main-site-miroshkin.vercel.app/api/getTable/${gameTitle}`, {
         method: "GET"
     });
     const table = await answer.json();
@@ -95,7 +95,7 @@ createRecordButton.onclick = async () =>
     const pointsInterval = setInterval(() => points(1), 250);
     createRecordButton.disabled = true;
     createRecordButton.style.opacity = 0.5;
-    const answer = await fetch(`https://miroshkin.vercel.app/api/createRecord/${gameTitle}`, {
+    const answer = await fetch(`https://miroshkin-git-main-site-miroshkin.vercel.app/api/createRecord/${gameTitle}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -137,7 +137,7 @@ editRecordButton.onclick = async () =>
     const pointsInterval = setInterval(() => points(2), 250);
     editRecordButton.disabled = true;
     editRecordButton.style.opacity = 0.5;
-    const answer = await fetch(`https://miroshkin.vercel.app/api/editRecord/${gameTitle}`, {
+    const answer = await fetch(`https://miroshkin-git-main-site-miroshkin.vercel.app/api/editRecord/${gameTitle}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -207,7 +207,7 @@ async function editData(deleteMode = false)
     let answer;
     if (!deleteMode)
     {
-        answer = await fetch(`https://miroshkin.vercel.app/api/editData/${gameTitle}`, {
+        answer = await fetch(`https://miroshkin-git-main-site-miroshkin.vercel.app/api/editData/${gameTitle}`, {
            method: "PATCH",
            headers: { "Content-Type": "application/json" },
            body: JSON.stringify({
@@ -220,7 +220,7 @@ async function editData(deleteMode = false)
     }
     else
     {
-        answer = await fetch(`https://miroshkin.vercel.app/api/deleteRecord/${gameTitle}`, {
+        answer = await fetch(`https://miroshkin-git-main-site-miroshkin.vercel.app/api/deleteRecord/${gameTitle}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
