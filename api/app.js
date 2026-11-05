@@ -94,7 +94,7 @@ app.patch("/api/editData/:game", async (req, res) =>
     {
         await db.execute({sql: `UPDATE ${tableName} SET name = ?, password = ?
             WHERE name = ?;`,
-            args: [data.newName, data.newPassword, record.name]});
+            args: [data.newName, data.newPassword.toLowerCase(), record.name]});
         res.status(200).send("Данные обновлены");       
     }
 });
