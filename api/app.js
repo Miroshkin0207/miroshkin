@@ -33,6 +33,8 @@ async function getRecord(req, res, data)
         tableName = getTableName(req.params.game);
         let probablyRecords = await db.execute({sql: `SELECT * FROM ${tableName} WHERE password = ?;`,
             args: [data.password.toLowerCase()]});
+        console.log(probablyRecords);
+        console.log(data.name.toLowerCase());
 
         for (let i = 0; i < probablyRecords.rows.length; i++)
         {
@@ -73,6 +75,7 @@ app.post("/api/createRecord/:game", async (req, res) =>
 app.patch("/api/editRecord/:game", async (req, res) =>
 {
     const data = req.body;
+    console.log("data: " + data);
     const record = await getRecord(req, res, data);
     if (record)
     {       
