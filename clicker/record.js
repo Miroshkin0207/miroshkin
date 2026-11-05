@@ -143,7 +143,7 @@ editRecordButton.onclick = async () =>
         body: JSON.stringify({
             name: recordName.value,
             password: recordPassword.value,
-            newScore: Number(localStorage.getItem("score")) || 0
+            newScore: gameTitle == "clicker" ? Number(localStorage.getItem("score")) || 0 : Number(localStorage.getItem("scoreKvadratik")) || 0
         })
     });
     clearInterval(pointsInterval);
