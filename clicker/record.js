@@ -10,7 +10,7 @@ switch (title)
         gameTitle = "kvadratik";
         break;
 }
-const url = window.location.href.includes("git-main") ? "miroshkin-git-main-miron55236" : "miroshkin";
+const url = window.location.href.includes("git-main") ? "miroshkin-git-main-mir55" : "miroshkin";
 
 // Открытие и закрытие различных меню
 document.querySelector("#add").onclick = () => openMenu("#menuScore");
