@@ -6,7 +6,7 @@ document.querySelector("#back").onclick = () => back();
 async function back() {
     await switchOn();
 
-    switch (document.querySelector("textarea").value.toLower())
+    switch (document.querySelector("textarea").value.toLowerCase())
     {
         case "metanit":
             window.location.href = "https://metanit.com";
