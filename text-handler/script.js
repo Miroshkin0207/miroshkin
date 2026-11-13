@@ -1,22 +1,25 @@
 ﻿// Импорт
 import { switchOn, switchOff } from "/main/common.js";
 
-// Переход на главную страницу
+// Переход на главную страницу... И не только)
 document.querySelector("#back").onclick = () => back();
 async function back() {
     await switchOn();
 
-    if (document.querySelector("textarea").value == "Anikill")
+    switch (document.querySelector("textarea").value.toLower())
     {
-        window.location.href = "https://anikill.vercel.app";
-    }
-    else if (document.querySelector("textarea").value == "Metanit")
-    {
-         window.location.href = "https://metanit.com";
-    }
-    else 
-    {
-        window.location.href = "/main/?dontNeedAnimation=true";
+        case "metanit":
+            window.location.href = "https://metanit.com";
+            break;
+        case "anikill":
+            window.location.href = "https://anikill.vercel.app";
+            break;
+        case "Секретик":
+            window.location.href = "https://ya.ru/video/preview/11719282409881555709?utm_source=copy_link&utm_medium=social&utm_campaign=share";
+            break;
+        default:
+            window.location.href = "/main/?dontNeedAnimation=true";
+            break;
     }
 }
 
