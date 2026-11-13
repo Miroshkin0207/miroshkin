@@ -14,7 +14,7 @@ async function back() {
         case "anikill":
             window.location.href = "https://anikill.vercel.app";
             break;
-        case "Секретик":
+        case "cекретик":
             window.location.href = "https://ya.ru/video/preview/11719282409881555709?utm_source=copy_link&utm_medium=social&utm_campaign=share";
             break;
         default:
