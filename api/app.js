@@ -11,7 +11,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, "..", "main")));
+const root = path.join(__dirname, "..");
+app.get("/", (req, res) => res.redirect("/main/"));
+app.use(express.static(root));
 
 const PORT = 3000;
 app.listen(PORT, () => console.log("Сервер начал работу"));
