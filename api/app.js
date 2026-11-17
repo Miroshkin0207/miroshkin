@@ -15,7 +15,7 @@ const root = path.join(__dirname, "..");
 app.get("/", (req, res) => res.redirect("/main/"));
 app.use(express.static(root));
 
-const PORT = 3000;
+const PORT = 8080;
 app.listen(PORT, () => console.log("Сервер начал работу"));
 
 let tableName;
